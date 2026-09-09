@@ -1,0 +1,1139 @@
+[
+ {
+  "capture": "ps_bmw_white_multidamage_hood_cam3_150k_repeat01",
+  "native_px": [
+   522,
+   348
+  ],
+  "camera": "cam3",
+  "subject": "bmw_white",
+  "label": "Bonnet, three dents and three scratches",
+  "state": "valid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_f_normal.jpg",
+    "support": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_f_support.jpg",
+    "usable": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_u_normal.jpg",
+    "support": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_u_support.jpg",
+    "usable": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_bmw_white_multidamage_hood_cam3_150k_repeat01",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 679,
+   "damage_ring_deviation_median_deg": 5.407,
+   "damage_ring_deviation_p90_deg": 10.707,
+   "evaluated_pixels": 135128,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.9167,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.0244,
+    -0.68879,
+    0.72455
+   ],
+   "mean_normal_resultant_length": 0.9777,
+   "mean_usable_lights": 11.138,
+   "median_elevation_deg": 47.456,
+   "median_fit_residual": 0.009619,
+   "median_positive_outlier_ratio": 0.0141,
+   "median_sparse_outlier_norm": 0.001518,
+   "median_usable_lights": 11.0,
+   "normal_deviation_median_deg": 1.032,
+   "normal_deviation_p90_deg": 4.9,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 8.705,
+   "reference_ring_pixels": 7168,
+   "relative_depth_p5_p95": [
+    -20.13657,
+    19.76922
+   ],
+   "relative_depth_range": 39.90578,
+   "relative_depth_status": "reported_relative_units",
+   "relative_depth_units": "plane-relative, arbitrary scale, not millimetres",
+   "requested_pixels_in_roi": 139069,
+   "roi_pixels": 176558,
+   "roi_retention": 0.9717,
+   "solved_pixels_in_roi": 135128,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "valid",
+   "state_reason": "97% of the 139069-pixel requested region is retained with at least 6 usable lights, and 100% of it is front-facing",
+   "surface_roughness_median_deg": 1.032,
+   "surface_roughness_p90_deg": 4.9,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 1.0
+   },
+   "valid_coverage": 0.9717,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.0466,
+   "predicted_part": "trunk_tailgate"
+  }
+ },
+ {
+  "capture": "ps_bmw_white_damaged_hood_r000_150k",
+  "native_px": [
+   539,
+   390
+  ],
+  "camera": "cam3",
+  "subject": "bmw_white",
+  "label": "Bonnet, one dent and one scratch",
+  "state": "valid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_f_normal.jpg",
+    "support": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_f_support.jpg",
+    "usable": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_u_normal.jpg",
+    "support": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_u_support.jpg",
+    "usable": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_damaged_hood_r000_150k_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_bmw_white_damaged_hood_r000_150k",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 1091,
+   "damage_ring_deviation_median_deg": 4.541,
+   "damage_ring_deviation_p90_deg": 8.835,
+   "evaluated_pixels": 156273,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 1.0,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    -0.0074,
+    -0.62464,
+    0.78088
+   ],
+   "mean_normal_resultant_length": 0.9725,
+   "mean_usable_lights": 11.524,
+   "median_elevation_deg": 43.898,
+   "median_fit_residual": 0.012573,
+   "median_positive_outlier_ratio": 0.1028,
+   "median_sparse_outlier_norm": 0.017926,
+   "median_usable_lights": 12.0,
+   "normal_deviation_median_deg": 0.743,
+   "normal_deviation_p90_deg": 4.145,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 10.623,
+   "reference_ring_pixels": 7712,
+   "relative_depth_p5_p95": [
+    -23.45866,
+    22.60645
+   ],
+   "relative_depth_range": 46.06511,
+   "relative_depth_status": "reported_relative_units",
+   "relative_depth_units": "plane-relative, arbitrary scale, not millimetres",
+   "requested_pixels_in_roi": 159822,
+   "roi_pixels": 197852,
+   "roi_retention": 0.9778,
+   "solved_pixels_in_roi": 156273,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "valid",
+   "state_reason": "98% of the 159822-pixel requested region is retained with at least 6 usable lights, and 100% of it is front-facing",
+   "surface_roughness_median_deg": 0.743,
+   "surface_roughness_p90_deg": 4.145,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 1.0
+   },
+   "valid_coverage": 0.9778,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.0576,
+   "predicted_part": "trunk_tailgate"
+  }
+ },
+ {
+  "capture": "ps_bmw_white_damaged_doors_r270_150k",
+  "native_px": [
+   321,
+   180
+  ],
+  "camera": "cam3",
+  "subject": "bmw_white",
+  "label": "Rear door, one dent",
+  "state": "valid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_f_normal.jpg",
+    "support": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_f_support.jpg",
+    "usable": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_u_normal.jpg",
+    "support": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_u_support.jpg",
+    "usable": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_damaged_doors_r270_150k_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_bmw_white_damaged_doors_r270_150k",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 30004,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.6667,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.00243,
+    -0.09307,
+    0.99566
+   ],
+   "mean_normal_resultant_length": 0.992,
+   "mean_usable_lights": 7.616,
+   "median_elevation_deg": 4.617,
+   "median_fit_residual": 0.014429,
+   "median_positive_outlier_ratio": 0.4139,
+   "median_sparse_outlier_norm": 0.048176,
+   "median_usable_lights": 8.0,
+   "normal_deviation_median_deg": 1.505,
+   "normal_deviation_p90_deg": 7.624,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 3.746,
+   "relative_depth_p5_p95": [
+    -3.39577,
+    1.74029
+   ],
+   "relative_depth_range": 5.13606,
+   "relative_depth_status": "reported_relative_units",
+   "relative_depth_units": "plane-relative, arbitrary scale, not millimetres",
+   "requested_pixels_in_roi": 37451,
+   "roi_pixels": 44542,
+   "roi_retention": 0.8012,
+   "solved_pixels_in_roi": 30004,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "valid",
+   "state_reason": "80% of the 37451-pixel requested region is retained with at least 6 usable lights, and 100% of it is front-facing",
+   "surface_roughness_median_deg": 1.505,
+   "surface_roughness_p90_deg": 7.624,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 0.6577
+   },
+   "valid_coverage": 0.8012,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.4212,
+   "predicted_part": "rear_door_left"
+  }
+ },
+ {
+  "capture": "ps_bmw_white_r000",
+  "native_px": [
+   540,
+   412
+  ],
+  "camera": "cam3",
+  "subject": "bmw_white",
+  "label": "Undamaged bonnet, positive control",
+  "state": "valid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_bmw_white_r000_cam3_f_normal.jpg",
+    "support": "img/ps/ps_bmw_white_r000_cam3_f_support.jpg",
+    "usable": "img/ps/ps_bmw_white_r000_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_r000_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_r000_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_r000_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_bmw_white_r000_cam3_u_normal.jpg",
+    "support": "img/ps/ps_bmw_white_r000_cam3_u_support.jpg",
+    "usable": "img/ps/ps_bmw_white_r000_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_bmw_white_r000_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_bmw_white_r000_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_bmw_white_r000_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "sbl_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_bmw_white_r000",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 93225,
+   "front_facing_fraction": 1.0,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.00934,
+    -0.65984,
+    0.75135
+   ],
+   "mean_normal_resultant_length": 0.9786,
+   "mean_usable_lights": 10.795,
+   "median_elevation_deg": 43.076,
+   "median_usable_lights": 11.0,
+   "normal_deviation_median_deg": 0.657,
+   "normal_deviation_p90_deg": 3.941,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 8.361,
+   "relative_depth_p5_p95": [
+    -25.70087,
+    21.94883
+   ],
+   "relative_depth_range": 47.64969,
+   "relative_depth_status": "reported_relative_units",
+   "relative_depth_units": "plane-relative, arbitrary scale, not millimetres",
+   "requested_pixels_in_roi": 95190,
+   "roi_pixels": 113125,
+   "roi_retention": 0.9794,
+   "solved_pixels_in_roi": 93225,
+   "source_npz": "cam3_sbl_filtered_data.npz",
+   "state": "valid",
+   "state_reason": "98% of the 95190-pixel requested region is retained with at least 6 usable lights, and 100% of it is front-facing",
+   "surface_roughness_median_deg": 0.657,
+   "surface_roughness_p90_deg": 3.941,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 1.0
+   },
+   "valid_coverage": 0.9794,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.0982,
+   "predicted_part": "windshield"
+  }
+ },
+ {
+  "capture": "ps_sg_fdm_tilt_cam3_150k_repeat01",
+  "native_px": [
+   814,
+   502
+  ],
+  "camera": "cam3",
+  "subject": "sg_fdm",
+  "label": "Tilted artefact, repeat 01",
+  "state": "valid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_f_normal.jpg",
+    "support": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_f_support.jpg",
+    "usable": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_u_normal.jpg",
+    "support": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_u_support.jpg",
+    "usable": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_sg_fdm_tilt_cam3_150k_repeat01_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_sg_fdm_tilt_cam3_150k_repeat01",
+   "coverage_of_retained_pixels": 0.9983,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 340069,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.75,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.0226,
+    -0.57305,
+    0.81921
+   ],
+   "mean_normal_resultant_length": 0.9867,
+   "mean_usable_lights": 8.956,
+   "median_elevation_deg": 35.911,
+   "median_fit_residual": 0.009424,
+   "median_positive_outlier_ratio": 0.1933,
+   "median_sparse_outlier_norm": 0.007494,
+   "median_usable_lights": 9.0,
+   "normal_deviation_median_deg": 0.6,
+   "normal_deviation_p90_deg": 2.628,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 8.619,
+   "relative_depth_p5_p95": [
+    -30.96896,
+    23.54111
+   ],
+   "relative_depth_range": 54.51007,
+   "relative_depth_status": "reported_relative_units",
+   "relative_depth_units": "plane-relative, arbitrary scale, not millimetres",
+   "requested_pixels_in_roi": 345218,
+   "roi_pixels": 398932,
+   "roi_retention": 0.9851,
+   "solved_pixels_in_roi": 340069,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "valid",
+   "state_reason": "98% of the 345218-pixel requested region is retained with at least 6 usable lights, and 100% of it is front-facing",
+   "surface_roughness_median_deg": 0.6,
+   "surface_roughness_p90_deg": 2.628,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 0.9998,
+    "at_least_6": 0.9983,
+    "at_least_8": 0.9792
+   },
+   "valid_coverage": 0.9834,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.1156,
+   "predicted_part": "trunk_tailgate"
+  }
+ },
+ {
+  "capture": "ps_sg_fdm_bare_r000",
+  "native_px": [
+   749,
+   302
+  ],
+  "camera": "cam3",
+  "subject": "sg_fdm",
+  "label": "Bare artefact, grazing view",
+  "state": "valid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_sg_fdm_bare_r000_cam3_f_normal.jpg",
+    "support": "img/ps/ps_sg_fdm_bare_r000_cam3_f_support.jpg",
+    "usable": "img/ps/ps_sg_fdm_bare_r000_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_sg_fdm_bare_r000_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_sg_fdm_bare_r000_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_sg_fdm_bare_r000_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_sg_fdm_bare_r000_cam3_u_normal.jpg",
+    "support": "img/ps/ps_sg_fdm_bare_r000_cam3_u_support.jpg",
+    "usable": "img/ps/ps_sg_fdm_bare_r000_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_sg_fdm_bare_r000_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_sg_fdm_bare_r000_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_sg_fdm_bare_r000_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_sg_fdm_bare_r000",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 8985,
+   "front_facing_fraction": 0.8947,
+   "illumination_support_median": 1.0,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    -0.18094,
+    -0.96307,
+    0.19939
+   ],
+   "mean_normal_resultant_length": 0.9608,
+   "mean_usable_lights": 11.772,
+   "median_elevation_deg": 82.14,
+   "median_fit_residual": 0.0117,
+   "median_positive_outlier_ratio": 0.3041,
+   "median_sparse_outlier_norm": 0.022609,
+   "median_usable_lights": 12.0,
+   "normal_deviation_median_deg": 3.868,
+   "normal_deviation_p90_deg": 14.973,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 9.984,
+   "relative_depth_status": "withheld_depth_conversion_not_validated",
+   "requested_pixels_in_roi": 9540,
+   "roi_pixels": 36954,
+   "roi_retention": 0.9418,
+   "solved_pixels_in_roi": 8985,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "valid",
+   "state_reason": "94% of the 9540-pixel requested region is retained with at least 6 usable lights, and 89% of it is front-facing",
+   "surface_roughness_median_deg": 3.868,
+   "surface_roughness_p90_deg": 14.973,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 1.0
+   },
+   "valid_coverage": 0.9418,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.0044,
+   "predicted_part": "trunk_tailgate"
+  }
+ },
+ {
+  "capture": "ps_sg_fdm_valid_r000",
+  "native_px": [
+   794,
+   440
+  ],
+  "camera": "cam3",
+  "subject": "sg_fdm",
+  "label": "Same artefact, under-exposed",
+  "state": "invalid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_sg_fdm_valid_r000_cam3_f_normal.jpg",
+    "support": "img/ps/ps_sg_fdm_valid_r000_cam3_f_support.jpg",
+    "usable": "img/ps/ps_sg_fdm_valid_r000_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_sg_fdm_valid_r000_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_sg_fdm_valid_r000_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_sg_fdm_valid_r000_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_sg_fdm_valid_r000_cam3_u_normal.jpg",
+    "support": "img/ps/ps_sg_fdm_valid_r000_cam3_u_support.jpg",
+    "usable": "img/ps/ps_sg_fdm_valid_r000_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_sg_fdm_valid_r000_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_sg_fdm_valid_r000_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_sg_fdm_valid_r000_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_sg_fdm_valid_r000",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 4,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.5,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.3413,
+    -0.76628,
+    0.54437
+   ],
+   "mean_normal_resultant_length": 1.0,
+   "mean_usable_lights": 6.0,
+   "median_elevation_deg": 57.036,
+   "median_fit_residual": 0.002804,
+   "median_positive_outlier_ratio": 0.0,
+   "median_sparse_outlier_norm": 0.0,
+   "median_usable_lights": 6.0,
+   "normal_deviation_median_deg": 0.461,
+   "normal_deviation_p90_deg": 0.531,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 0.461,
+   "relative_depth_status": "withheld_depth_conversion_not_validated",
+   "requested_pixels_in_roi": 342,
+   "roi_pixels": 342,
+   "roi_retention": 0.0117,
+   "solved_pixels_in_roi": 4,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "invalid",
+   "state_reason": "1% of the requested region is supported (1% retained, 100% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 0.461,
+   "surface_roughness_p90_deg": 0.531,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 0.0
+   },
+   "valid_coverage": 0.0117,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.0453,
+   "predicted_part": "trunk_tailgate"
+  }
+ },
+ {
+  "capture": "ps_sheetmetal_grey_dents_cam3_150k_repeat01",
+  "native_px": [
+   1160,
+   303
+  ],
+  "camera": "cam3",
+  "subject": "sheet_metal",
+  "label": "Painted steel strip, four formed dents",
+  "state": "valid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_f_normal.jpg",
+    "support": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_f_support.jpg",
+    "usable": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_u_normal.jpg",
+    "support": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_u_support.jpg",
+    "usable": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_sheetmetal_grey_dents_cam3_150k_repeat01_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_sheetmetal_grey_dents_cam3_150k_repeat01",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 25426,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.8333,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    -0.23304,
+    -0.86961,
+    0.43528
+   ],
+   "mean_normal_resultant_length": 0.9949,
+   "mean_usable_lights": 9.863,
+   "median_elevation_deg": 64.858,
+   "median_fit_residual": 0.00368,
+   "median_positive_outlier_ratio": 0.0,
+   "median_sparse_outlier_norm": 0.0,
+   "median_usable_lights": 10.0,
+   "normal_deviation_median_deg": 0.775,
+   "normal_deviation_p90_deg": 1.655,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 3.357,
+   "relative_depth_status": "withheld_depth_conversion_not_validated",
+   "requested_pixels_in_roi": 26644,
+   "roi_pixels": 53970,
+   "roi_retention": 0.9543,
+   "solved_pixels_in_roi": 25426,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "valid",
+   "state_reason": "95% of the 26644-pixel requested region is retained with at least 6 usable lights, and 100% of it is front-facing",
+   "surface_roughness_median_deg": 0.775,
+   "surface_roughness_p90_deg": 1.655,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 0.9972
+   },
+   "valid_coverage": 0.9543,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.0122,
+   "predicted_part": "trunk_tailgate"
+  }
+ },
+ {
+  "capture": "ps_rr_black_damaged_side_r020_600k",
+  "native_px": [
+   316,
+   282
+  ],
+  "camera": "cam2",
+  "subject": "range_rover",
+  "label": "Damaged front door, gloss black",
+  "state": "partial",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_f_normal.jpg",
+    "support": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_f_support.jpg",
+    "usable": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_f_usable.jpg",
+    "depth": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_f_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_f_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_u_normal.jpg",
+    "support": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_u_support.jpg",
+    "usable": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_u_usable.jpg",
+    "depth": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_u_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_u_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_damaged_side_r020_600k_cam2_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam2",
+   "capture_set": "ps_rr_black_damaged_side_r020_600k",
+   "coverage_of_retained_pixels": 0.1445,
+   "damage_pixels_evaluated": 5338,
+   "damage_ring_deviation_median_deg": 66.601,
+   "damage_ring_deviation_p90_deg": 72.442,
+   "evaluated_pixels": 51844,
+   "front_facing_fraction": 0.9914,
+   "illumination_support_median": 0.3333,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.47751,
+    -0.6889,
+    -0.54534
+   ],
+   "mean_normal_resultant_length": 0.9012,
+   "mean_usable_lights": 4.19,
+   "median_elevation_deg": 128.295,
+   "median_fit_residual": 0.006867,
+   "median_positive_outlier_ratio": 0.163,
+   "median_sparse_outlier_norm": 0.001743,
+   "median_usable_lights": 4.0,
+   "normal_deviation_median_deg": 8.739,
+   "normal_deviation_p90_deg": 23.135,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 14.676,
+   "reference_ring_pixels": 8036,
+   "relative_depth_status": "withheld_non_lambertian",
+   "requested_pixels_in_roi": 73219,
+   "roi_pixels": 83376,
+   "roi_retention": 0.7081,
+   "solved_pixels_in_roi": 51844,
+   "source_npz": "cam2_l1_filtered_data.npz",
+   "state": "partial",
+   "state_reason": "10% of the requested region is supported (71% retained, 14% of those well lit), below the 70% required for integration",
+   "surface_roughness_median_deg": 8.739,
+   "surface_roughness_p90_deg": 23.135,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 0.2503,
+    "at_least_6": 0.1445,
+    "at_least_8": 0.0516
+   },
+   "valid_coverage": 0.1023,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.2858,
+   "predicted_part": "front_door_left"
+  }
+ },
+ {
+  "capture": "ps_rr_black_damaged_side_r020_600k",
+  "native_px": [
+   332,
+   328
+  ],
+  "camera": "cam3",
+  "subject": "range_rover",
+  "label": "Damaged front door, second camera",
+  "state": "invalid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_f_normal.jpg",
+    "support": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_f_support.jpg",
+    "usable": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_u_normal.jpg",
+    "support": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_u_support.jpg",
+    "usable": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_damaged_side_r020_600k_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_rr_black_damaged_side_r020_600k",
+   "coverage_of_retained_pixels": 0.0905,
+   "damage_pixels_evaluated": 1916,
+   "damage_ring_deviation_median_deg": 18.071,
+   "damage_ring_deviation_p90_deg": 24.14,
+   "evaluated_pixels": 10677,
+   "front_facing_fraction": 0.9988,
+   "illumination_support_median": 0.25,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    -0.64804,
+    -0.33616,
+    0.6834
+   ],
+   "mean_normal_resultant_length": 0.9825,
+   "mean_usable_lights": 3.587,
+   "median_elevation_deg": 49.862,
+   "median_fit_residual": 0.003763,
+   "median_positive_outlier_ratio": 0.0,
+   "median_sparse_outlier_norm": 0.0,
+   "median_usable_lights": 3.0,
+   "normal_deviation_median_deg": 4.237,
+   "normal_deviation_p90_deg": 9.504,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 7.348,
+   "reference_ring_pixels": 1671,
+   "relative_depth_status": "withheld_non_lambertian",
+   "requested_pixels_in_roi": 31881,
+   "roi_pixels": 48566,
+   "roi_retention": 0.3349,
+   "solved_pixels_in_roi": 10677,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "invalid",
+   "state_reason": "3% of the requested region is supported (33% retained, 9% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 4.237,
+   "surface_roughness_p90_deg": 9.504,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 0.187,
+    "at_least_6": 0.0905,
+    "at_least_8": 0.0001
+   },
+   "valid_coverage": 0.0303,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.4212,
+   "predicted_part": "front_door_left"
+  }
+ },
+ {
+  "capture": "ps_rr_black_clean_side_r020_600k",
+  "native_px": [
+   292,
+   254
+  ],
+  "camera": "cam2",
+  "subject": "range_rover",
+  "label": "Matched clean front door",
+  "state": "invalid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_f_normal.jpg",
+    "support": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_f_support.jpg",
+    "usable": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_f_usable.jpg",
+    "depth": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_f_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_f_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_u_normal.jpg",
+    "support": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_u_support.jpg",
+    "usable": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_u_usable.jpg",
+    "depth": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_u_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_u_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_clean_side_r020_600k_cam2_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam2",
+   "capture_set": "ps_rr_black_clean_side_r020_600k",
+   "coverage_of_retained_pixels": 0.0262,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 32531,
+   "front_facing_fraction": 0.9989,
+   "illumination_support_median": 0.3333,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.32845,
+    -0.58474,
+    -0.74176
+   ],
+   "mean_normal_resultant_length": 0.9615,
+   "mean_usable_lights": 3.675,
+   "median_elevation_deg": 140.498,
+   "median_fit_residual": 0.006183,
+   "median_positive_outlier_ratio": 0.0845,
+   "median_sparse_outlier_norm": 0.000752,
+   "median_usable_lights": 4.0,
+   "normal_deviation_median_deg": 5.074,
+   "normal_deviation_p90_deg": 15.787,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 10.386,
+   "relative_depth_status": "withheld_non_lambertian",
+   "requested_pixels_in_roi": 57939,
+   "roi_pixels": 68415,
+   "roi_retention": 0.5615,
+   "solved_pixels_in_roi": 32531,
+   "source_npz": "cam2_l1_filtered_data.npz",
+   "state": "invalid",
+   "state_reason": "1% of the requested region is supported (56% retained, 3% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 5.074,
+   "surface_roughness_p90_deg": 15.787,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 0.0653,
+    "at_least_6": 0.0262,
+    "at_least_8": 0.0066
+   },
+   "valid_coverage": 0.0147,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.4744,
+   "predicted_part": "front_door_left"
+  }
+ },
+ {
+  "capture": "ps_rr_black_damaged_cam3_tilt_r000_600k",
+  "native_px": [
+   477,
+   346
+  ],
+  "camera": "cam3",
+  "subject": "range_rover",
+  "label": "Damaged door, tilted pose",
+  "state": "invalid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_f_normal.jpg",
+    "support": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_f_support.jpg",
+    "usable": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_u_normal.jpg",
+    "support": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_u_support.jpg",
+    "usable": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_damaged_cam3_tilt_r000_600k_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_rr_black_damaged_cam3_tilt_r000_600k",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 1327,
+   "damage_ring_deviation_median_deg": 4.758,
+   "damage_ring_deviation_p90_deg": 11.048,
+   "evaluated_pixels": 4927,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.6667,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    -0.07943,
+    -0.23089,
+    0.96973
+   ],
+   "mean_normal_resultant_length": 0.988,
+   "mean_usable_lights": 7.858,
+   "median_elevation_deg": 14.993,
+   "median_fit_residual": 0.013311,
+   "median_positive_outlier_ratio": 0.4254,
+   "median_sparse_outlier_norm": 0.036174,
+   "median_usable_lights": 8.0,
+   "normal_deviation_median_deg": 3.883,
+   "normal_deviation_p90_deg": 9.859,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 5.797,
+   "reference_ring_pixels": 162,
+   "relative_depth_status": "withheld_non_lambertian",
+   "requested_pixels_in_roi": 97020,
+   "roi_pixels": 97020,
+   "roi_retention": 0.0508,
+   "solved_pixels_in_roi": 4927,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "invalid",
+   "state_reason": "5% of the requested region is supported (5% retained, 100% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 3.883,
+   "surface_roughness_p90_deg": 9.859,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 0.6324
+   },
+   "valid_coverage": 0.0508,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.558,
+   "predicted_part": "front_door_right"
+  }
+ },
+ {
+  "capture": "ps_rr_black_clean_side_r020_600k",
+  "native_px": [
+   348,
+   307
+  ],
+  "camera": "cam3",
+  "subject": "range_rover",
+  "label": "Matched clean front door, second camera",
+  "state": "invalid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_f_normal.jpg",
+    "support": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_f_support.jpg",
+    "usable": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_u_normal.jpg",
+    "support": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_u_support.jpg",
+    "usable": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_clean_side_r020_600k_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_rr_black_clean_side_r020_600k",
+   "coverage_of_retained_pixels": 0.0088,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 36701,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.25,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    -0.73726,
+    -0.27571,
+    0.6168
+   ],
+   "mean_normal_resultant_length": 0.9925,
+   "mean_usable_lights": 3.147,
+   "median_elevation_deg": 52.542,
+   "median_fit_residual": 0.00499,
+   "median_positive_outlier_ratio": 0.0,
+   "median_sparse_outlier_norm": 0.0,
+   "median_usable_lights": 3.0,
+   "normal_deviation_median_deg": 2.831,
+   "normal_deviation_p90_deg": 6.753,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 5.916,
+   "relative_depth_status": "withheld_non_lambertian",
+   "requested_pixels_in_roi": 54294,
+   "roi_pixels": 89037,
+   "roi_retention": 0.676,
+   "solved_pixels_in_roi": 36701,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "invalid",
+   "state_reason": "1% of the requested region is supported (68% retained, 1% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 2.831,
+   "surface_roughness_p90_deg": 6.753,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 0.0192,
+    "at_least_6": 0.0088,
+    "at_least_8": 0.0001
+   },
+   "valid_coverage": 0.0059,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.464,
+   "predicted_part": "front_door_left"
+  }
+ },
+ {
+  "capture": "ps_rr_black_clean_cam3_tilt_r000_600k",
+  "native_px": [
+   494,
+   352
+  ],
+  "camera": "cam3",
+  "subject": "range_rover",
+  "label": "Clean door, tilted pose",
+  "state": "invalid",
+  "algorithm": "l1_filtered",
+  "maps": {
+   "filtered": {
+    "normal": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_f_normal.jpg",
+    "support": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_f_support.jpg",
+    "usable": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_f_usable.jpg",
+    "depth": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_f_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_f_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_photo.jpg"
+   },
+   "unfiltered": {
+    "normal": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_u_normal.jpg",
+    "support": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_u_support.jpg",
+    "usable": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_u_usable.jpg",
+    "depth": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_u_depth.jpg",
+    "elevation": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_u_elevation.jpg",
+    "photo": "img/ps/ps_rr_black_clean_cam3_tilt_r000_600k_cam3_photo.jpg"
+   }
+  },
+  "evidence": {
+   "algorithm": "l1_filtered",
+   "camera": "cam3",
+   "capture_set": "ps_rr_black_clean_cam3_tilt_r000_600k",
+   "coverage_of_retained_pixels": 1.0,
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 380,
+   "front_facing_fraction": 1.0,
+   "illumination_support_median": 0.6667,
+   "label": "predicted_part_roi",
+   "mean_normal_camera_frame": [
+    0.14482,
+    -0.47264,
+    0.86928
+   ],
+   "mean_normal_resultant_length": 0.9623,
+   "mean_usable_lights": 7.834,
+   "median_elevation_deg": 24.622,
+   "median_fit_residual": 0.010792,
+   "median_positive_outlier_ratio": 0.762,
+   "median_sparse_outlier_norm": 0.069008,
+   "median_usable_lights": 8.0,
+   "normal_deviation_median_deg": 1.378,
+   "normal_deviation_p90_deg": 2.955,
+   "normal_reference": "locally smoothed normal field",
+   "normal_spread_about_mean_median_deg": 6.29,
+   "relative_depth_status": "withheld_non_lambertian",
+   "requested_pixels_in_roi": 63518,
+   "roi_pixels": 63518,
+   "roi_retention": 0.006,
+   "solved_pixels_in_roi": 380,
+   "source_npz": "cam3_l1_filtered_data.npz",
+   "state": "invalid",
+   "state_reason": "1% of the requested region is supported (1% retained, 100% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 1.378,
+   "surface_roughness_p90_deg": 2.955,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 0.8026
+   },
+   "valid_coverage": 0.006,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "roi_agreement_iou": 0.0852,
+   "predicted_part": "trunk_tailgate"
+  }
+ }
+]

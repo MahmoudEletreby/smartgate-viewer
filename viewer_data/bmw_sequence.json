@@ -1,0 +1,3646 @@
+[
+ {
+  "id": "damaged_bmw_cam0_r000",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 0,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   425,
+   299,
+   1728,
+   841
+  ],
+  "exposure_scale": 1.6021,
+  "quality_raw": {
+   "median_brightness": 0.2078,
+   "saturated_fraction": 0.00571,
+   "sharpness": 0.005616,
+   "crop_width": 1303,
+   "crop_height": 542
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r000_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r000_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r000_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r000_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r030",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 30,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   403,
+   297,
+   1619,
+   872
+  ],
+  "exposure_scale": 1.5733,
+  "quality_raw": {
+   "median_brightness": 0.2157,
+   "saturated_fraction": 0.00595,
+   "sharpness": 0.005549,
+   "crop_width": 1216,
+   "crop_height": 575
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 15,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.6797,
+    "area_px": 2635,
+    "part": null,
+    "attributed": false,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "bbox": [
+     928,
+     448,
+     1005,
+     494
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.4944,
+    "area_px": 1520,
+    "part": null,
+    "attributed": false,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "bbox": [
+     931,
+     468,
+     1006,
+     495
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r030_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r030_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r030_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r030_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r060",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 60,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   595,
+   304,
+   1449,
+   855
+  ],
+  "exposure_scale": 1.5725,
+  "quality_raw": {
+   "median_brightness": 0.1961,
+   "saturated_fraction": 0.00593,
+   "sharpness": 0.005659,
+   "crop_width": 854,
+   "crop_height": 551
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 10,
+  "part_classes": [
+   "body_side_right",
+   "front_door_right",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.3233,
+    "area_px": 183,
+    "part": "rear_bumper",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     621,
+     287,
+     673,
+     310
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r060_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r060_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r060_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r060_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r090",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 90,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   826,
+   297,
+   1683,
+   869
+  ],
+  "exposure_scale": 1.7162,
+  "quality_raw": {
+   "median_brightness": 0.2078,
+   "saturated_fraction": 0.00753,
+   "sharpness": 0.00551,
+   "crop_width": 857,
+   "crop_height": 572
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_left",
+   "front_door_left",
+   "license_plate",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.7109,
+    "area_px": 251,
+    "part": "rear_bumper",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     173,
+     289,
+     231,
+     334
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r090_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r090_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r090_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r090_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r120",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 120,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   659,
+   273,
+   1903,
+   859
+  ],
+  "exposure_scale": 1.7193,
+  "quality_raw": {
+   "median_brightness": 0.2,
+   "saturated_fraction": 0.00755,
+   "sharpness": 0.00565,
+   "crop_width": 1244,
+   "crop_height": 586
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 13,
+  "part_classes": [
+   "body_side_left",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.795,
+    "area_px": 276,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     277,
+     276,
+     328,
+     355
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r120_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r120_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r120_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r120_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r150",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 150,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   630,
+   269,
+   1942,
+   815
+  ],
+  "exposure_scale": 1.7583,
+  "quality_raw": {
+   "median_brightness": 0.2039,
+   "saturated_fraction": 0.00759,
+   "sharpness": 0.006326,
+   "crop_width": 1312,
+   "crop_height": 546
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 12,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.5867,
+    "area_px": 267,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     412,
+     284,
+     482,
+     355
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3875,
+    "area_px": 480,
+    "part": "rear_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     613,
+     355,
+     660,
+     372
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3774,
+    "area_px": 495,
+    "part": "rear_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     608,
+     360,
+     654,
+     373
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r150_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r150_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r150_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r150_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r180",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 180,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   594,
+   276,
+   1885,
+   840
+  ],
+  "exposure_scale": 1.5695,
+  "quality_raw": {
+   "median_brightness": 0.1882,
+   "saturated_fraction": 0.00591,
+   "sharpness": 0.005706,
+   "crop_width": 1291,
+   "crop_height": 564
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8425,
+    "area_px": 356,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     606,
+     270,
+     674,
+     342
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.6021,
+    "area_px": 1318,
+    "part": "rear_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     788,
+     320,
+     864,
+     345
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r180_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r180_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r180_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r180_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r210",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 210,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   604,
+   286,
+   1727,
+   846
+  ],
+  "exposure_scale": 1.4782,
+  "quality_raw": {
+   "median_brightness": 0.1882,
+   "saturated_fraction": 0.0119,
+   "sharpness": 0.006426,
+   "crop_width": 1123,
+   "crop_height": 560
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8072,
+    "area_px": 349,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     738,
+     248,
+     779,
+     315
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.5222,
+    "area_px": 2000,
+    "part": null,
+    "attributed": false,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "bbox": [
+     734,
+     483,
+     822,
+     512
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r210_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r210_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r210_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r210_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r240",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 240,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   766,
+   306,
+   1499,
+   818
+  ],
+  "exposure_scale": 1.5672,
+  "quality_raw": {
+   "median_brightness": 0.1725,
+   "saturated_fraction": 0.00868,
+   "sharpness": 0.007416,
+   "crop_width": 733,
+   "crop_height": 512
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 12,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "mirror_right",
+   "rear_door_left",
+   "side_window",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r240_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r240_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r240_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r240_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r270",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 270,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   875,
+   310,
+   1651,
+   824
+  ],
+  "exposure_scale": 1.7029,
+  "quality_raw": {
+   "median_brightness": 0.1804,
+   "saturated_fraction": 0.01058,
+   "sharpness": 0.008078,
+   "crop_width": 776,
+   "crop_height": 514
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "mirror_right",
+   "rear_door_right",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.4253,
+    "area_px": 2134,
+    "part": "body_side_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     68,
+     307,
+     153,
+     390
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r270_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r270_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r270_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r270_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r300",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 300,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   643,
+   303,
+   1765,
+   816
+  ],
+  "exposure_scale": 1.702,
+  "quality_raw": {
+   "median_brightness": 0.1961,
+   "saturated_fraction": 0.01053,
+   "sharpness": 0.007506,
+   "crop_width": 1122,
+   "crop_height": 513
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.3018,
+    "area_px": 994,
+    "part": "body_side_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     499,
+     212,
+     542,
+     240
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r300_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r300_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r300_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r300_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam0_r330",
+  "vehicle": "damaged",
+  "camera": "cam0",
+  "angle": 330,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   485,
+   298,
+   1748,
+   796
+  ],
+  "exposure_scale": 1.6948,
+  "quality_raw": {
+   "median_brightness": 0.2157,
+   "saturated_fraction": 0.01241,
+   "sharpness": 0.0068,
+   "crop_width": 1263,
+   "crop_height": 498
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 12,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_right",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.6529,
+    "area_px": 2390,
+    "part": "windshield",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     697,
+     77,
+     817,
+     133
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam0_r330_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam0_r330_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam0_r330_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam0_r330_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r000",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 0,
+  "crop_ok": false,
+  "eligible": false,
+  "crop_xyxy": [
+   0,
+   0,
+   2304,
+   1296
+  ],
+  "exposure_scale": 3.1467,
+  "quality_raw": {
+   "median_brightness": 0.1961,
+   "saturated_fraction": 0.01538,
+   "sharpness": 0.004425,
+   "crop_width": 2304,
+   "crop_height": 1296
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 4,
+  "part_classes": [
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r000_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r000_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r000_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r000_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r030",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 30,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   736,
+   268,
+   1880,
+   1296
+  ],
+  "exposure_scale": 3.3026,
+  "quality_raw": {
+   "median_brightness": 0.2392,
+   "saturated_fraction": 0.03648,
+   "sharpness": 0.005903,
+   "crop_width": 1144,
+   "crop_height": 1028
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 17,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.8071,
+    "area_px": 2279,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     137,
+     283,
+     199,
+     336
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.6673,
+    "area_px": 1349,
+    "part": "trunk_tailgate",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     626,
+     350,
+     675,
+     396
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.4523,
+    "area_px": 1045,
+    "part": "rear_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     377,
+     572,
+     418,
+     617
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3316,
+    "area_px": 742,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     237,
+     416,
+     270,
+     451
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r030_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r030_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r030_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r030_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r060",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 60,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   613,
+   310,
+   1996,
+   1133
+  ],
+  "exposure_scale": 3.74,
+  "quality_raw": {
+   "median_brightness": 0.2275,
+   "saturated_fraction": 0.03794,
+   "sharpness": 0.00676,
+   "crop_width": 1383,
+   "crop_height": 823
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.6542,
+    "area_px": 195,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     394,
+     420,
+     463,
+     497
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r060_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r060_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r060_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r060_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r090",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 90,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   596,
+   292,
+   2008,
+   981
+  ],
+  "exposure_scale": 3.9443,
+  "quality_raw": {
+   "median_brightness": 0.251,
+   "saturated_fraction": 0.0421,
+   "sharpness": 0.007973,
+   "crop_width": 1412,
+   "crop_height": 689
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 13,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.6383,
+    "area_px": 1393,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     267,
+     278,
+     328,
+     310
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.6327,
+    "area_px": 183,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     557,
+     476,
+     627,
+     527
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3211,
+    "area_px": 464,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     81,
+     365,
+     190,
+     378
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.314,
+    "area_px": 768,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     112,
+     239,
+     211,
+     288
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r090_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r090_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r090_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r090_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r120",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 120,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   616,
+   226,
+   1901,
+   1105
+  ],
+  "exposure_scale": 3.7718,
+  "quality_raw": {
+   "median_brightness": 0.2196,
+   "saturated_fraction": 0.03554,
+   "sharpness": 0.006483,
+   "crop_width": 1285,
+   "crop_height": 879
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8293,
+    "area_px": 111,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     689,
+     524,
+     741,
+     551
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.77,
+    "area_px": 712,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     173,
+     554,
+     297,
+     618
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.7413,
+    "area_px": 722,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     133,
+     424,
+     195,
+     513
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.5059,
+    "area_px": 677,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     193,
+     554,
+     298,
+     596
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3898,
+    "area_px": 1361,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     314,
+     431,
+     376,
+     463
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r120_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r120_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r120_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r120_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r150",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 150,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   683,
+   181,
+   1685,
+   1188
+  ],
+  "exposure_scale": 3.5076,
+  "quality_raw": {
+   "median_brightness": 0.2353,
+   "saturated_fraction": 0.04185,
+   "sharpness": 0.006766,
+   "crop_width": 1002,
+   "crop_height": 1007
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 16,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.6204,
+    "area_px": 1949,
+    "part": "mirror_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     258,
+     285,
+     302,
+     343
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.5274,
+    "area_px": 41,
+    "part": null,
+    "attributed": false,
+    "reason": "winning overlap 41 px below 50 px",
+    "bbox": [
+     749,
+     503,
+     762,
+     516
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.4728,
+    "area_px": 454,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     132,
+     569,
+     180,
+     632
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3171,
+    "area_px": 100,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     268,
+     665,
+     276,
+     682
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r150_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r150_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r150_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r150_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r180",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 180,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   891,
+   167,
+   1587,
+   1173
+  ],
+  "exposure_scale": 3.4299,
+  "quality_raw": {
+   "median_brightness": 0.3373,
+   "saturated_fraction": 0.06436,
+   "sharpness": 0.009511,
+   "crop_width": 696,
+   "crop_height": 1006
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_left",
+   "front_door_right",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "mirror_right",
+   "rear_door_right",
+   "roof",
+   "side_window",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.7781,
+    "area_px": 941,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     275,
+     628,
+     382,
+     711
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.6853,
+    "area_px": 1719,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     375,
+     523,
+     425,
+     575
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3213,
+    "area_px": 144,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     184,
+     700,
+     193,
+     723
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r180_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r180_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r180_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r180_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r210",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 210,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   746,
+   186,
+   1784,
+   1140
+  ],
+  "exposure_scale": 3.5942,
+  "quality_raw": {
+   "median_brightness": 0.2314,
+   "saturated_fraction": 0.04491,
+   "sharpness": 0.006496,
+   "crop_width": 1038,
+   "crop_height": 954
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 15,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8881,
+    "area_px": 381,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     590,
+     618,
+     653,
+     671
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.8601,
+    "area_px": 321,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     474,
+     539,
+     535,
+     575
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3754,
+    "area_px": 728,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     661,
+     565,
+     792,
+     593
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r210_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r210_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r210_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r210_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r240",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 240,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   560,
+   230,
+   1832,
+   1029
+  ],
+  "exposure_scale": 3.8821,
+  "quality_raw": {
+   "median_brightness": 0.2235,
+   "saturated_fraction": 0.03857,
+   "sharpness": 0.006659,
+   "crop_width": 1272,
+   "crop_height": 799
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.6624,
+    "area_px": 270,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     980,
+     475,
+     1060,
+     495
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.5618,
+    "area_px": 1375,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     475,
+     271,
+     536,
+     304
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3542,
+    "area_px": 266,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     827,
+     447,
+     898,
+     456
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r240_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r240_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r240_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r240_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r270",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 270,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   438,
+   276,
+   1819,
+   952
+  ],
+  "exposure_scale": 4.0498,
+  "quality_raw": {
+   "median_brightness": 0.2275,
+   "saturated_fraction": 0.04168,
+   "sharpness": 0.007139,
+   "crop_width": 1381,
+   "crop_height": 676
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 15,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.6968,
+    "area_px": 411,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     1152,
+     201,
+     1220,
+     237
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.6063,
+    "area_px": 202,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     1053,
+     301,
+     1109,
+     312
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r270_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r270_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r270_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r270_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r300",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 300,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   413,
+   272,
+   1732,
+   1125
+  ],
+  "exposure_scale": 3.8353,
+  "quality_raw": {
+   "median_brightness": 0.2314,
+   "saturated_fraction": 0.03692,
+   "sharpness": 0.006441,
+   "crop_width": 1319,
+   "crop_height": 853
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 13,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8433,
+    "area_px": 174,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     1068,
+     197,
+     1108,
+     225
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3875,
+    "area_px": 751,
+    "part": "body_side_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     267,
+     585,
+     328,
+     612
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3553,
+    "area_px": 663,
+    "part": "roof",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     359,
+     256,
+     409,
+     286
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r300_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r300_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r300_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r300_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam1_r330",
+  "vehicle": "damaged",
+  "camera": "cam1",
+  "angle": 330,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   485,
+   252,
+   1592,
+   1293
+  ],
+  "exposure_scale": 3.4383,
+  "quality_raw": {
+   "median_brightness": 0.2392,
+   "saturated_fraction": 0.03485,
+   "sharpness": 0.00564,
+   "crop_width": 1107,
+   "crop_height": 1041
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 16,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.4389,
+    "area_px": 1084,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     898,
+     260,
+     953,
+     306
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.356,
+    "area_px": 1075,
+    "part": "roof",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     411,
+     372,
+     452,
+     417
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3406,
+    "area_px": 518,
+    "part": "rear_glass",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     391,
+     507,
+     415,
+     532
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam1_r330_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam1_r330_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam1_r330_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam1_r330_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r000",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 0,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   327,
+   538,
+   1582,
+   1071
+  ],
+  "exposure_scale": 2.4605,
+  "quality_raw": {
+   "median_brightness": 0.2078,
+   "saturated_fraction": 0.00503,
+   "sharpness": 0.004816,
+   "crop_width": 1255,
+   "crop_height": 533
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.7177,
+    "area_px": 1111,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     497,
+     221,
+     563,
+     246
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r000_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r000_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r000_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r000_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r030",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 30,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   246,
+   534,
+   1559,
+   1061
+  ],
+  "exposure_scale": 2.5893,
+  "quality_raw": {
+   "median_brightness": 0.2157,
+   "saturated_fraction": 0.0059,
+   "sharpness": 0.005121,
+   "crop_width": 1313,
+   "crop_height": 527
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r030_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r030_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r030_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r030_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r060",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 60,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   212,
+   536,
+   1470,
+   1110
+  ],
+  "exposure_scale": 2.5061,
+  "quality_raw": {
+   "median_brightness": 0.2118,
+   "saturated_fraction": 0.00804,
+   "sharpness": 0.004482,
+   "crop_width": 1258,
+   "crop_height": 574
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.4753,
+    "area_px": 210,
+    "part": "rear_bumper",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     69,
+     344,
+     130,
+     367
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3961,
+    "area_px": 304,
+    "part": "rear_bumper",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     159,
+     308,
+     223,
+     328
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r060_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r060_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r060_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r060_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r090",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 90,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   368,
+   550,
+   1316,
+   1124
+  ],
+  "exposure_scale": 2.6129,
+  "quality_raw": {
+   "median_brightness": 0.2196,
+   "saturated_fraction": 0.00661,
+   "sharpness": 0.00362,
+   "crop_width": 948,
+   "crop_height": 574
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 12,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r090_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r090_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r090_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r090_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r120",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 120,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   687,
+   560,
+   1437,
+   1102
+  ],
+  "exposure_scale": 2.603,
+  "quality_raw": {
+   "median_brightness": 0.2235,
+   "saturated_fraction": 0.00548,
+   "sharpness": 0.003675,
+   "crop_width": 750,
+   "crop_height": 542
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_left",
+   "front_door_left",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "side_window",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r120_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r120_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r120_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r120_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r150",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 150,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   521,
+   549,
+   1690,
+   1128
+  ],
+  "exposure_scale": 2.3961,
+  "quality_raw": {
+   "median_brightness": 0.2157,
+   "saturated_fraction": 0.00668,
+   "sharpness": 0.004055,
+   "crop_width": 1169,
+   "crop_height": 579
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 12,
+  "part_classes": [
+   "body_side_left",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.7242,
+    "area_px": 315,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     253,
+     239,
+     287,
+     312
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r150_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r150_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r150_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r150_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r180",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 180,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   451,
+   547,
+   1743,
+   1101
+  ],
+  "exposure_scale": 2.4473,
+  "quality_raw": {
+   "median_brightness": 0.2118,
+   "saturated_fraction": 0.00454,
+   "sharpness": 0.004084,
+   "crop_width": 1292,
+   "crop_height": 554
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 13,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.6762,
+    "area_px": 369,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     416,
+     243,
+     483,
+     330
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r180_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r180_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r180_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r180_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r210",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 210,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   419,
+   547,
+   1715,
+   1066
+  ],
+  "exposure_scale": 2.505,
+  "quality_raw": {
+   "median_brightness": 0.2235,
+   "saturated_fraction": 0.00793,
+   "sharpness": 0.004982,
+   "crop_width": 1296,
+   "crop_height": 519
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 11,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8773,
+    "area_px": 358,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     601,
+     257,
+     664,
+     332
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r210_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r210_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r210_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r210_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r240",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 240,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   415,
+   554,
+   1589,
+   1099
+  ],
+  "exposure_scale": 2.4172,
+  "quality_raw": {
+   "median_brightness": 0.2157,
+   "saturated_fraction": 0.00951,
+   "sharpness": 0.004794,
+   "crop_width": 1174,
+   "crop_height": 545
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 12,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.7564,
+    "area_px": 295,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     752,
+     249,
+     791,
+     320
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.5184,
+    "area_px": 976,
+    "part": "windshield",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     492,
+     70,
+     543,
+     105
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r240_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r240_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r240_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r240_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r270",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 270,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   562,
+   566,
+   1374,
+   1090
+  ],
+  "exposure_scale": 2.6259,
+  "quality_raw": {
+   "median_brightness": 0.2,
+   "saturated_fraction": 0.00853,
+   "sharpness": 0.00633,
+   "crop_width": 812,
+   "crop_height": 524
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 10,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_right",
+   "rear_door_left",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.3282,
+    "area_px": 331,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     541,
+     170,
+     626,
+     230
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r270_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r270_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r270_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r270_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r300",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 300,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   752,
+   569,
+   1437,
+   1066
+  ],
+  "exposure_scale": 2.4771,
+  "quality_raw": {
+   "median_brightness": 0.1922,
+   "saturated_fraction": 0.00824,
+   "sharpness": 0.006251,
+   "crop_width": 685,
+   "crop_height": 497
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 12,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "mirror_right",
+   "rear_door_right",
+   "side_window",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r300_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r300_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r300_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r300_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam2_r330",
+  "vehicle": "damaged",
+  "camera": "cam2",
+  "angle": 330,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   515,
+   549,
+   1567,
+   1080
+  ],
+  "exposure_scale": 2.4344,
+  "quality_raw": {
+   "median_brightness": 0.2078,
+   "saturated_fraction": 0.00727,
+   "sharpness": 0.005587,
+   "crop_width": 1052,
+   "crop_height": 531
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_right",
+   "roof",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.4696,
+    "area_px": 405,
+    "part": null,
+    "attributed": false,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "bbox": [
+     342,
+     418,
+     393,
+     435
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam2_r330_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam2_r330_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam2_r330_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam2_r330_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r000",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 0,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   778,
+   303,
+   1466,
+   1261
+  ],
+  "exposure_scale": 2.886,
+  "quality_raw": {
+   "median_brightness": 0.349,
+   "saturated_fraction": 0.02644,
+   "sharpness": 0.00719,
+   "crop_width": 688,
+   "crop_height": 958
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_left",
+   "front_door_right",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "mirror_right",
+   "rear_door_left",
+   "roof",
+   "side_window",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.6608,
+    "area_px": 348,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     403,
+     639,
+     427,
+     658
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.6028,
+    "area_px": 1597,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     380,
+     479,
+     428,
+     530
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.5737,
+    "area_px": 924,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     274,
+     570,
+     369,
+     656
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.4657,
+    "area_px": 366,
+    "part": "windshield",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     388,
+     369,
+     426,
+     386
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.4019,
+    "area_px": 430,
+    "part": "windshield",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     387,
+     368,
+     425,
+     388
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3634,
+    "area_px": 722,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     295,
+     584,
+     369,
+     656
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r000_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r000_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r000_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r000_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r030",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 30,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   683,
+   307,
+   1664,
+   1240
+  ],
+  "exposure_scale": 2.9434,
+  "quality_raw": {
+   "median_brightness": 0.2314,
+   "saturated_fraction": 0.0162,
+   "sharpness": 0.005389,
+   "crop_width": 981,
+   "crop_height": 933
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 15,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8574,
+    "area_px": 437,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     536,
+     592,
+     595,
+     644
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.6955,
+    "area_px": 311,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     728,
+     650,
+     747,
+     669
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.5024,
+    "area_px": 296,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     428,
+     508,
+     480,
+     543
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r030_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r030_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r030_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r030_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r060",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 60,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   464,
+   334,
+   1719,
+   1149
+  ],
+  "exposure_scale": 2.9589,
+  "quality_raw": {
+   "median_brightness": 0.2275,
+   "saturated_fraction": 0.01474,
+   "sharpness": 0.005322,
+   "crop_width": 1255,
+   "crop_height": 815
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "mirror_left",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.8116,
+    "area_px": 1312,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     486,
+     274,
+     546,
+     305
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.5586,
+    "area_px": 844,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     420,
+     382,
+     466,
+     407
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.4155,
+    "area_px": 318,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     963,
+     476,
+     1048,
+     508
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3339,
+    "area_px": 402,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     943,
+     471,
+     1040,
+     505
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3001,
+    "area_px": 258,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     971,
+     485,
+     1050,
+     509
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r060_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r060_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r060_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r060_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r090",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 90,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   325,
+   380,
+   1701,
+   1031
+  ],
+  "exposure_scale": 2.9197,
+  "quality_raw": {
+   "median_brightness": 0.2431,
+   "saturated_fraction": 0.01862,
+   "sharpness": 0.006104,
+   "crop_width": 1376,
+   "crop_height": 651
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 15,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.7838,
+    "area_px": 389,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     1169,
+     230,
+     1236,
+     262
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3417,
+    "area_px": 700,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     640,
+     386,
+     701,
+     408
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r090_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r090_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r090_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r090_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r120",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 120,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   334,
+   404,
+   1654,
+   1186
+  ],
+  "exposure_scale": 2.9998,
+  "quality_raw": {
+   "median_brightness": 0.2353,
+   "saturated_fraction": 0.0138,
+   "sharpness": 0.004918,
+   "crop_width": 1320,
+   "crop_height": 782
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.7558,
+    "area_px": 133,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     1075,
+     194,
+     1112,
+     214
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r120_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r120_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r120_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r120_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r150",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 150,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   359,
+   370,
+   1514,
+   1296
+  ],
+  "exposure_scale": 2.6752,
+  "quality_raw": {
+   "median_brightness": 0.2431,
+   "saturated_fraction": 0.02725,
+   "sharpness": 0.003872,
+   "crop_width": 1155,
+   "crop_height": 926
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 15,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_right",
+   "headlight_right",
+   "hood",
+   "rear_bumper",
+   "rear_door_right",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "dent",
+    "confidence": 0.7464,
+    "area_px": 494,
+    "part": "rear_glass",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     378,
+     494,
+     407,
+     514
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.5536,
+    "area_px": 1074,
+    "part": "body_side_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     595,
+     581,
+     664,
+     665
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.3479,
+    "area_px": 1387,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     940,
+     254,
+     995,
+     293
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.3334,
+    "area_px": 689,
+    "part": "front_door_right",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     839,
+     281,
+     937,
+     371
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r150_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r150_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r150_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r150_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r180",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 180,
+  "crop_ok": false,
+  "eligible": false,
+  "crop_xyxy": [
+   0,
+   0,
+   2304,
+   1296
+  ],
+  "exposure_scale": 2.6536,
+  "quality_raw": {
+   "median_brightness": 0.1961,
+   "saturated_fraction": 0.01246,
+   "sharpness": 0.003324,
+   "crop_width": 2304,
+   "crop_height": 1296
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 8,
+  "part_classes": [
+   "front_door_left",
+   "rear_glass",
+   "side_window",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.6194,
+    "area_px": 5320,
+    "part": "trunk_tailgate",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     1,
+     4,
+     290,
+     60
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r180_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r180_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r180_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r180_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r210",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 210,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   658,
+   383,
+   1744,
+   1296
+  ],
+  "exposure_scale": 2.9229,
+  "quality_raw": {
+   "median_brightness": 0.2627,
+   "saturated_fraction": 0.0171,
+   "sharpness": 0.004277,
+   "crop_width": 1086,
+   "crop_height": 913
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 16,
+  "part_classes": [
+   "body_side_left",
+   "body_side_right",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "side_window",
+   "taillight_left",
+   "taillight_right",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.6401,
+    "area_px": 73,
+    "part": "rear_bumper",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     940,
+     777,
+     966,
+     793
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.6108,
+    "area_px": 2527,
+    "part": "rear_glass",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     665,
+     461,
+     733,
+     519
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.5913,
+    "area_px": 583,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     191,
+     286,
+     266,
+     372
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.4548,
+    "area_px": 443,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     230,
+     137,
+     256,
+     156
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r210_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r210_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r210_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r210_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r240",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 240,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   575,
+   415,
+   1883,
+   1256
+  ],
+  "exposure_scale": 3.0003,
+  "quality_raw": {
+   "median_brightness": 0.2431,
+   "saturated_fraction": 0.01463,
+   "sharpness": 0.004911,
+   "crop_width": 1308,
+   "crop_height": 841
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 13,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.7917,
+    "area_px": 237,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     329,
+     404,
+     391,
+     485
+    ]
+   },
+   {
+    "class": "dent",
+    "confidence": 0.5062,
+    "area_px": 737,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     418,
+     403,
+     474,
+     431
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.4352,
+    "area_px": 232,
+    "part": "roof",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     837,
+     229,
+     892,
+     256
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r240_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r240_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r240_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r240_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r270",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 270,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   485,
+   413,
+   1900,
+   1086
+  ],
+  "exposure_scale": 2.9584,
+  "quality_raw": {
+   "median_brightness": 0.2431,
+   "saturated_fraction": 0.01671,
+   "sharpness": 0.005586,
+   "crop_width": 1415,
+   "crop_height": 673
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 13,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.818,
+    "area_px": 157,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     562,
+     450,
+     630,
+     505
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.4723,
+    "area_px": 497,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     137,
+     201,
+     229,
+     241
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r270_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r270_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r270_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r270_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r300",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 300,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   518,
+   356,
+   1810,
+   1187
+  ],
+  "exposure_scale": 2.9993,
+  "quality_raw": {
+   "median_brightness": 0.2235,
+   "saturated_fraction": 0.01408,
+   "sharpness": 0.004987,
+   "crop_width": 1292,
+   "crop_height": 831
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "hood",
+   "mirror_right",
+   "rear_bumper",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.8506,
+    "area_px": 649,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     143,
+     362,
+     212,
+     440
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.7381,
+    "area_px": 139,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     702,
+     495,
+     752,
+     528
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.572,
+    "area_px": 623,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     180,
+     494,
+     295,
+     537
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.4973,
+    "area_px": 80,
+    "part": "rear_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     877,
+     358,
+     912,
+     370
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r300_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r300_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r300_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r300_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ },
+ {
+  "id": "damaged_bmw_cam3_r330",
+  "vehicle": "damaged",
+  "camera": "cam3",
+  "angle": 330,
+  "crop_ok": true,
+  "eligible": true,
+  "crop_xyxy": [
+   578,
+   317,
+   1609,
+   1261
+  ],
+  "exposure_scale": 2.9429,
+  "quality_raw": {
+   "median_brightness": 0.2392,
+   "saturated_fraction": 0.01562,
+   "sharpness": 0.005055,
+   "crop_width": 1031,
+   "crop_height": 944
+  },
+  "eligible_parts": [],
+  "n_parts_detected": 14,
+  "part_classes": [
+   "body_side_left",
+   "front_bumper",
+   "front_door_left",
+   "headlight_left",
+   "headlight_right",
+   "hood",
+   "mirror_right",
+   "rear_door_left",
+   "rear_glass",
+   "roof",
+   "taillight_left",
+   "trunk_tailgate",
+   "wheel",
+   "windshield"
+  ],
+  "detections": [
+   {
+    "class": "scratch",
+    "confidence": 0.6213,
+    "area_px": 516,
+    "part": "hood",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     426,
+     588,
+     478,
+     633
+    ]
+   },
+   {
+    "class": "scratch",
+    "confidence": 0.614,
+    "area_px": 58,
+    "part": "front_door_left",
+    "attributed": true,
+    "reason": "assigned",
+    "bbox": [
+     763,
+     471,
+     777,
+     490
+    ]
+   }
+  ],
+  "img": {
+   "rgb": "img/bmwseq/damaged_bmw_cam3_r330_rgb.jpg",
+   "damage": "img/bmwseq/damaged_bmw_cam3_r330_damage.jpg",
+   "parts": "img/bmwseq/damaged_bmw_cam3_r330_parts.jpg",
+   "thumb": "img/bmwseq/damaged_bmw_cam3_r330_thumb.jpg"
+  },
+  "subject": "bmw_white"
+ }
+]

@@ -1,0 +1,359 @@
+{
+ "measurements": {
+  "sg_fdm": {
+   "source": "PS_Results.md section 2.3, three fixed-pose repeats, cam3",
+   "reference": "nominal CAD, not measured geometry",
+   "summary": {
+    "mae_mm": 0.604,
+    "median_abs_error_mm": 0.545,
+    "rmse_mm": 0.709,
+    "mean_per_feature_sd_mm": 0.0043,
+    "max_across_repeat_range_mm": 0.0149,
+    "sign_agreement": "7 of 8"
+   },
+   "features": [
+    {
+     "name": "FDM-C08",
+     "nominal_mm": -0.5594,
+     "recovered_mm": -0.163,
+     "sd_mm": 0.0008,
+     "abs_error_mm": 0.3964,
+     "sign_correct": true,
+     "released": true
+    },
+    {
+     "name": "FDM-C16",
+     "nominal_mm": -1.1243,
+     "recovered_mm": -0.6712,
+     "sd_mm": 0.003,
+     "abs_error_mm": 0.4532,
+     "sign_correct": true,
+     "released": true
+    },
+    {
+     "name": "FDM-C30",
+     "nominal_mm": -2.1436,
+     "recovered_mm": -1.5072,
+     "sd_mm": 0.0078,
+     "abs_error_mm": 0.6364,
+     "sign_correct": true,
+     "released": true
+    },
+    {
+     "name": "FDM-X30",
+     "nominal_mm": 2.1436,
+     "recovered_mm": 2.1441,
+     "sd_mm": 0.0046,
+     "abs_error_mm": 0.0005,
+     "sign_correct": true,
+     "released": true
+    },
+    {
+     "name": "FDM-D25",
+     "nominal_mm": -0.8741,
+     "recovered_mm": -0.147,
+     "sd_mm": 0.008,
+     "abs_error_mm": 0.7271,
+     "sign_correct": true,
+     "released": true
+    },
+    {
+     "name": "FDM-D30",
+     "nominal_mm": -1.0489,
+     "recovered_mm": 0.0573,
+     "sd_mm": 0.0051,
+     "abs_error_mm": 1.1062,
+     "sign_correct": false,
+     "released": false,
+     "rejection_reason": "reconstructed with the wrong sign; concavity not recovered"
+    },
+    {
+     "name": "FDM-W0",
+     "nominal_mm": 1.0,
+     "recovered_mm": 0.6637,
+     "sd_mm": 0.0042,
+     "abs_error_mm": 0.3363,
+     "sign_correct": true,
+     "released": true
+    },
+    {
+     "name": "FDM-W1",
+     "nominal_mm": 2.0,
+     "recovered_mm": 0.8203,
+     "sd_mm": 0.0013,
+     "abs_error_mm": 1.1797,
+     "sign_correct": true,
+     "released": true
+    }
+   ]
+  },
+  "sheet_metal": {
+   "source": "PS_Results.md section 2.4, three fixed-pose repeats, cam3",
+   "reference": "calliper depth on hand-formed dents in primed steel",
+   "summary": {
+    "valid_only_mae_mm": 0.38,
+    "valid_only_range_mm": [
+     0.29,
+     0.47
+    ],
+    "valid_coverage": "3 of 4",
+    "mae_if_rejected_dent_forced_mm": 0.94,
+    "note": "Forcing dent 4 into the average despite its failed local reconstruction nearly triples the error. Abstention is part of the measurement result."
+   },
+   "features": [
+    {
+     "name": "Dent 1",
+     "ball_bearing_mm": 8,
+     "calliper_mm": 2.3,
+     "inner_diameter_mm": 5.6,
+     "response_px": 20.13,
+     "response_sd_px": 0.15,
+     "recovered_mm": [
+      2.1,
+      2.28
+     ],
+     "abs_error_mm": [
+      0.02,
+      0.2
+     ],
+     "released": true,
+     "note": "1% to 9% low"
+    },
+    {
+     "name": "Dent 2",
+     "ball_bearing_mm": 7,
+     "calliper_mm": 2.7,
+     "inner_diameter_mm": 5.6,
+     "response_px": 21.87,
+     "response_sd_px": 0.46,
+     "recovered_mm": [
+      2.19,
+      2.37
+     ],
+     "abs_error_mm": [
+      0.33,
+      0.51
+     ],
+     "released": true,
+     "note": "12% to 19% low, compressed"
+    },
+    {
+     "name": "Dent 3",
+     "ball_bearing_mm": 6,
+     "calliper_mm": 2.8,
+     "inner_diameter_mm": 5.0,
+     "response_px": 19.95,
+     "response_sd_px": 0.28,
+     "recovered_mm": [
+      2.09,
+      2.27
+     ],
+     "abs_error_mm": [
+      0.53,
+      0.71
+     ],
+     "released": true,
+     "note": "19% to 25% low, compressed"
+    },
+    {
+     "name": "Dent 4",
+     "ball_bearing_mm": 5,
+     "calliper_mm": 2.4,
+     "inner_diameter_mm": 4.0,
+     "response_px": -1.88,
+     "response_sd_px": 0.13,
+     "recovered_mm": null,
+     "abs_error_mm": null,
+     "released": false,
+     "rejection_reason": "integrated response has the wrong sign, about -0.20 to -0.22 mm. The normal anomaly localises the dent but no severity value is released."
+    }
+   ]
+  },
+  "bmw_white": {
+   "source": "PS_Results.md sections 3.3 and 3.4",
+   "reference": "calliper depth on hand-formed dents in a die-cast bonnet and door",
+   "summary": {
+    "multidamage_mae_mm": 0.42,
+    "fixed_pose_sd_mm": 0.01,
+    "note": "All three depression polarities are correct and all three are compressed. The dominant limitation is systematic depth compression rather than acquisition noise."
+   },
+   "features": [
+    {
+     "name": "Bonnet, top left",
+     "calliper_mm": 0.6,
+     "footprint": "2.2 mm diameter",
+     "local_usable_lights": 11,
+     "normal_departure_deg": [
+      6.3,
+      8.11
+     ],
+     "recovered_mm": 0.39,
+     "sd_mm": 0.01,
+     "abs_error_mm": 0.21,
+     "released": true,
+     "note": "36% low, exploratory"
+    },
+    {
+     "name": "Bonnet, top right",
+     "calliper_mm": 0.9,
+     "footprint": "7.8 by 2.0 mm",
+     "local_usable_lights": 12,
+     "normal_departure_deg": [
+      5.5,
+      7.22
+     ],
+     "recovered_mm": 0.5,
+     "sd_mm": 0.01,
+     "abs_error_mm": 0.4,
+     "released": true,
+     "note": "44% low, exploratory"
+    },
+    {
+     "name": "Bonnet, middle right",
+     "calliper_mm": 0.9,
+     "footprint": "1.9 mm diameter",
+     "local_usable_lights": 10,
+     "normal_departure_deg": [
+      3.84,
+      6.93
+     ],
+     "recovered_mm": 0.25,
+     "sd_mm": 0.01,
+     "abs_error_mm": 0.65,
+     "released": true,
+     "note": "72% low, exploratory"
+    },
+    {
+     "name": "Rear door dent",
+     "calliper_mm": 1.0,
+     "footprint": "5 mm impression",
+     "local_usable_lights": 8,
+     "normal_departure_deg": [
+      8.1,
+      11.1
+     ],
+     "recovered_mm": 0.068,
+     "sd_mm": null,
+     "abs_error_mm": 0.93,
+     "released": false,
+     "rejection_reason": "strict refinement removes the exact centre of the dent. The panel passes the capture-level gate but depth is withheld for this instance."
+    }
+   ]
+  }
+ },
+ "capture_support": {
+  "ps_bmw_white_damaged_hood_r000_150k": {
+   "requested_px": 162431,
+   "usable_lights_p10_med_p90": [
+    11,
+    12,
+    12
+   ],
+   "region_at_least_six": 0.99998,
+   "retained": 0.9764,
+   "state": "valid"
+  },
+  "ps_bmw_white_damaged_doors_r270_150k": {
+   "requested_px": 37485,
+   "usable_lights_p10_med_p90": [
+    6,
+    8,
+    8
+   ],
+   "region_at_least_six": 0.9882,
+   "retained": 0.8004,
+   "state": "valid"
+  },
+  "ps_bmw_white_multidamage_hood_cam3_150k_repeat01": {
+   "requested_px": 139069,
+   "usable_lights_p10_med_p90": [
+    10,
+    11,
+    12
+   ],
+   "region_at_least_six": 0.99935,
+   "retained": 0.97166,
+   "state": "valid"
+  },
+  "ps_sheetmetal_grey_dents_cam3_150k_repeat01": {
+   "requested_px": 286481,
+   "usable_lights_p10_med_p90": [
+    9,
+    10,
+    10
+   ],
+   "region_at_least_six": 0.99938,
+   "retained": 0.9773,
+   "state": "valid"
+  }
+ },
+ "bmw_segmentation": {
+  "source": "segment_chamber.py, run 2026-09-06 for the viewer",
+  "finding": "The two perception streams want different framing. A photometric stereo capture fills the frame with one panel, which is the framing that breaks the RGB stream: the COCO vehicle crop finds no car in a bonnet close-up, so the part model runs at the wrong object-to-frame ratio and misattributes. Damage detection itself transfers, but only with the site-adapted checkpoint.",
+  "runs": [
+   {
+    "capture": "ps_bmw_white_multidamage_hood_cam3_150k_repeat01",
+    "damage_model": "CarDD 6-class, best_imgsz1024.pt",
+    "crop": "none, no vehicle found",
+    "detections": [],
+    "note": "Three dents and three scratches that photometric stereo localises are not detected."
+   },
+   {
+    "capture": "ps_bmw_white_multidamage_hood_cam3_150k_repeat01",
+    "damage_model": "site-adapted YOLO11s 2-class",
+    "crop": "none, no vehicle found",
+    "detections": [
+     {
+      "class": "dent",
+      "confidence": 0.85,
+      "assigned_part": "trunk_tailgate",
+      "attribution_correct": false
+     }
+    ],
+    "note": "Damage found. Part attribution wrong because the part model cannot parse a bonnet close-up."
+   },
+   {
+    "capture": "ps_bmw_white_damaged_hood_r000_150k",
+    "damage_model": "CarDD 6-class, best_imgsz1024.pt",
+    "crop": "none, no vehicle found",
+    "detections": [
+     {
+      "class": "glass shatter",
+      "confidence": 0.39,
+      "assigned_part": "trunk_tailgate",
+      "attribution_correct": false
+     }
+    ],
+    "note": "False positive class on an undamaged region."
+   },
+   {
+    "capture": "ps_bmw_white_damaged_hood_r000_150k",
+    "damage_model": "site-adapted YOLO11s 2-class",
+    "crop": "none, no vehicle found",
+    "detections": [
+     {
+      "class": "dent",
+      "confidence": 0.83,
+      "assigned_part": "side_window",
+      "attribution_correct": false
+     }
+    ],
+    "note": "Damage found, attribution wrong."
+   },
+   {
+    "capture": "ps_bmw_white_damaged_doors_r270_150k",
+    "damage_model": "CarDD 6-class, best_imgsz1024.pt",
+    "crop": "auto, [513,377,1833,1033]",
+    "detections": [
+     {
+      "class": "dent",
+      "confidence": 0.4,
+      "assigned_part": "front_door_left",
+      "attribution_correct": true
+     }
+    ],
+    "note": "The one BMW capture framed wide enough for the crop to succeed. Damage and attribution both correct."
+   }
+  ]
+ }
+}

@@ -1,0 +1,90 @@
+[
+ {
+  "confidence_threshold": 0.3,
+  "clean_part_class_results": 28,
+  "clean_with_consensus": 15,
+  "clean_observations": 181,
+  "damaged_part_class_results": 27,
+  "damaged_with_consensus": 17,
+  "damaged_observations": 412,
+  "damaged_over_clean_results": 0.96,
+  "damaged_over_clean_with_consensus": 1.13
+ },
+ {
+  "confidence_threshold": 0.4,
+  "clean_part_class_results": 27,
+  "clean_with_consensus": 15,
+  "clean_observations": 180,
+  "damaged_part_class_results": 26,
+  "damaged_with_consensus": 17,
+  "damaged_observations": 411,
+  "damaged_over_clean_results": 0.96,
+  "damaged_over_clean_with_consensus": 1.13
+ },
+ {
+  "confidence_threshold": 0.5,
+  "clean_part_class_results": 25,
+  "clean_with_consensus": 15,
+  "clean_observations": 173,
+  "damaged_part_class_results": 26,
+  "damaged_with_consensus": 17,
+  "damaged_observations": 411,
+  "damaged_over_clean_results": 1.04,
+  "damaged_over_clean_with_consensus": 1.13
+ },
+ {
+  "confidence_threshold": 0.6,
+  "clean_part_class_results": 20,
+  "clean_with_consensus": 13,
+  "clean_observations": 161,
+  "damaged_part_class_results": 23,
+  "damaged_with_consensus": 17,
+  "damaged_observations": 406,
+  "damaged_over_clean_results": 1.15,
+  "damaged_over_clean_with_consensus": 1.31
+ },
+ {
+  "confidence_threshold": 0.7,
+  "clean_part_class_results": 16,
+  "clean_with_consensus": 11,
+  "clean_observations": 150,
+  "damaged_part_class_results": 22,
+  "damaged_with_consensus": 17,
+  "damaged_observations": 404,
+  "damaged_over_clean_results": 1.38,
+  "damaged_over_clean_with_consensus": 1.55
+ },
+ {
+  "confidence_threshold": 0.8,
+  "clean_part_class_results": 10,
+  "clean_with_consensus": 6,
+  "clean_observations": 105,
+  "damaged_part_class_results": 15,
+  "damaged_with_consensus": 12,
+  "damaged_observations": 354,
+  "damaged_over_clean_results": 1.5,
+  "damaged_over_clean_with_consensus": 2.0
+ },
+ {
+  "confidence_threshold": 0.85,
+  "clean_part_class_results": 1,
+  "clean_with_consensus": 1,
+  "clean_observations": 34,
+  "damaged_part_class_results": 14,
+  "damaged_with_consensus": 12,
+  "damaged_observations": 351,
+  "damaged_over_clean_results": 14.0,
+  "damaged_over_clean_with_consensus": 12.0
+ },
+ {
+  "confidence_threshold": 0.9,
+  "clean_part_class_results": 0,
+  "clean_with_consensus": 0,
+  "clean_observations": 0,
+  "damaged_part_class_results": 9,
+  "damaged_with_consensus": 8,
+  "damaged_observations": 250,
+  "damaged_over_clean_results": 9.0,
+  "damaged_over_clean_with_consensus": 8.0
+ }
+]

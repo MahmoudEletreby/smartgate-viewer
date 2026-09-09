@@ -1,0 +1,58 @@
+{
+ "status": "Research preview: validated on a machined artefact only",
+ "claim": "Photometric stereo can propose damage regions with no RGB segmentation in the loop. Its detection limit is a limit on surface slope, not on depth.",
+ "slope_not_depth": [
+  {
+   "feature": "C08",
+   "rim_slope_deg": 8,
+   "nominal_depth_mm": 0.56,
+   "detected": "0 of 6"
+  },
+  {
+   "feature": "D25",
+   "rim_slope_deg": 8,
+   "nominal_depth_mm": 0.87,
+   "detected": "1 of 6"
+  },
+  {
+   "feature": "D30",
+   "rim_slope_deg": 8,
+   "nominal_depth_mm": 1.05,
+   "detected": "1 of 6"
+  },
+  {
+   "feature": "C16",
+   "rim_slope_deg": 16,
+   "nominal_depth_mm": 1.12,
+   "detected": "0 of 6"
+  },
+  {
+   "feature": "C30",
+   "rim_slope_deg": 30,
+   "nominal_depth_mm": 2.14,
+   "detected": "5 of 6"
+  },
+  {
+   "feature": "X30",
+   "rim_slope_deg": 30,
+   "nominal_depth_mm": 2.14,
+   "detected": "5 of 6"
+  },
+  {
+   "feature": "W0",
+   "rim_slope_deg": 90,
+   "nominal_depth_mm": 1.0,
+   "detected": "4 of 6"
+  },
+  {
+   "feature": "W1",
+   "rim_slope_deg": 90,
+   "nominal_depth_mm": 2.0,
+   "detected": "5 of 6"
+  }
+ ],
+ "deciding_comparison": "W0 is a 1.00 mm boss found in 4 captures of 6. C16 is a deeper 1.12 mm cap found in none. W0 has a vertical wall and C16 a 16 degree rim. Depth does not order the outcomes; slope does.",
+ "negative_control": "Both views of the undamaged BMW bonnet produced zero proposals. The designed styling channels are visible in the departure map and sit below threshold throughout.",
+ "range_rover": "Zero proposals on all six gloss-black Range Rover captures, including panels where RGB detects scratches at 0.9 confidence. At three to four usable lights of twelve there is no surface measurement to propose from.",
+ "not_supported": "Nothing here is a damage detector evaluated on damage. Every positive is a machined spherical cap or a rectangular boss on a matte printed plate. This must not be merged into the fusion results until it has been evaluated on real damage."
+}

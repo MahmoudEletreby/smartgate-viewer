@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartGate inspection record</title>
+<style>
+:root{
+  --ground:#F4F3F1; --panel:#FBFAF9; --rule:#D8D5D1; --rule2:#E8E6E2;
+  --ink:#1A1A19; --ink2:#6B6864; --ink3:#9A9692;
+  --valid:#009E73; --partial:#E69F00; --invalid:#8A8683; --na:#C4C1BD;
+  --scratch:#0072B2; --dent:#CC79A7; --excl:#D55E00;
+  --font:"IBM Plex Sans","Source Sans 3","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono","Consolas","Menlo",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--ground);color:var(--ink);font-family:var(--font);font-size:13px;line-height:1.35;font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-variant-numeric:tabular-nums}
+button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+b,strong{font-weight:600}
+small{font-size:11px;color:var(--ink2)}
+.num{font-variant-numeric:tabular-nums}
+.u{font-size:11px;color:var(--ink2);margin-left:2px}
+.lab{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2)}
+.muted{color:var(--ink2)}
+.tiny{font-size:11px}
+hr{border:0;border-top:1px solid var(--rule);margin:8px 0}
+
+#app{display:grid;height:100vh;width:100vw;grid-template-rows:44px 48px minmax(0,1fr) 150px;grid-template-columns:280px minmax(0,1fr) 340px;background:var(--rule)}
+#app>*{background:var(--panel);min-width:0;min-height:0}
+#subjectbar{grid-column:1/4;display:flex;align-items:stretch;border-bottom:1px solid var(--rule);gap:1px;background:var(--rule)}
+#header{grid-column:1/4;display:flex;align-items:center;gap:16px;padding:0 12px;border-bottom:1px solid var(--rule)}
+#left{grid-row:3;grid-column:1;display:flex;flex-direction:column;overflow:hidden}
+#stage{grid-row:3;grid-column:2;display:flex;flex-direction:column;overflow:hidden}
+#right{grid-row:3;grid-column:3;overflow:auto;padding:10px 12px 20px}
+#strip{grid-column:1/4;display:flex;align-items:stretch;border-top:1px solid var(--rule);overflow:hidden}
+
+/* subject bar */
+.subj{flex:1 1 0;display:flex;align-items:center;gap:10px;padding:0 12px;background:var(--panel);text-align:left;min-height:44px}
+.subj[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.subj[aria-pressed="true"] small{color:#D8D5D1}
+.subj .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+.subj .t{display:flex;flex-direction:column;line-height:1.15}
+.subj .t b{font-size:13px}
+.subj .t small{font-size:11px}
+#subjectbar .aux{flex:0 0 auto;display:flex;gap:1px}
+#subjectbar .aux button{background:var(--panel);padding:0 14px;min-height:44px;font-size:12px;color:var(--ink2)}
+#subjectbar .aux button:hover{color:var(--ink)}
+
+/* header */
+#header h1{font-size:15px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
+#header .headline{flex:1 1 80px;min-width:0;font-size:12px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#thresh{flex:0 0 auto}
+.seg{display:inline-flex;flex:0 0 auto;border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+.seg button{padding:0 12px;min-height:34px;font-size:12px;border-right:1px solid var(--rule);white-space:nowrap;flex:0 0 auto}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+#thresh{display:flex;align-items:center;gap:10px;white-space:nowrap}
+#thresh input[type=range]{width:150px;accent-color:var(--ink)}
+#thresh .k{display:inline-flex;flex-direction:column;line-height:1.1;align-items:flex-end;min-width:44px}
+#thresh .k b{font-size:15px;font-weight:600}
+#thresh .k small{font-size:10px}
+#thresh .sep{width:1px;height:26px;background:var(--rule)}
+
+/* left rail */
+#left .pane{padding:10px 12px;border-bottom:1px solid var(--rule)}
+#left table.t{font-size:11px}
+#left table.t td,#left table.t th{padding:3px 3px}
+#left table.t .u{display:none}
+#left .list{flex:1 1 auto;overflow:auto}
+#schematic{width:100%;max-width:264px;height:auto;display:block;margin:0 auto}
+#schematic .body{fill:var(--ground);stroke:var(--ink3);stroke-width:1.4}
+#schematic .lead{stroke:var(--rule);stroke-width:1;stroke-dasharray:2 3}
+#schematic .part{fill:var(--panel);stroke:var(--ink3);stroke-width:1;cursor:pointer;transition:stroke-width .08s}
+#schematic .part.glass{stroke-dasharray:none;opacity:.9}
+#schematic .part.lamp{stroke-width:.8}
+#schematic .part:hover{stroke:var(--ink);stroke-width:1.6}
+#schematic .part.sel{stroke:var(--ink);stroke-width:2.2}
+#schematic .part.inert{fill:none;stroke:var(--rule);stroke-dasharray:2 2;cursor:default}
+#schematic .part.inert:hover{stroke:var(--rule);stroke-width:1}
+#schematic text{font-size:9px;fill:var(--ink2);pointer-events:none;font-family:var(--font)}
+#schematic .axis{font-size:9px;fill:var(--ink3);letter-spacing:.08em;text-transform:uppercase}
+.prow{display:grid;grid-template-columns:14px 1fr auto;align-items:center;gap:8px;width:100%;padding:0 12px;min-height:34px;text-align:left;border-bottom:1px solid var(--rule2)}
+.prow[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.prow[aria-pressed="true"] small{color:#D8D5D1}
+.prow .dot{width:9px;height:9px;border-radius:50%}
+.prow .n{font-size:12px}
+.prow .r{font-size:11px;color:var(--ink2);text-align:right}
+.prow[aria-pressed="true"] .r{color:#D8D5D1}
+.legend{display:flex;flex-wrap:wrap;gap:8px 12px;font-size:11px;color:var(--ink2);padding:6px 12px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:9px;height:9px;border-radius:50%;display:inline-block}
+
+/* stage */
+#tabs{display:flex;align-items:stretch;border-bottom:1px solid var(--rule);min-height:40px}
+#tabs .grp{display:flex;align-items:stretch}
+#tabs .grp+.grp{border-left:1px solid var(--rule)}
+#tabs button.tab{padding:0 12px;min-height:40px;font-size:12px;color:var(--ink2);border-bottom:2px solid transparent}
+#tabs button.tab[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+#tabs button.tab[disabled]{color:var(--na);cursor:default}
+#tabs .spacer{flex:1}
+#tabs .seg{margin:6px 8px 6px 0}
+#tabs .seg button{min-height:26px;padding:0 9px;font-size:11px}
+#tabnote{display:none;padding:6px 12px;font-size:11px;color:var(--ink2);border-bottom:1px solid var(--rule);background:var(--ground)}
+#tabnote.on{display:block}
+#viewport{flex:1 1 auto;position:relative;overflow:hidden;background:#101010;touch-action:none;cursor:grab}
+#viewport.dragging{cursor:grabbing}
+#viewport img{position:absolute;left:0;top:0;transform-origin:0 0;user-select:none;-webkit-user-drag:none;will-change:transform;max-width:none}
+#viewport img.pix{image-rendering:pixelated;image-rendering:crisp-edges}
+#viewport .empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9A9692;font-size:12px;text-align:center;padding:20px}
+#zoomctl{position:absolute;right:8px;top:8px;display:flex;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+#zoomctl button,#zoomctl span{background:var(--panel);min-height:30px;min-width:30px;padding:0 8px;font-size:11px;display:inline-flex;align-items:center;justify-content:center}
+#zoomctl span{color:var(--ink2);min-width:88px}
+/* Fixed height. If this reflows between layers the viewport changes size, and
+   a shared zoom viewport then appears to shift when switching layer. */
+#caption{display:flex;flex-wrap:nowrap;gap:3px 14px;align-items:center;padding:6px 12px;border-top:1px solid var(--rule);font-size:11px;color:var(--ink2);height:34px;overflow:hidden}
+#caption>div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#caption>div:nth-child(2){flex:1 1 auto;min-width:0}
+#caption>div:nth-child(1),#caption>div:nth-child(3){flex:0 0 auto}
+#caption .id{font-family:var(--mono);color:var(--ink);font-size:11px;white-space:nowrap}
+#caption .excl{color:var(--excl)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:1px 7px;border:1px solid var(--rule);border-radius:2px;font-size:11px;color:var(--ink);white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.chip.big{font-size:12px;padding:3px 9px}
+
+/* right rail */
+#right h2{font-size:17px;font-weight:600;line-height:1.2}
+#right h3{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--rule)}
+#right h3:first-of-type{margin-top:10px}
+.kv{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;font-size:12px}
+.kv div:nth-child(odd){color:var(--ink2)}
+.kv div:nth-child(even){text-align:right;white-space:normal;overflow-wrap:anywhere;max-width:200px;justify-self:end}
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th{font-weight:500;color:var(--ink2);text-align:right;padding:3px 4px;border-bottom:1px solid var(--rule);font-size:11px;white-space:nowrap}
+table.t th:first-child,table.t td:first-child{text-align:left;padding-left:0}
+table.t td{padding:3px 4px;border-bottom:1px solid var(--rule2);text-align:right;white-space:nowrap}
+table.t tr.rej td{color:var(--ink2)}
+table.t tr.rej td:first-child{color:var(--ink)}
+.reason{font-size:12px;line-height:1.4;padding:8px 10px;border:1px solid var(--rule);border-radius:2px;background:var(--ground);margin:6px 0}
+.reason.q{font-style:normal}
+.bars{display:grid;grid-template-columns:auto 1fr auto;gap:3px 8px;align-items:center;font-size:11px}
+.bars .bar{height:8px;background:var(--rule2);position:relative}
+.bars .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--ink2)}
+.bars .bar.g6 i{background:var(--valid)}
+.note{font-size:11px;color:var(--ink2);line-height:1.4;margin-top:6px}
+.evstrip{display:flex;align-items:flex-end;gap:2px;height:44px;padding:4px 0;border-bottom:1px solid var(--rule);overflow-x:auto}
+.evstrip button{flex:0 0 auto;width:8px;min-width:8px;border-radius:0;height:100%;position:relative;padding:0;min-height:0}
+.evstrip button i{position:absolute;left:1px;right:1px;bottom:0;display:block}
+.evstrip button.cur i{outline:1px solid var(--ink)}
+.cmp{display:grid;grid-template-columns:1fr auto auto;gap:2px 10px;font-size:12px}
+.cmp div{white-space:nowrap}
+.cmp .h{color:var(--ink2);font-size:11px;text-align:right}
+.cmp .h:first-child{text-align:left}
+.cmp .v{text-align:right}
+.figs img{width:100%;display:block;border:1px solid var(--rule);margin-top:6px}
+.runs td{white-space:normal}
+
+/* strip */
+#dial{flex:0 0 auto;width:214px;touch-action:none;border-right:1px solid var(--rule);display:flex;align-items:center;justify-content:center;padding:4px}
+#dial svg{width:206px;height:152px;display:block}
+#dial .tick{stroke:var(--ink3);stroke-width:1}
+#dial .ring{fill:none;stroke:var(--rule);stroke-width:1}
+#dial .grab{fill:none;stroke:transparent;stroke-width:40;cursor:grab;pointer-events:stroke}
+#dial .handle{fill:none;stroke:var(--ink);stroke-width:2;pointer-events:none}
+#dial .handle.live{stroke-width:2.6}
+body.dialdrag{cursor:grabbing;user-select:none}
+body.dialdrag #dial .grab{cursor:grabbing}
+#dial .ang{cursor:pointer}
+#dial .ang circle{fill:var(--panel);stroke:var(--ink3);stroke-width:1}
+#dial .ang.sel circle{fill:var(--ink);stroke:var(--ink)}
+#dial .ang.sel text{fill:var(--ground)}
+#dial .ang.excl circle{stroke:var(--excl);stroke-dasharray:2 2}
+#dial .ang.excl line{stroke:var(--excl);stroke-width:1.5}
+#dial text{font-size:8px;fill:var(--ink);text-anchor:middle;dominant-baseline:middle;pointer-events:none;font-family:var(--font)}
+#dial .cam{cursor:pointer}
+#dial .cam rect{fill:var(--panel);stroke:var(--rule)}
+#dial .cam.sel rect{fill:var(--ink);stroke:var(--ink)}
+#dial .cam.sel text{fill:var(--ground)}
+#dial .lbl{font-size:8px;fill:var(--ink2)}
+#thumbs{flex:1 1 auto;display:flex;align-items:stretch;overflow-x:auto;overflow-y:hidden;gap:1px;background:var(--rule);padding:0}
+.grp-lab{flex:0 0 auto;writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);padding:6px 3px;background:var(--panel);display:flex;align-items:center}
+.th{flex:0 0 auto;width:118px;background:var(--panel);display:flex;flex-direction:column;align-items:stretch;padding:4px 4px 3px;text-align:left;position:relative}
+.th[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.th[aria-pressed="true"] small{color:#D8D5D1}
+.th img{width:110px;height:auto;max-height:96px;object-fit:contain;display:block;background:#101010;border:1px solid var(--rule)}
+.th .cap{display:flex;justify-content:space-between;font-size:10px;line-height:1.2;margin-top:3px;font-family:var(--mono)}
+.th.excl img{opacity:.55}
+.th.excl::after{content:"";position:absolute;left:8px;right:8px;top:52px;height:0;border-top:2px solid var(--excl);transform:rotate(-14deg)}
+.th .x{position:absolute;top:6px;right:7px;font-size:9px;letter-spacing:.05em;color:var(--excl);text-transform:uppercase;background:var(--panel);padding:0 3px}
+.th .st{position:absolute;top:8px;left:8px;width:9px;height:9px;border-radius:50%}
+#strip .none{padding:12px;color:var(--ink2);font-size:12px}
+
+/* drawer */
+#drawer{position:fixed;inset:0;background:rgba(26,26,25,.45);display:none;z-index:10}
+#drawer.on{display:block}
+#drawer .box{position:absolute;right:0;top:0;bottom:0;width:min(640px,92vw);background:var(--panel);border-left:1px solid var(--rule);overflow:auto;padding:16px 18px 30px}
+#drawer h2{font-size:16px;font-weight:600}
+#drawer .status{font-size:12px;color:var(--ink2);border:1px solid var(--rule);padding:6px 10px;border-radius:2px;margin:10px 0 14px;background:var(--ground)}
+#drawer p{font-size:12.5px;line-height:1.5;margin:8px 0}
+#drawer h3{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--rule)}
+#drawer .close{position:absolute;top:8px;right:10px;min-height:36px;min-width:36px;font-size:18px;color:var(--ink2)}
+#drawer img{width:100%;display:block;border:1px solid var(--rule);margin:8px 0}
+.st-valid{background:var(--valid)}.st-partial{background:var(--partial)}.st-invalid{background:var(--invalid)}.st-not_attempted{background:var(--na)}.st-abstains{background:var(--invalid)}
+.cl-scratch{background:var(--scratch)}.cl-dent{background:var(--dent)}
+.txt-valid{color:var(--valid)}.txt-partial{color:var(--partial)}.txt-invalid{color:var(--invalid)}
+#toast{position:fixed;left:50%;bottom:160px;transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:8px 14px;font-size:12px;border-radius:2px;display:none;z-index:20;max-width:80vw}
+#toast.on{display:block}
+@media (max-width:1100px){#app{grid-template-columns:240px minmax(0,1fr) 300px}}
+</style>
+</head>
+<body>
+<script type="application/json" id="data">/*__DATA__*/</script>
+
+<div id="app">
+  <div id="subjectbar"></div>
+  <div id="header"></div>
+  <div id="left"></div>
+  <div id="stage">
+    <div id="tabs"></div>
+    <div id="tabnote"></div>
+    <div id="viewport">
+      <div id="zoomctl">
+        <button id="zfit" title="Fit to frame">Fit</button>
+        <button id="z11" title="One image pixel per screen pixel">1:1</button>
+        <button id="zminus">&minus;</button>
+        <button id="zplus">+</button>
+        <span id="zread">fit</span>
+      </div>
+    </div>
+    <div id="caption"></div>
+  </div>
+  <div id="right"></div>
+  <div id="strip">
+    <div id="dial"></div>
+    <div id="thumbs"></div>
+  </div>
+</div>
+
+<div id="drawer"><div class="box" id="drawerbox"></div></div>
+<div id="toast"></div>
+
+<script>
+'use strict';
+/* ------------------------------------------------------------------ data */
+const D = JSON.parse(document.getElementById('data').textContent);
+const ROOTP = 'viewer_data/';
+const img = p => p ? ROOTP + p : null;
+
+const viewsById = Object.fromEntries(D.views.map(v => [v.id, v]));
+const seqById = Object.fromEntries(D.bmw_sequence.map(v => [v.id, v]));
+const bmwCloseById = Object.fromEntries(D.bmw_views.map(v => [v.id, v]));
+const psKey = c => `${c.capture}::${c.camera}`;
+const psByKey = Object.fromEntries(D.ps_captures.map(c => [psKey(c), c]));
+const psBySubject = {};
+for (const c of D.ps_captures) (psBySubject[c.subject] ||= []).push(c);
+const partsByKey = Object.fromEntries(D.parts.map(p => [`${p.vehicle}::${p.part}`, p]));
+const subjectsById = Object.fromEntries(D.subjects.map(s => [s.id, s]));
+const captureSupport = D.measurements.capture_support || {};
+
+const DECISION = {
+  no_rgb_damage: 'No damage detected',
+  rgb_damage_single_view_only: 'Detected in one view only',
+  rgb_damage_multiview_confirmed_no_geometry: 'Confirmed across views, no geometry',
+  rgb_damage_geometry_partially_supported: 'Confirmed, geometry partially supports'
+};
+const STATE_LABEL = { valid: 'Valid', partial: 'Partial', invalid: 'Invalid', not_attempted: 'Not attempted', abstains: 'Abstains' };
+const CAM_LABEL = { cam0: 'cam0', cam1: 'cam1', cam2: 'cam2', cam3: 'cam3' };
+const EXCL_REASON = 'Excluded from aggregation. The COCO vehicle crop found no vehicle in this frame, so segmentation ran on the full chamber frame and no detection is read from it.';
+const PS_POSE_NOTE = 'Photometric stereo bursts sit at specific poses only. RGB is captured at every indexed angle; a twelve-light burst is spent on selected views. Select a panel burst in the strip to see its geometry.';
+const PS_NOT_RR = 'No photometric stereo burst covers this part.';
+const BLANK_REASON = 'Empty after refinement. The quality gate removed every pixel of this region, so there is no image to show. That is the result rather than a fault: switch to the unfiltered variant to see what the solver produced before the gate was applied.';
+const withheldList = c => (c && c.withheld_maps) ? Object.entries(c.withheld_maps).map(([k, v]) => `${LAYER_LABEL[k].toLowerCase()} (${v.join(' and ')})`).join(', ') : '';
+const FRAME_LAYERS = ['rgb', 'damage', 'parts'];
+const PS_LAYERS = ['photo', 'normal', 'support', 'usable', 'depth', 'elevation'];
+const LAYER_LABEL = { rgb: 'RGB', damage: 'Damage', parts: 'Parts', photo: 'Photo', normal: 'Normals', support: 'Support', usable: 'Usable lights', depth: 'Depth', elevation: 'Elevation' };
+const LAYER_HINT = { photo: 'prepared photograph, cropped to the solved region', normal: 'surface normal, false colour', support: 'illumination support, 0 to 1', usable: 'usable lights per pixel, 0 to 12', depth: 'integrated relative depth, robust range', elevation: 'normal elevation, 0 to 90 degrees' };
+const PART_LABEL = s => s.replace(/_/g, ' ');
+
+/* ----------------------------------------------------------------- state */
+const S = {
+  // Land on the white BMW. It is the subject where the geometry gate returns
+  // valid and the dents are visible in the normal map, so a reader who opens
+  // the page and looks at one screen sees the measurement working. The Range
+  // Rover is the harder surface and reads as a failure without the surrounding
+  // explanation, which is in its own subject panel.
+  subject: 'bmw_white',
+  vehicle: 'damaged',
+  part: null,
+  view: null,          // id in views / bmw_sequence / bmw_views / ps key
+  layer: 'rgb',
+  variant: 'filtered',
+  thresholdIdx: 0,
+  compare: false,
+  vp: { frame: { s: 1, cx: .5, cy: .5 }, ps: { s: 1, cx: .5, cy: .5 } },
+  showTabNote: null
+};
+
+/* --------------------------------------------------------------- helpers */
+const $ = sel => document.querySelector(sel);
+const el = (tag, attrs = {}, ...kids) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === 'class') n.className = v;
+    else if (k === 'html') n.innerHTML = v;
+    else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
+    else if (k === 'style') n.style.cssText = v;
+    else n.setAttribute(k, v === true ? '' : v);
+  }
+  for (const k of kids.flat()) if (k != null) n.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return n;
+};
+const fmt = (x, d = 2) => (x == null || Number.isNaN(+x)) ? 'n/a' : (+x).toFixed(d);
+const pct = (x, d = 1) => x == null ? 'n/a' : (100 * x).toFixed(d) + '%';
+const num = x => (x == null || x === '' ) ? null : (typeof x === 'string' ? (x === 'True' ? true : x === 'False' ? false : (isNaN(+x) ? x : +x)) : x);
+const toast = (m, ms = 2600) => { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('on'), ms); };
+const dot = (cls, extra = '') => el('i', { class: `dot ${cls} ${extra}`.trim(), style: 'display:inline-block;width:9px;height:9px;border-radius:50%' });
+const stateChip = (state, big) => el('span', { class: `chip${big ? ' big' : ''}` }, el('i', { class: `st-${state}` }), STATE_LABEL[state] || state);
+
+/* ------------------------------------------------------ view resolution */
+function subjectViews() {
+  if (S.subject === 'range_rover') return D.views.filter(v => v.vehicle === S.vehicle);
+  if (S.subject === 'bmw_white') return D.bmw_sequence;
+  return [];
+}
+function currentPart() { return S.part ? partsByKey[`${S.vehicle}::${S.part}`] : null; }
+function partPsCapture(p) {
+  const ps = p && p.photometric_stereo;
+  if (!ps || !ps.source_capture) return null;
+  return psByKey[`${ps.source_capture}::${ps.source_camera}`] || null;
+}
+/* Resolve what the stage can show for the current selection. */
+function resolveStage() {
+  const out = { frame: null, ps: null, caption: {}, excluded: false, family: null, psReason: null, frameReason: null };
+  if (S.subject === 'range_rover') {
+    const v = viewsById[S.view];
+    if (v) {
+      out.frame = v.img; out.caption = { id: v.id, camera: v.camera, angle: v.angle, q: v.quality_raw, crop: v.crop_xyxy, exposure: v.exposure_scale };
+      out.excluded = !v.crop_ok;
+    }
+    const p = currentPart();
+    const c = partPsCapture(p);
+    if (c) out.ps = c;
+    else out.psReason = p ? (p.photometric_stereo.state_reason || PS_NOT_RR) + (p.photometric_stereo.source_capture ? ' Maps for this capture and camera are not carried in the bundle.' : '') : 'Select a part to attach its photometric stereo evidence.';
+  } else if (S.subject === 'bmw_white') {
+    if (seqById[S.view]) {
+      const v = seqById[S.view];
+      out.frame = v.img; out.caption = { id: v.id, camera: v.camera, angle: v.angle };
+      out.excluded = !v.crop_ok; out.psReason = PS_POSE_NOTE;
+    } else if (bmwCloseById[S.view]) {
+      const b = bmwCloseById[S.view];
+      out.frame = b.img; out.caption = { id: b.id, camera: b.camera, angle: null, closeup: true };
+      out.ps = psByKey[`${b.id}::${b.camera}`] || null;
+      if (!out.ps) out.psReason = 'No photometric stereo maps in the bundle for this capture.';
+    }
+  } else {
+    const c = psByKey[S.view];
+    if (c) { out.ps = c; out.caption = { id: c.capture, camera: c.camera, angle: null, closeup: true }; }
+    out.frameReason = 'No prepared RGB frame is carried in the bundle for this capture. The evidence for this subject is the photometric stereo solve.';
+  }
+  return out;
+}
+function layerSrc(r) {
+  if (FRAME_LAYERS.includes(S.layer)) return r.frame ? img(r.frame[S.layer]) : null;
+  if (!r.ps) return null;
+  const m = r.ps.maps[S.variant] || {};
+  return img(m[S.layer] || (r.ps.maps[S.variant === 'filtered' ? 'unfiltered' : 'filtered'] || {})[S.layer]);
+}
+
+/* -------------------------------------------------------------- viewport */
+const VP = {
+  el: null, imgEl: null, nat: [0, 0], family: 'frame',
+  pointers: new Map(), last: null, pinch: null,
+  fitScale() { const r = this.el.getBoundingClientRect(); if (!this.nat[0]) return 1; return Math.min(r.width / this.nat[0], r.height / this.nat[1]); },
+  state() { return S.vp[this.family]; },
+  apply() {
+    if (!this.imgEl || !this.nat[0]) return;
+    const r = this.el.getBoundingClientRect(); const st = this.state();
+    const k = this.fitScale() * st.s;
+    const w = this.nat[0] * k, h = this.nat[1] * k;
+    const tx = r.width / 2 - st.cx * w, ty = r.height / 2 - st.cy * h;
+    this.imgEl.style.transform = `translate(${tx}px,${ty}px) scale(${k})`;
+    this.imgEl.classList.toggle('pix', k > 2);
+    const pxpp = k; // screen px per image px
+    $('#zread').textContent = `${st.s.toFixed(2)}× of fit · ${pxpp.toFixed(2)} px/px${pxpp > 1.001 ? ' · past 1:1' : ''}`;
+  },
+  setImage(src, family) {
+    this.family = family;
+    if (!this.imgEl) { this.imgEl = el('img', { alt: '', draggable: 'false' }); this.el.append(this.imgEl); }
+    const self = this;
+    this.imgEl.onload = () => { self.nat = [self.imgEl.naturalWidth, self.imgEl.naturalHeight]; self.apply(); };
+    if (this.imgEl.src !== new URL(src, location.href).href) this.imgEl.src = src; else this.apply();
+    this.imgEl.style.display = '';
+  },
+  clear() { if (this.imgEl) this.imgEl.style.display = 'none'; $('#zread').textContent = 'no image'; },
+  zoomAt(factor, px, py) {
+    const st = this.state(); const r = this.el.getBoundingClientRect();
+    const k0 = this.fitScale() * st.s;
+    const s1 = Math.max(1, Math.min(8, st.s * factor));
+    const k1 = this.fitScale() * s1;
+    // keep the image point under (px,py) fixed
+    const w0 = this.nat[0] * k0, h0 = this.nat[1] * k0;
+    const ix = (px - (r.width / 2 - st.cx * w0)) / w0, iy = (py - (r.height / 2 - st.cy * h0)) / h0;
+    const w1 = this.nat[0] * k1, h1 = this.nat[1] * k1;
+    st.cx = ix - (px - r.width / 2) / w1; st.cy = iy - (py - r.height / 2) / h1;
+    st.s = s1; this.clampCentre(); this.apply();
+  },
+  clampCentre() { const st = this.state(); st.cx = Math.max(0, Math.min(1, st.cx)); st.cy = Math.max(0, Math.min(1, st.cy)); },
+  panBy(dx, dy) { const st = this.state(); const k = this.fitScale() * st.s; st.cx -= dx / (this.nat[0] * k); st.cy -= dy / (this.nat[1] * k); this.clampCentre(); this.apply(); },
+  fit() { const st = this.state(); st.s = 1; st.cx = .5; st.cy = .5; this.apply(); },
+  oneToOne() { const st = this.state(); st.s = Math.max(1, Math.min(8, 1 / this.fitScale())); this.apply(); },
+  init() {
+    this.el = $('#viewport');
+    const v = this.el;
+    v.addEventListener('pointerdown', e => {
+      if (e.target.closest('#zoomctl')) return;
+      v.setPointerCapture(e.pointerId); this.pointers.set(e.pointerId, [e.clientX, e.clientY]);
+      if (this.pointers.size === 1) { this.last = [e.clientX, e.clientY]; v.classList.add('dragging'); }
+      if (this.pointers.size === 2) { const [a, b] = [...this.pointers.values()]; this.pinch = Math.hypot(a[0] - b[0], a[1] - b[1]); }
+    });
+    v.addEventListener('pointermove', e => {
+      if (!this.pointers.has(e.pointerId)) return;
+      this.pointers.set(e.pointerId, [e.clientX, e.clientY]);
+      if (this.pointers.size === 2) {
+        const [a, b] = [...this.pointers.values()]; const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+        if (this.pinch) { const r = v.getBoundingClientRect(); this.zoomAt(d / this.pinch, (a[0] + b[0]) / 2 - r.left, (a[1] + b[1]) / 2 - r.top); }
+        this.pinch = d;
+      } else if (this.pointers.size === 1 && this.last) {
+        this.panBy(e.clientX - this.last[0], e.clientY - this.last[1]); this.last = [e.clientX, e.clientY];
+      }
+    });
+    const up = e => { this.pointers.delete(e.pointerId); if (this.pointers.size < 2) this.pinch = null; if (this.pointers.size === 0) { this.last = null; v.classList.remove('dragging'); } };
+    v.addEventListener('pointerup', up); v.addEventListener('pointercancel', up);
+    v.addEventListener('wheel', e => { e.preventDefault(); const r = v.getBoundingClientRect(); this.zoomAt(Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top); }, { passive: false });
+    let lastTap = 0;
+    v.addEventListener('pointerup', e => {
+      if (e.target.closest('#zoomctl')) return;
+      const t = performance.now();
+      if (t - lastTap < 320) { const r = v.getBoundingClientRect(); const st = this.state(); if (st.s > 1.05) this.fit(); else this.zoomAt(4, e.clientX - r.left, e.clientY - r.top); lastTap = 0; }
+      else lastTap = t;
+    });
+    $('#zfit').onclick = () => this.fit(); $('#z11').onclick = () => this.oneToOne();
+    $('#zplus').onclick = () => { const r = v.getBoundingClientRect(); this.zoomAt(1.5, r.width / 2, r.height / 2); };
+    $('#zminus').onclick = () => { const r = v.getBoundingClientRect(); this.zoomAt(1 / 1.5, r.width / 2, r.height / 2); };
+    new ResizeObserver(() => this.apply()).observe(v);
+  }
+};
+
+/* --------------------------------------------------------------- render */
+function render() { renderSubjectBar(); renderHeader(); renderLeft(); renderStage(); renderRight(); renderStrip(); }
+
+function renderSubjectBar() {
+  const bar = $('#subjectbar'); bar.replaceChildren();
+  for (const s of D.subjects) {
+    bar.append(el('button', { class: 'subj', 'aria-pressed': String(S.subject === s.id), onclick: () => selectSubject(s.id) },
+      el('span', { class: `dot st-${s.geometry_outcome}` }),
+      el('span', { class: 't' }, el('b', {}, s.name), el('small', {}, `${s.finish} · ${s.geometry_outcome}`))));
+  }
+  bar.append(el('div', { class: 'aux' },
+    el('button', { onclick: openDrawer }, 'Research preview'),
+    el('button', { onclick: exportStage }, 'Export stage PNG'),
+    el('button', { onclick: exportRecord }, 'Export record PNG')));
+}
+
+function renderHeader() {
+  const h = $('#header'); h.replaceChildren();
+  const subj = subjectsById[S.subject];
+  h.append(el('h1', {}, 'SmartGate inspection record'));
+  h.append(el('div', { class: 'headline', title: subj.headline }, subj.headline));
+  if (S.subject === 'range_rover') {
+    h.append(el('div', { class: 'seg', role: 'group', 'aria-label': 'Vehicle' },
+      ...D.manifest.vehicles.map(v => el('button', { 'aria-pressed': String(S.vehicle === v), onclick: () => setVehicle(v) }, v[0].toUpperCase() + v.slice(1)))));
+    h.append(el('div', { class: 'seg' }, el('button', { 'aria-pressed': String(S.compare), onclick: () => { S.compare = !S.compare; renderHeader(); renderRight(); } }, 'Compare vehicles')));
+    const row = D.sensitivity[S.thresholdIdx];
+    const k = (v, l) => el('span', { class: 'k' }, el('b', { class: 'num' }, v), el('small', {}, l));
+    const slider = el('input', { type: 'range', min: 0, max: D.sensitivity.length - 1, step: 1, value: S.thresholdIdx, 'aria-label': 'Confidence threshold, sensitivity analysis' });
+    slider.addEventListener('input', e => { S.thresholdIdx = +e.target.value; renderThreshold(); });
+    h.append(el('div', { id: 'thresh' },
+      el('span', { class: 'lab' }, 'Sensitivity'), slider,
+      el('span', { class: 'k', id: 'th-val' }, el('b', { class: 'num' }, row.confidence_threshold.toFixed(2)), el('small', {}, 'threshold')),
+      el('span', { class: 'sep' }),
+      k(row.clean_part_class_results, 'clean'), k(row.damaged_part_class_results, 'damaged'), k(fmt(row.damaged_over_clean_results, 2), 'ratio'),
+      el('span', { class: 'sep' }),
+      el('span', { class: 'lab' }, 'with consensus'),
+      k(row.clean_with_consensus, 'clean'), k(row.damaged_with_consensus, 'damaged'), k(fmt(row.damaged_over_clean_with_consensus, 2), 'ratio')));
+    h.querySelector('#thresh').title = 'Sensitivity analysis. The system reports at 0.30; the operating point was fixed before this sweep was run.';
+  }
+}
+function renderThreshold() { renderHeader(); }
+
+/* ---- left rail */
+/* Plan view of the vehicle. A body silhouette carries the panels visible from
+   above; the door panels are set out beside it on leaders, so every part has a
+   click target and a label without the greenhouse and the doors competing for
+   the same few pixels of width. Laid out by hand in a 300 by 400 box, centred
+   on x = 150 and mirrored about it. Body is 130 wide over 336 long, which is
+   roughly the plan aspect of a real saloon. */
+const SCHEMATIC = [
+  // nose
+  { p: 'front_bumper', d: 'M150 40C174 40 194 50 200 68L203 78L97 78L100 68C106 50 126 40 150 40Z' },
+  { p: 'headlight_left', d: 'M111 57C118 54 126 53 132 55L133 69C126 67 118 67 112 70Z', s: 'lamp' },
+  { p: 'headlight_right', d: 'M189 57C182 54 174 53 168 55L167 69C174 67 182 67 188 70Z', s: 'lamp' },
+  // upper body, front to rear
+  { p: 'hood', d: 'M97 78L203 78C206 100 209 128 209 152L91 152C91 128 94 100 97 78Z', t: [150, 118] },
+  { p: 'windshield', d: 'M91 152L209 152L192 190L108 190Z', t: [150, 174], s: 'glass' },
+  { p: 'roof', d: 'M108 190L192 190L192 268L108 268Z', t: [150, 231] },
+  { p: 'side_window', d: 'M193 194L202 194L202 264L193 264Z', s: 'glass' },
+  { p: 'side_window', d: 'M107 194L98 194L98 264L107 264Z', s: 'glass' },
+  { p: 'rear_glass', d: 'M108 268L192 268L209 306L91 306Z', t: [150, 291], s: 'glass' },
+  { p: 'trunk_tailgate', d: 'M91 306L209 306C209 326 207 340 205 348L95 348C93 340 91 326 91 306Z', t: [150, 330] },
+  { p: 'rear_bumper', d: 'M95 348L205 348C199 364 176 372 150 372C124 372 101 364 95 348Z' },
+  { p: 'taillight_left', d: 'M106 351C114 354 122 355 129 354L128 365C121 365 113 363 108 360Z', s: 'lamp' },
+  { p: 'taillight_right', d: 'M194 351C186 354 178 355 171 354L172 365C179 365 187 363 192 360Z', s: 'lamp' },
+  { p: 'license_plate', r: [137, 351, 26, 12, 2] },
+  // flanks: sill strips inside the body edge, wheels straddling it
+  { p: 'body_side_right', d: 'M204 150L214 150L213 296L203 296Z' },
+  { p: 'body_side_left', d: 'M96 150L86 150L87 296L97 296Z' },
+  { p: 'wheel', r: [204, 96, 20, 48, 5] },
+  { p: 'wheel', r: [204, 300, 20, 48, 5] },
+  { p: 'wheel', r: [76, 96, 20, 48, 5] },
+  { p: 'wheel', r: [76, 300, 20, 48, 5] },
+  { p: 'mirror_right', d: 'M213 176L230 179L230 190L213 188Z' },
+  { p: 'mirror_left', d: 'M87 176L70 179L70 190L87 188Z' },
+  // doors, set out beside the body so they carry a label
+  { p: 'front_door_right', r: [232, 174, 60, 70, 3], t: [262, 213] },
+  { p: 'rear_door_right', r: [232, 250, 60, 70, 3], t: [262, 289] },
+  { p: 'front_door_left', r: [8, 174, 60, 70, 3], t: [38, 213] },
+  { p: 'rear_door_left', r: [8, 250, 60, 70, 3], t: [38, 289] }
+];
+// Outline of the body, drawn behind the panels so the shape reads as a car
+// even where a panel has no record and is left blank.
+const BODY_PATH = 'M150 40C174 40 194 50 200 68C207 88 213 110 214 134L215 250C215 288 212 322 205 344C197 364 176 372 150 372C124 372 103 364 95 344C88 322 85 288 85 250L86 134C87 110 93 88 100 68C106 50 126 40 150 40Z';
+// Leaders tying each set-out door to the flank it belongs to.
+const SCHEMATIC_LEADERS = [[232, 209, 215, 209], [232, 285, 215, 285],
+                           [68, 209, 85, 209], [68, 285, 85, 285]];
+const SHORT_LABEL = {
+  trunk_tailgate: 'tailgate', rear_glass: 'rear glass',
+  front_door_right: 'front door R', rear_door_right: 'rear door R',
+  front_door_left: 'front door L', rear_door_left: 'rear door L'
+};
+const STATE_FILL = { valid: 'rgba(0,158,115,.35)', partial: 'rgba(230,159,0,.4)', invalid: 'rgba(138,134,131,.35)', not_attempted: 'rgba(196,193,189,.35)' };
+function renderLeft() {
+  const L = $('#left'); L.replaceChildren();
+  if (S.subject === 'range_rover') {
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const mk = (n, a) => { const e = document.createElementNS(svgNS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
+    const svg = mk('svg', { viewBox: '0 0 300 400' }); svg.id = 'schematic';
+    svg.setAttribute('role', 'group');
+    svg.setAttribute('aria-label', `Plan view of the ${S.vehicle} vehicle`);
+
+    svg.append(mk('path', { d: BODY_PATH, class: 'body' }));
+    for (const [x1, y1, x2, y2] of SCHEMATIC_LEADERS) svg.append(mk('line', { x1, y1, x2, y2, class: 'lead' }));
+
+    for (const sh of SCHEMATIC) {
+      const part = sh.p;
+      const rec = partsByKey[`${S.vehicle}::${part}`];
+      const g = sh.d ? mk('path', { d: sh.d })
+                     : mk('rect', { x: sh.r[0], y: sh.r[1], width: sh.r[2], height: sh.r[3], rx: sh.r[4] });
+      g.setAttribute('class', 'part' + (sh.s ? ' ' + sh.s : '') + (S.part === part ? ' sel' : '') + (rec ? '' : ' inert'));
+      if (rec) g.setAttribute('fill', STATE_FILL[rec.photometric_stereo.state] || STATE_FILL.not_attempted);
+      g.setAttribute('role', 'button'); g.setAttribute('tabindex', rec ? '0' : '-1');
+      const t = mk('title', {}); t.textContent = PART_LABEL(part) + (rec ? ` · ${DECISION[rec.decision]}` : ' · no record'); g.append(t);
+      if (rec) { g.addEventListener('click', () => selectPart(part)); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectPart(part); } }); }
+      svg.append(g);
+      if (sh.t) {
+        const tx = mk('text', { x: sh.t[0], y: sh.t[1], 'text-anchor': 'middle' });
+        tx.textContent = SHORT_LABEL[part] || PART_LABEL(part);
+        svg.append(tx);
+      }
+    }
+    const nose = mk('text', { x: 150, y: 22, 'text-anchor': 'middle', class: 'axis' }); nose.textContent = 'front'; svg.append(nose);
+    const tail = mk('text', { x: 150, y: 392, 'text-anchor': 'middle', class: 'axis' }); tail.textContent = 'rear'; svg.append(tail);
+    L.append(el('div', { class: 'pane' }, el('div', { class: 'lab', style: 'margin-bottom:6px' }, `Plan view · ${S.vehicle} vehicle · fill shows geometry state`), svg));
+    L.append(el('div', { class: 'legend' },
+      ...['valid', 'partial', 'invalid', 'not_attempted'].map(s => el('span', {}, el('i', { class: `st-${s}` }), STATE_LABEL[s]))));
+    const list = el('div', { class: 'list', role: 'listbox', 'aria-label': 'Parts' });
+    const parts = D.parts.filter(p => p.vehicle === S.vehicle).sort((a, b) => a.part.localeCompare(b.part));
+    for (const p of parts) {
+      const cls = p.rgb.damage_classes || [];
+      const maxc = Math.max(0, ...cls.map(c => p.rgb.by_class[c].max_confidence || 0));
+      list.append(el('button', { class: 'prow', 'aria-pressed': String(S.part === p.part), onclick: () => selectPart(p.part) },
+        el('span', { class: `dot st-${p.photometric_stereo.state}` }),
+        el('span', { class: 'n' }, PART_LABEL(p.part)),
+        el('span', { class: 'r' }, cls.length ? `${cls.join(', ')} · ${maxc.toFixed(2)}` : 'none')));
+    }
+    L.append(list);
+  } else {
+    const caps = psBySubject[S.subject] || [];
+    const list = el('div', { class: 'list' });
+    list.append(el('div', { class: 'lab', style: 'padding:10px 12px 4px' }, 'Photometric stereo captures'));
+    for (const c of caps) {
+      const key = psKey(c);
+      list.append(el('button', { class: 'prow', 'aria-pressed': String(S.view === key || S.view === c.capture), onclick: () => selectView(S.subject === 'bmw_white' && bmwCloseById[c.capture] ? c.capture : key) },
+        el('span', { class: `dot st-${c.state}` }), el('span', { class: 'n' }, c.label), el('span', { class: 'r' }, `${c.camera} · ${c.native_px ? c.native_px.join('×') : ''}`)));
+    }
+    if (S.subject === 'bmw_white') {
+      list.append(el('div', { class: 'lab', style: 'padding:12px 12px 4px' }, `Indexed sequence, damaged, ${D.bmw_sequence.length} views`));
+      list.append(el('div', { class: 'note', style: 'padding:0 12px 8px' }, 'Whole-vehicle frames at twelve angles from four cameras. Use the dial or the strip. Photometric stereo attaches only to the panel bursts above.'));
+    }
+    const meas = D.measurements.measurements[S.subject];
+    if (meas) list.append(renderMeasurementTable(meas, true));
+    L.append(list);
+  }
+}
+function renderMeasurementTable(meas, compact) {
+  const wrap = el('div', { class: 'pane', style: 'border-top:1px solid var(--rule)' });
+  wrap.append(el('div', { class: 'lab', style: 'margin-bottom:4px' }, 'Depth against ground truth'));
+  wrap.append(el('div', { class: 'tiny muted', style: 'margin-bottom:6px' }, meas.reference));
+  const t = el('table', { class: 't' });
+  const f0 = meas.features[0];
+  const hasNom = 'nominal_mm' in f0, hasCal = 'calliper_mm' in f0;
+  t.append(el('tr', {}, el('th', {}, 'Feature'), el('th', {}, hasNom ? 'Nominal' : 'Calliper'), el('th', {}, 'Recovered'), el('th', {}, 'Abs err'), compact ? null : el('th', {}, 'SD')));
+  for (const f of meas.features) {
+    const rec = Array.isArray(f.recovered_mm) ? `${fmt(f.recovered_mm[0])} to ${fmt(f.recovered_mm[1])}` : fmt(f.recovered_mm, hasNom ? 4 : 3);
+    const err = Array.isArray(f.abs_error_mm) ? `${fmt(f.abs_error_mm[0])} to ${fmt(f.abs_error_mm[1])}` : fmt(f.abs_error_mm, hasNom ? 4 : 2);
+    const sd = f.sd_mm != null ? fmt(f.sd_mm, 4) : (f.response_sd_px != null ? fmt(f.response_sd_px, 2) + ' px' : 'n/a');
+    const tr = el('tr', { class: f.released ? '' : 'rej' },
+      el('td', {}, f.name, f.released ? '' : el('small', { style: 'display:block;color:var(--excl)' }, 'rejected')),
+      el('td', {}, fmt(hasNom ? f.nominal_mm : f.calliper_mm, hasNom ? 4 : 2), el('span', { class: 'u' }, 'mm')),
+      el('td', {}, f.released ? rec : 'withheld', f.released ? el('span', { class: 'u' }, 'mm') : ''),
+      el('td', {}, f.released ? err : 'n/a'), compact ? null : el('td', {}, sd));
+    if (!f.released && f.rejection_reason) { tr.title = f.rejection_reason; }
+    t.append(tr);
+    if (!f.released && f.rejection_reason) t.append(el('tr', { class: 'rej' }, el('td', { colspan: compact ? 4 : 5, style: 'white-space:normal;text-align:left;font-size:11px;padding-bottom:6px' }, f.rejection_reason)));
+  }
+  wrap.append(el('div', { style: 'overflow-x:auto' }, t));
+  const s = meas.summary || {};
+  const items = [];
+  if (s.mae_mm != null) items.push(`MAE ${fmt(s.mae_mm, 3)} mm`, `median ${fmt(s.median_abs_error_mm, 3)} mm`, `RMSE ${fmt(s.rmse_mm, 3)} mm`, `per-feature SD ${fmt(s.mean_per_feature_sd_mm, 4)} mm`, `sign ${s.sign_agreement}`);
+  if (s.valid_only_mae_mm != null) items.push(`valid-only MAE ${fmt(s.valid_only_mae_mm, 2)} mm (${fmt(s.valid_only_range_mm[0], 2)} to ${fmt(s.valid_only_range_mm[1], 2)})`, `valid coverage ${s.valid_coverage}`, `MAE if rejected dent forced ${fmt(s.mae_if_rejected_dent_forced_mm, 2)} mm`);
+  if (s.multidamage_mae_mm != null) items.push(`exploratory MAE ${fmt(s.multidamage_mae_mm, 2)} mm`, `fixed-pose SD ${fmt(s.fixed_pose_sd_mm, 2)} mm`);
+  wrap.append(el('div', { class: 'note' }, items.join(' · ')));
+  if (s.note) wrap.append(el('div', { class: 'reason' }, s.note));
+  wrap.append(el('div', { class: 'tiny muted', style: 'margin-top:4px' }, 'Source: ' + meas.source));
+  return wrap;
+}
+
+/* ---- stage */
+function renderStage() {
+  const r = resolveStage();
+  const tabs = $('#tabs'); tabs.replaceChildren();
+  const mk = (layer, enabled, reason) => el('button', { class: 'tab', 'aria-pressed': String(S.layer === layer), disabled: !enabled, title: enabled ? '' : reason,
+    onclick: () => { if (enabled) { S.layer = layer; S.showTabNote = null; renderStage(); } else { S.showTabNote = reason; renderStage(); } },
+    onpointerdown: e => { if (!enabled) { S.showTabNote = reason; $('#tabnote').textContent = reason; $('#tabnote').classList.add('on'); } } }, LAYER_LABEL[layer]);
+  const g1 = el('div', { class: 'grp' }), g2 = el('div', { class: 'grp' });
+  for (const l of FRAME_LAYERS) g1.append(mk(l, !!(r.frame && r.frame[l]), r.frameReason || 'No frame for this layer.'));
+  for (const l of PS_LAYERS) {
+    const has = r.ps && ((r.ps.maps.filtered || {})[l] || (r.ps.maps.unfiltered || {})[l]);
+    const withheld = r.ps && r.ps.withheld_maps && r.ps.withheld_maps[l];
+    g2.append(mk(l, !!has, withheld ? BLANK_REASON : (r.psReason || 'This map was not produced for this capture.')));
+  }
+  tabs.append(g1, g2, el('div', { class: 'spacer' }));
+  if (r.ps && PS_LAYERS.includes(S.layer)) {
+    tabs.append(el('div', { class: 'seg' }, ...['filtered', 'unfiltered'].map(v => el('button', { 'aria-pressed': String(S.variant === v), onclick: () => { S.variant = v; renderStage(); } }, v))));
+  }
+  const note = $('#tabnote'); if (S.showTabNote) { note.textContent = S.showTabNote; note.classList.add('on'); } else { note.classList.remove('on'); }
+
+  // if the chosen layer is not available, fall to the first available
+  const src = layerSrc(r);
+  if (!src) {
+    const alt = [...FRAME_LAYERS, ...PS_LAYERS].find(l => (FRAME_LAYERS.includes(l) ? r.frame && r.frame[l] : r.ps && ((r.ps.maps.filtered || {})[l] || (r.ps.maps.unfiltered || {})[l])));
+    if (alt && alt !== S.layer) { S.layer = alt; return renderStage(); }
+  }
+  const vp = $('#viewport'); const old = vp.querySelector('.empty'); if (old) old.remove();
+  if (src) VP.setImage(src, FRAME_LAYERS.includes(S.layer) ? 'frame' : 'ps');
+  else { VP.clear(); vp.append(el('div', { class: 'empty' }, 'Nothing selected. Choose a part, a view or a capture.')); }
+
+  // caption
+  const c = $('#caption'); c.replaceChildren();
+  const cap = r.caption || {};
+  const left = el('div', {}, el('span', { class: 'id' }, cap.id || ''));
+  const mid = el('div', {});
+  if (cap.camera) mid.append(el('span', {}, `${cap.camera}`, cap.angle != null ? ` · ${cap.angle}°` : ' · panel burst'), ' ');
+  if (cap.q) mid.append(el('span', { class: 'muted' }, ` · brightness ${fmt(cap.q.median_brightness, 3)} · saturated ${pct(cap.q.saturated_fraction, 2)} · sharpness ${fmt(cap.q.sharpness, 4)}`));
+  if (r.excluded) { mid.append(el('span', { class: 'excl' }, ' · Excluded from aggregation, the vehicle crop found no vehicle')); mid.title = EXCL_REASON; }
+  const right = el('div', {});
+  if (PS_LAYERS.includes(S.layer) && r.ps) right.append(stateChip(r.ps.state), ' ', el('span', { class: 'muted' }, `${LAYER_HINT[S.layer]} · native ${r.ps.native_px ? r.ps.native_px.join('×') : 'n/a'} px · ${S.layer === 'photo' ? 'registered to the maps' : S.variant + ' · ' + r.ps.algorithm}`));
+  else if (FRAME_LAYERS.includes(S.layer)) right.append(el('span', { class: 'muted' }, S.layer === 'rgb' ? 'prepared frame' : S.layer === 'damage' ? 'damage instance overlay' : 'part segmentation overlay'));
+  c.append(left, mid, right);
+}
+
+/* ---- right rail */
+function renderRight() {
+  const R = $('#right'); R.replaceChildren();
+  if (S.subject === 'range_rover') renderRightRR(R); else renderRightPanel(R);
+}
+/* Acquisition provenance, and the illumination-limited sequence it replaced.
+   The legacy 45-degree run is carried as measured numbers rather than as a
+   second set of images. Both columns are copied from the comparison run. */
+function renderAcquisition(R) {
+  const a = D.manifest.acquisition, cmp = D.acquisition;
+  if (!a) return;
+  R.append(el('h3', {}, 'Acquisition'));
+  R.append(el('div', { class: 'kv' },
+    ...kv('Illumination', a.illumination),
+    ...kv('Indexing', a.increment_deg + '°, ' + D.manifest.angles.length + ' positions'),
+    ...kv('Exposure, Range Rover', a.exposure.range_rover),
+    ...kv('Exposure, BMW', a.exposure.bmw_white),
+    ...kv('White point', a.white_point)));
+  if (!cmp || !cmp.range_rover) return;
+  const rr = cmp.range_rover, u = cmp.prepared_frame_uniformity || {};
+  const row = (label, legacy, now) => el('tr', {},
+    el('td', {}, label), el('td', { class: 'v' }, legacy), el('td', { class: 'v' }, now));
+  const t = el('table', { class: 't' },
+    el('thead', {}, el('tr', {},
+      el('th', { class: 'h' }, 'Range Rover'), el('th', { class: 'h' }, 'Relit 45°'), el('th', { class: 'h' }, 'All LED 30°'))),
+    el('tbody', {},
+      row('Views', rr.legacy_relit_45deg.views, rr.allled_30deg.views),
+      row('Vehicle crops found', rr.legacy_relit_45deg.successful_vehicle_crops + '/' + rr.legacy_relit_45deg.views,
+          rr.allled_30deg.successful_vehicle_crops + '/' + rr.allled_30deg.views),
+      row('Crop success', (rr.legacy_relit_45deg.crop_success_rate * 100).toFixed(1) + '%',
+          (rr.allled_30deg.crop_success_rate * 100).toFixed(1) + '%'),
+      row('Frame uniformity, CV', u.range_rover_legacy ? u.range_rover_legacy.coefficient_of_variation : '–',
+          u.range_rover_allled ? u.range_rover_allled.coefficient_of_variation : '–'),
+      row('Results at 0.85, clean', rr.legacy_relit_45deg.by_vehicle.clean['part_class_results_at_confidence_0.85'],
+          rr.allled_30deg.by_vehicle.clean['part_class_results_at_confidence_0.85']),
+      row('Results at 0.85, damaged', rr.legacy_relit_45deg.by_vehicle.damaged['part_class_results_at_confidence_0.85'],
+          rr.allled_30deg.by_vehicle.damaged['part_class_results_at_confidence_0.85'])));
+  R.append(t);
+  R.append(el('div', { class: 'reason' }, cmp.note));
+  R.append(el('div', { class: 'reason' }, cmp.interpretation));
+  const fig = cmp.figure;
+  if (fig) R.append(el('div', { class: 'figs' }, el('img', { src: img(fig), alt: 'Effect of all-LED indexed RGB acquisition' })));
+}
+
+function renderRightRR(R) {
+  const p = currentPart();
+  const subj = subjectsById.range_rover;
+  if (!p) {
+    R.append(el('h2', {}, 'Range Rover, ' + S.vehicle), el('div', { class: 'note' }, subj.why_it_matters));
+    R.append(el('h3', {}, 'Sequence'));
+    const c = D.manifest.counts;
+    R.append(el('div', { class: 'kv' }, ...kv('Views', c.views_total), ...kv('Eligible views', c.views_eligible), ...kv('Excluded by crop', c.views_crop_failed), ...kv('Part records', c.part_records), ...kv('Damage instances', c.damage_instances), ...kv('Attributed', c.attributed), ...kv('Unattributed', c.unattributed)));
+    R.append(el('h3', {}, 'Models'));
+    R.append(el('div', { class: 'kv' }, ...kv('Damage', D.manifest.damage_model), ...kv('Parts', D.manifest.part_model), ...kv('Crop', D.manifest.crop_model), ...kv('Threshold', D.manifest.confidence_threshold.toFixed(2))));
+    renderAcquisition(R);
+    R.append(el('h3', {}, 'Read with care'));
+    for (const k of ['sample', 'confound', 'scale']) R.append(el('div', { class: 'reason' }, D.manifest.caveats[k]));
+    const figs = D.extras.figures || {};
+    if (figs.coverage_matrix) R.append(el('h3', {}, 'Coverage'), el('div', { class: 'figs' }, el('img', { src: img(figs.coverage_matrix), alt: 'Multi-view coverage matrix' })));
+    R.append(el('div', { class: 'note' }, 'Select a part in the schematic or list to open its record.'));
+    return;
+  }
+  const ps = p.photometric_stereo;
+  R.append(el('h2', {}, PART_LABEL(p.part)), el('div', { class: 'tiny muted' }, `${p.vehicle} vehicle · ${p.eligible_views} eligible views · fixed view ${p.fixed_view_id}${p.fixed_view_eligible ? '' : ' (ineligible)'}`));
+  R.append(el('div', { style: 'margin:8px 0 2px;display:flex;gap:6px;flex-wrap:wrap;align-items:center' },
+    el('span', { class: 'chip big' }, el('i', { class: `st-${ps.state}` }), DECISION[p.decision] || p.decision),
+    p.review_required ? el('span', { class: 'chip' }, 'review required') : null));
+
+  R.append(el('h3', {}, 'RGB evidence'));
+  const cls = p.rgb.damage_classes || [];
+  if (!cls.length) R.append(el('div', { class: 'note' }, 'No damage detected on this part in any eligible view at the 0.30 operating point.'));
+  else {
+    const t = el('table', { class: 't' });
+    t.append(el('tr', {}, el('th', {}, 'Class'), el('th', {}, 'Max conf'), el('th', {}, 'Obs'), el('th', {}, 'Consensus'), el('th', {}, 'Fixed view'), el('th', {}, 'Mask px')));
+    for (const c of cls) {
+      const b = p.rgb.by_class[c];
+      t.append(el('tr', {}, el('td', {}, dot(`cl-${c}`), ' ', c), el('td', {}, fmt(b.max_confidence, 3)), el('td', {}, b.observations), el('td', {}, b.two_view_consensus ? `yes · ${b.consensus_support}` : 'no'),
+        el('td', {}, b.fixed_view_detected ? fmt(b.fixed_view_confidence, 3) : 'none'), el('td', {}, b.total_mask_area_px ?? 'n/a')));
+    }
+    R.append(t);
+    R.append(el('div', { class: 'kv', style: 'margin-top:6px' }, ...kv('Any damage, fixed view', yn(p.rgb.any_damage_fixed_view)), ...kv('Any damage, max confidence', yn(p.rgb.any_damage_max_confidence)), ...kv('Any damage, two-view consensus', yn(p.rgb.any_damage_consensus))));
+    R.append(el('h3', {}, 'Observations across the sequence'));
+    R.append(renderEvidenceStrip(p));
+  }
+
+  R.append(el('h3', {}, 'Geometry'));
+  R.append(el('div', { style: 'display:flex;gap:8px;align-items:center;flex-wrap:wrap' }, stateChip(ps.state, true), ps.relative_depth_status ? el('span', { class: 'chip' }, 'depth ' + ps.relative_depth_status.replace(/_/g, ' ')) : null));
+  R.append(el('div', { class: 'reason' }, ps.state_reason || ''));
+  if (ps.state !== 'not_attempted') {
+    R.append(el('div', { class: 'kv' }, ...kv('Source capture', ps.source_capture), ...kv('Camera · angle', `${ps.source_camera} · ${ps.turntable_angle_deg ?? 'n/a'}°`), ...kv('Solver', ps.source_algorithm), ...kv('Region', ps.roi_source), ...kv('Region agreement IoU', fmt(ps.roi_agreement_iou, 3)),
+      ...kv('Evaluated pixels', ps.evaluated_pixels), ...kv('Damage pixels evaluated', ps.damage_pixels_evaluated), ...kv('Valid coverage', pct(ps.valid_coverage, 1)), ...kv('Median usable lights', fmt(ps.median_usable_lights, 0)),
+      ...kv('Front-facing fraction', fmt(ps.front_facing_fraction, 3)), ...kv('Median fit residual', fmt(ps.median_fit_residual, 4)), ...kv('Positive outlier ratio', fmt(ps.median_positive_outlier_ratio, 3)),
+      ...kv('Surface roughness, median / p90', `${fmt(ps.surface_roughness_median_deg, 2)}° / ${fmt(ps.surface_roughness_p90_deg, 2)}°`),
+      ...kv('Damage ring deviation, median / p90', ps.damage_ring_deviation_median_deg == null ? 'unavailable, no damage pixels in region' : `${fmt(ps.damage_ring_deviation_median_deg, 1)}° / ${fmt(ps.damage_ring_deviation_p90_deg, 1)}°`)));
+    if (ps.usable_light_fractions) R.append(usableBars(ps.usable_light_fractions));
+    R.append(el('div', { class: 'reason' }, 'Metric depth withheld. ' + (ps.relative_depth_status === 'withheld_non_lambertian' ? 'The surface is treated as non-Lambertian: too few usable lights per pixel to constrain a normal well enough to integrate.' : `Status: ${ps.relative_depth_status}.`)));
+    const c = partPsCapture(p);
+    if (!c) R.append(el('div', { class: 'note' }, 'Maps for this capture and camera are not carried in the bundle, so only the graded statistics are shown.'));
+    else if (withheldList(c)) R.append(el('div', { class: 'note' }, `Empty after refinement, so withheld: ${withheldList(c)}. The gate removed every pixel of these layers; the unfiltered variant is unaffected.`));
+  }
+
+  R.append(el('h3', {}, 'Views'));
+  R.append(el('div', { class: 'kv' }, ...kv('Eligible views', p.eligible_views), ...kv('Angles seeing part', (p.angles_seeing_part || []).map(a => a + '°').join(', ')), ...kv('Cameras', (p.cameras_seeing_part || []).join(', ')), ...kv('Representative view', p.representative_view), ...kv('Representative quality', fmt(p.representative_view_quality, 3)), ...kv('Shown here', p.best_seen_view), ...kv('Part area in that view', p.best_seen_area_px != null ? p.best_seen_area_px.toLocaleString() + ' px' : null)));
+  if (p.best_seen_view && p.best_seen_view !== p.representative_view) R.append(el('div', { class: 'reason' }, `The representative view is the highest scoring on image quality. It is not always the view that shows this panel best: on ${p.representative_view} the part model resolved fewer distinct classes. Selecting the part opens ${p.best_seen_view} instead, where the panel covers the most pixels among views in which the model resolved at least ${p.best_seen_class_floor} classes. Both views are eligible and neither number is recomputed here.`));
+  if (p.representative_view_components) {
+    const q = p.representative_view_components;
+    R.append(el('div', { class: 'kv', style: 'margin-top:4px' }, ...Object.entries(q).flatMap(([k, v]) => kv('· ' + k, fmt(v, 3)))));
+  }
+  if (S.compare) {
+    R.append(el('h3', {}, 'Clean against damaged'));
+    const rows = D.compare.filter(r => r.part === p.part);
+    if (!rows.length) R.append(el('div', { class: 'note' }, 'No comparison row for this part.'));
+    else {
+      const g = el('div', { class: 'cmp' });
+      g.append(el('div', { class: 'h' }, 'class'), el('div', { class: 'h' }, 'clean'), el('div', { class: 'h' }, 'damaged'));
+      for (const r of rows) {
+        const cc = num(r.clean_max_confidence), dc = num(r.damaged_max_confidence);
+        g.append(el('div', {}, dot(`cl-${r.damage_class}`), ' ', r.damage_class, el('small', { style: 'display:block' }, 'max conf · obs · consensus')),
+          el('div', { class: 'v' }, `${cc == null ? 'none' : fmt(cc, 3)} · ${num(r.clean_observations)} · ${num(r.clean_consensus) ? 'yes' : 'no'}`, el('small', { style: 'display:block' }, `${num(r.clean_eligible_views)} views`)),
+          el('div', { class: 'v' }, `${dc == null ? 'none' : fmt(dc, 3)} · ${num(r.damaged_observations)} · ${num(r.damaged_consensus) ? 'yes' : 'no'}`, el('small', { style: 'display:block' }, `${num(r.damaged_eligible_views)} views`)));
+      }
+      R.append(g, el('div', { class: 'note' }, D.manifest.caveats.confound));
+    }
+  }
+}
+function renderEvidenceStrip(p) {
+  const wrap = el('div', {});
+  const strip = el('div', { class: 'evstrip', role: 'group', 'aria-label': 'Observations' });
+  const order = subjectViews().map(v => v.id);
+  let n = 0;
+  for (const c of p.rgb.damage_classes || []) {
+    const b = p.rgb.by_class[c];
+    const counts = {}; for (const v of b.observation_views || []) counts[v] = (counts[v] || 0) + 1;
+    for (const vid of order) {
+      const k = counts[vid] || 0;
+      for (let i = 0; i < k; i++) {
+        n++;
+        const isMax = vid === b.max_confidence_view && i === 0;
+        const h = isMax ? Math.round(100 * b.max_confidence) : 55;
+        strip.append(el('button', { class: vid === S.view ? 'cur' : '', title: `${vid} · ${c}${isMax ? ' · ' + fmt(b.max_confidence, 3) + ' (max)' : ''}`, onclick: () => selectView(vid) },
+          el('i', { class: `cl-${c}`, style: `height:${h}%;opacity:${isMax ? 1 : .55}` })));
+      }
+    }
+  }
+  wrap.append(strip);
+  wrap.append(el('div', { class: 'note' }, `${n} observation${n === 1 ? '' : 's'}, one tick per detection, coloured by class and ordered by view. Per-observation confidence is not carried in the bundle; the full-height tick marks the view holding each class's maximum confidence. Tap a tick to open its view.`));
+  return wrap;
+}
+
+function renderRightPanel(R) {
+  const subj = subjectsById[S.subject];
+  R.append(el('h2', {}, subj.name), el('div', { class: 'tiny muted' }, `${subj.scale} · ${subj.finish}`));
+  R.append(el('div', { style: 'margin:8px 0 2px' }, stateChip(subj.geometry_outcome, true)));
+  R.append(el('div', { class: 'reason' }, subj.headline), el('div', { class: 'note' }, subj.why_it_matters));
+
+  const r = resolveStage();
+  if (S.subject === 'bmw_white' && seqById[S.view]) {
+    const v = seqById[S.view];
+    R.append(el('h3', {}, 'This view'));
+    R.append(el('div', { class: 'kv' }, ...kv('View', v.id), ...kv('Camera · angle', `${v.camera} · ${v.angle}°`), ...kv('Vehicle crop', v.crop_ok ? 'found' : 'none found'), ...kv('Part classes present', v.n_parts_detected)));
+    if (!v.crop_ok) R.append(el('div', { class: 'reason' }, EXCL_REASON));
+    R.append(el('div', { class: 'note' }, (v.part_classes || []).map(PART_LABEL).join(', ') || 'none'));
+    R.append(el('h3', {}, 'Damage detections'));
+    if (!v.detections.length) R.append(el('div', { class: 'note' }, 'None at the 0.30 operating point.'));
+    else {
+      const t = el('table', { class: 't' }); t.append(el('tr', {}, el('th', {}, 'Class'), el('th', {}, 'Conf'), el('th', {}, 'Part'), el('th', {}, 'Overlap')));
+      for (const d of v.detections) t.append(el('tr', {}, el('td', {}, dot(`cl-${d.class}`), ' ', d.class), el('td', {}, fmt(d.confidence, 3)), el('td', {}, d.part ? PART_LABEL(d.part) : 'unattributed'), el('td', {}, d.overlap_pct != null ? fmt(d.overlap_pct, 0) + '%' : 'n/a')));
+      R.append(t);
+    }
+    R.append(el('h3', {}, 'Geometry'), el('div', { class: 'reason' }, PS_POSE_NOTE));
+    const c = D.manifest.counts;
+    R.append(el('h3', {}, 'Sequence'), el('div', { class: 'kv' }, ...kv('Views', c.bmw_sequence_views), ...kv('With vehicle crop', c.bmw_sequence_crop_ok), ...kv('Damage instances', c.bmw_sequence_detections)));
+  }
+
+  if (r.ps) {
+    const c = r.ps;
+    R.append(el('h3', {}, 'Photometric stereo capture'));
+    R.append(el('div', { style: 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px' }, stateChip(c.state, true), el('span', { class: 'chip' }, c.camera), el('span', { class: 'chip' }, c.algorithm)));
+    R.append(el('div', { class: 'kv' }, ...kv('Capture', c.capture), ...kv('Panel', c.label), ...kv('Native solved region', c.native_px ? c.native_px.join(' × ') + ' px' : 'n/a')));
+    const sup = captureSupport[c.capture] || (bmwCloseById[c.capture] && bmwCloseById[c.capture].support);
+    if (sup) {
+      R.append(el('div', { class: 'lab', style: 'margin:8px 0 4px' }, 'Capture-level support'));
+      R.append(el('div', { class: 'kv' }, ...kv('Requested pixels', sup.requested_px), ...kv('Usable lights p10 / median / p90', sup.usable_lights_p10_med_p90.join(' / ')), ...kv('Region with ≥ 6 lights', pct(sup.region_at_least_six, 3)), ...kv('Retained after refinement', pct(sup.retained, 2)), ...kv('Capture-level state', STATE_LABEL[sup.state])));
+    }
+    if (c.evidence) {
+      const e = c.evidence;
+      R.append(el('div', { class: 'lab', style: 'margin:8px 0 4px' }, 'Graded region'));
+      R.append(el('div', { class: 'kv' }, ...kv('Region', e.roi_source), ...kv('Assigned part', e.predicted_part ? PART_LABEL(e.predicted_part) : 'n/a'), ...kv('Region agreement IoU', fmt(e.roi_agreement_iou, 3)),
+        ...kv('Evaluated pixels', e.evaluated_pixels), ...kv('Region retention', pct(e.roi_retention, 1)), ...kv('Valid coverage', pct(e.valid_coverage, 1)),
+        ...kv('Usable lights, mean / median', `${fmt(e.mean_usable_lights, 1)} / ${fmt(e.median_usable_lights, 0)}`), ...kv('Front-facing fraction', fmt(e.front_facing_fraction, 3)),
+        ...kv('Median elevation', fmt(e.median_elevation_deg, 1) + '°'),
+        ...kv('Normal deviation, median / p90', `${fmt(e.normal_deviation_median_deg, 2)}° / ${fmt(e.normal_deviation_p90_deg, 2)}°`),
+        ...kv('Surface roughness, median / p90', `${fmt(e.surface_roughness_median_deg, 2)}° / ${fmt(e.surface_roughness_p90_deg, 2)}°`),
+        ...kv('Damage pixels evaluated', e.damage_pixels_evaluated),
+        ...kv('Relative depth range', e.relative_depth_range == null ? 'n/a' : fmt(e.relative_depth_range, 2)),
+        ...kv('Depth status', e.relative_depth_status ? e.relative_depth_status.replace(/_/g, ' ') : 'n/a')));
+      if (e.relative_depth_units) R.append(el('div', { class: 'note' }, 'Depth units: ' + e.relative_depth_units));
+      if (e.state_reason) R.append(el('div', { class: 'reason' }, e.state_reason));
+      if (e.usable_light_fractions) R.append(usableBars(e.usable_light_fractions));
+    }
+    if (c.state === 'invalid' && S.subject === 'sg_fdm') R.append(el('div', { class: 'reason' }, 'Same artefact, same pose, same solved region as the valid tilted capture. Only the exposure differs. The gate tracks illumination support on a fixed subject.'));
+    R.append(el('div', { class: 'note' }, 'Maps are cropped to the solved region with one shared box per capture, so every layer of this capture is pixel-registered with every other. The native size above is the true resolution of the measurement.'));
+    if (withheldList(c)) R.append(el('div', { class: 'reason' }, `Empty after refinement, so withheld: ${withheldList(c)}. The gate removed every pixel of these layers. The unfiltered variant is unaffected and the support statistics above stand.`));
+  }
+
+  const meas = D.measurements.measurements[S.subject];
+  if (meas && S.subject !== 'bmw_white') { /* table lives in the left rail for these subjects */ }
+  if (S.subject === 'bmw_white') {
+    if (meas) R.append(renderMeasurementTable(meas, false));
+    const seg = D.measurements.bmw_segmentation;
+    R.append(el('h3', {}, 'Framing result'));
+    R.append(el('div', { class: 'reason' }, seg.finding));
+    const t = el('table', { class: 't runs' }); t.append(el('tr', {}, el('th', {}, 'Capture'), el('th', {}, 'Model'), el('th', {}, 'Crop'), el('th', {}, 'Result')));
+    for (const run of seg.runs) {
+      const det = run.detections.length ? run.detections.map(d => `${d.class} ${fmt(d.confidence, 2)} → ${PART_LABEL(d.assigned_part)}${d.attribution_correct ? ' (correct)' : ' (wrong panel)'}`).join('; ') : 'no detection';
+      t.append(el('tr', {}, el('td', { style: 'white-space:normal;text-align:left' }, run.capture.replace(/^ps_bmw_white_/, '')), el('td', { style: 'white-space:normal' }, run.damage_model), el('td', { style: 'white-space:normal' }, run.crop), el('td', { style: 'white-space:normal;text-align:left' }, det, el('small', { style: 'display:block' }, run.note))));
+    }
+    R.append(t);
+    const cc = D.manifest.counts;
+    R.append(el('div', { class: 'kv', style: 'margin-top:8px' }, ...kv('Close-up panel captures, crop found', '1 of 4'), ...kv('Indexed whole-vehicle views, crop found', `${cc.bmw_sequence_crop_ok} of ${cc.bmw_sequence_views}`), ...kv('Indexed views, detections attributed', `${D.bmw_sequence.reduce((a, v) => a + v.detections.filter(d => d.attributed).length, 0)} of ${cc.bmw_sequence_detections}`)));
+    R.append(el('div', { class: 'note' }, 'The two streams want different framing. Photometric stereo needs a close, well-lit panel; RGB attribution needs a whole vehicle. The present pipeline assumes one frame serves both.'));
+  }
+  if (S.subject === 'sg_fdm' && D.extras.figures && D.extras.figures.fdm_evaluation) {
+    R.append(el('h3', {}, 'Evaluation figure'), el('div', { class: 'figs' }, el('img', { src: img(D.extras.figures.fdm_evaluation), alt: 'FDM normal deviation and locally referenced depth' })));
+  }
+  R.append(el('h3', {}, 'Read with care'), el('div', { class: 'reason' }, D.manifest.caveats.scale));
+}
+function kv(k, v) { return [el('div', {}, k), el('div', { class: 'num' }, v == null ? 'n/a' : v)]; }
+function usableBars(fr) {
+  const w = el('div', {});
+  w.append(el('div', { class: 'lab', style: 'margin:8px 0 4px' }, 'Pixels meeting a usable-light count'));
+  const b = el('div', { class: 'bars' });
+  for (const [k, v] of Object.entries(fr)) {
+    b.append(el('span', {}, k.replace('at_least_', '≥ ') + ' lights'), el('div', { class: 'bar' + (k === 'at_least_6' ? ' g6' : '') }, el('i', { style: `width:${(100 * v).toFixed(1)}%` })), el('span', { class: 'num' }, pct(v, 1)));
+  }
+  w.append(b, el('div', { class: 'note' }, 'Three lights is the algebraic minimum and passes everything. The operational gate is six.'));
+  return w;
+}
+function yn(b) { return b ? 'yes' : 'no'; }
+
+/* ---- strip */
+function renderStrip() {
+  const dial = $('#dial'), th = $('#thumbs'); dial.replaceChildren(); th.replaceChildren();
+  const hasDial = S.subject === 'range_rover' || S.subject === 'bmw_white';
+  dial.style.display = hasDial ? '' : 'none';
+  if (hasDial) { renderDial(dial); bindDial(); }
+
+  const p = currentPart();
+  const cur = S.view;
+  if (S.subject === 'range_rover') {
+    let views = subjectViews();
+    if (p) views = views.filter(v => (p.eligible_view_ids || []).includes(v.id) || !v.crop_ok || v.id === cur);
+    th.append(el('div', { class: 'grp-lab' }, p ? `${PART_LABEL(p.part)} · ${views.filter(v => v.crop_ok).length} eligible` : `${S.vehicle} · ${views.length} views`));
+    for (const v of views) th.append(thumb(v.id, img(v.img.thumb), v.camera, v.angle + '°', !v.crop_ok, null, cur === v.id));
+  } else if (S.subject === 'bmw_white') {
+    th.append(el('div', { class: 'grp-lab' }, 'panel bursts'));
+    for (const b of D.bmw_views) { const c = psByKey[`${b.id}::${b.camera}`]; th.append(thumb(b.id, img(b.img.thumb), b.camera, c ? c.label : '', false, c ? c.state : null, cur === b.id)); }
+    th.append(el('div', { class: 'grp-lab' }, `indexed · ${D.bmw_sequence.length} views`));
+    for (const v of D.bmw_sequence) th.append(thumb(v.id, img(v.img.thumb), v.camera, v.angle + '°', !v.crop_ok, null, cur === v.id));
+  } else {
+    th.append(el('div', { class: 'grp-lab' }, 'captures'));
+    for (const c of psBySubject[S.subject] || []) { const m = c.maps.filtered.normal || c.maps.unfiltered.normal; th.append(thumb(psKey(c), img(m), c.camera, c.label, false, c.state, cur === psKey(c))); }
+  }
+  const sel = th.querySelector('[aria-pressed="true"]'); if (sel) sel.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+}
+function thumb(id, src, cam, label, excluded, state, pressed) {
+  return el('button', { class: 'th' + (excluded ? ' excl' : ''), 'aria-pressed': String(pressed), onclick: () => selectView(id), title: excluded ? EXCL_REASON : label },
+    el('img', { src, alt: '', loading: 'lazy' }),
+    state ? el('span', { class: `st st-${state}` }) : null,
+    excluded ? el('span', { class: 'x' }, 'excluded') : null,
+    el('span', { class: 'cap' }, el('span', {}, cam), el('span', {}, label.length > 14 ? label.slice(0, 13) + '…' : label)));
+}
+/* Drag to rotate the turntable. The dial svg is rebuilt on every view change,
+   so the gesture is bound once to the persistent #dial container and tracked on
+   window: the element under the pointer is replaced mid-gesture and pointer
+   capture on it would be lost. Movement has to pass a small threshold before a
+   drag begins, so a plain click on an angle node still selects that node. */
+let dragging = false;
+function dialAngleAt(clientX, clientY) {
+  const svg = $('#dial svg'); if (!svg) return null;
+  const ctm = svg.getScreenCTM(); if (!ctm) return null;
+  const pt = svg.createSVGPoint(); pt.x = clientX; pt.y = clientY;
+  const q = pt.matrixTransform(ctm.inverse());
+  const cx = +svg.dataset.cx, cy = +svg.dataset.cy, R = +svg.dataset.r;
+  const dx = q.x - cx, dy = q.y - cy;
+  const radius = Math.hypot(dx, dy);
+  const deg = (Math.atan2(dy, dx) * 180 / Math.PI + 90 + 360) % 360;
+  return { deg, radius, R };
+}
+function snapToAngle(deg) {
+  const A = D.manifest.angles;
+  let best = A[0], bestD = 1e9;
+  for (const a of A) {
+    const d = Math.min(Math.abs(a - deg), 360 - Math.abs(a - deg));
+    if (d < bestD) { bestD = d; best = a; }
+  }
+  return best;
+}
+function dialSeekTo(deg) {
+  const cur = viewsById[S.view] || seqById[S.view];
+  const cam = cur ? cur.camera : (S._cam || 'cam2');
+  const a = snapToAngle(deg);
+  const v = subjectViews().find(w => w.camera === cam && w.angle === a);
+  if (v && v.id !== S.view) selectView(v.id);
+}
+function bindDial() {
+  const dial = $('#dial'); if (!dial || dial.dataset.bound) return;
+  dial.dataset.bound = '1';
+  let start = null, moved = false;
+  dial.addEventListener('pointerdown', e => {
+    const g = dialAngleAt(e.clientX, e.clientY); if (!g) return;
+    // only near the ring, so the camera buttons in the corner stay clickable
+    if (g.radius < g.R - 24 || g.radius > g.R + 20) return;
+    start = { x: e.clientX, y: e.clientY }; moved = false;
+  });
+  window.addEventListener('pointermove', e => {
+    if (!start) return;
+    if (!moved && Math.hypot(e.clientX - start.x, e.clientY - start.y) < 4) return;
+    if (!moved) { moved = true; dragging = true; document.body.classList.add('dialdrag'); }
+    const g = dialAngleAt(e.clientX, e.clientY); if (!g) return;
+    e.preventDefault();
+    dialSeekTo(g.deg);
+  }, { passive: false });
+  const end = () => {
+    if (moved) { dragging = false; document.body.classList.remove('dialdrag'); renderStrip(); }
+    start = null; moved = false;
+  };
+  window.addEventListener('pointerup', end);
+  window.addEventListener('pointercancel', end);
+}
+
+function renderDial(dial) {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg'); svg.setAttribute('viewBox', '0 0 210 156');
+  const cx = 70, cy = 78, R = 60;
+  const ring = document.createElementNS(svgNS, 'circle'); ring.setAttribute('cx', cx); ring.setAttribute('cy', cy); ring.setAttribute('r', R); ring.setAttribute('class', 'ring'); svg.append(ring);
+  // Wide transparent band along the ring. This is what a drag grabs, so the
+  // gesture works in the gaps between the angle nodes as well as on them.
+  const grab = document.createElementNS(svgNS, 'circle'); grab.setAttribute('cx', cx); grab.setAttribute('cy', cy); grab.setAttribute('r', R); grab.setAttribute('class', 'grab'); svg.append(grab);
+  svg.dataset.cx = cx; svg.dataset.cy = cy; svg.dataset.r = R;
+  const views = subjectViews();
+  const curView = viewsById[S.view] || seqById[S.view];
+  const closeup = bmwCloseById[S.view];
+  const curCam = curView ? curView.camera : (closeup ? closeup.camera : (S._cam || 'cam2'));
+  const curAngle = curView ? curView.angle : null;
+  const lbl = document.createElementNS(svgNS, 'text'); lbl.setAttribute('x', cx); lbl.setAttribute('y', cy - 6); lbl.setAttribute('class', 'lbl'); lbl.textContent = 'turntable'; svg.append(lbl);
+  const lbl2 = document.createElementNS(svgNS, 'text'); lbl2.setAttribute('x', cx); lbl2.setAttribute('y', cy + 6); lbl2.setAttribute('class', 'lbl'); lbl2.textContent = curAngle != null ? `${curAngle}° · ${curCam}` : 'no view'; svg.append(lbl2);
+  for (const a of D.manifest.angles) {
+    const t = (a - 90) * Math.PI / 180; const x = cx + R * Math.cos(t), y = cy + R * Math.sin(t);
+    const v = views.find(w => w.camera === curCam && w.angle === a);
+    const g = document.createElementNS(svgNS, 'g'); g.setAttribute('class', 'ang' + (curAngle === a ? ' sel' : '') + (v && !v.crop_ok ? ' excl' : ''));
+    g.setAttribute('role', 'button'); g.setAttribute('tabindex', '0');
+    const tk = document.createElementNS(svgNS, 'line'); tk.setAttribute('x1', cx + (R - 8) * Math.cos(t)); tk.setAttribute('y1', cy + (R - 8) * Math.sin(t)); tk.setAttribute('x2', cx + R * Math.cos(t)); tk.setAttribute('y2', cy + R * Math.sin(t)); tk.setAttribute('class', 'tick'); svg.append(tk);
+    const c = document.createElementNS(svgNS, 'circle'); c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', 9.5); g.append(c);
+    if (v && !v.crop_ok) { const ln = document.createElementNS(svgNS, 'line'); ln.setAttribute('x1', x - 6.5); ln.setAttribute('y1', y + 6.5); ln.setAttribute('x2', x + 6.5); ln.setAttribute('y2', y - 6.5); g.append(ln); }
+    const tx = document.createElementNS(svgNS, 'text'); tx.setAttribute('x', x); tx.setAttribute('y', y + .5); tx.textContent = a; g.append(tx);
+    const title = document.createElementNS(svgNS, 'title'); title.textContent = v ? (v.crop_ok ? `${v.id}` : `${v.id} · excluded, vehicle crop found no vehicle`) : `no view at ${a}° for ${curCam}`; g.append(title);
+    if (v) { g.addEventListener('click', () => selectView(v.id)); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectView(v.id); } }); }
+    svg.append(g);
+  }
+  // camera selector, a labelled cluster rather than invented azimuths
+  const camLbl = document.createElementNS(svgNS, 'text'); camLbl.setAttribute('x', 176); camLbl.setAttribute('y', 26); camLbl.setAttribute('class', 'lbl'); camLbl.textContent = 'camera'; svg.append(camLbl);
+  D.manifest.cameras.forEach((cam, i) => {
+    const x = 152 + (i % 2) * 26, y = 38 + Math.floor(i / 2) * 42;
+    const g = document.createElementNS(svgNS, 'g'); g.setAttribute('class', 'cam' + (curCam === cam ? ' sel' : '')); g.setAttribute('role', 'button'); g.setAttribute('tabindex', '0');
+    const r = document.createElementNS(svgNS, 'rect'); r.setAttribute('x', x); r.setAttribute('y', y); r.setAttribute('width', 22); r.setAttribute('height', 32); r.setAttribute('rx', 2); g.append(r);
+    const t = document.createElementNS(svgNS, 'text'); t.setAttribute('x', x + 11); t.setAttribute('y', y + 16); t.textContent = cam.replace('cam', ''); g.append(t);
+    const pick = () => { S._cam = cam; const a = curAngle != null ? curAngle : 0; const v = views.find(w => w.camera === cam && w.angle === a) || views.find(w => w.camera === cam); if (v) selectView(v.id); else renderStrip(); };
+    g.addEventListener('click', pick); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    svg.append(g);
+  });
+  if (curAngle != null) {
+    const t = (curAngle - 90) * Math.PI / 180;
+    const hx = cx + R * Math.cos(t), hy = cy + R * Math.sin(t);
+    const h = document.createElementNS(svgNS, 'circle');
+    h.setAttribute('cx', hx); h.setAttribute('cy', hy); h.setAttribute('r', 13.5);
+    h.setAttribute('class', 'handle' + (dragging ? ' live' : ''));
+    svg.append(h);
+  }
+  const foot = document.createElementNS(svgNS, 'text'); foot.setAttribute('x', 176); foot.setAttribute('y', 144); foot.setAttribute('class', 'lbl'); foot.textContent = dragging ? 'drag to rotate' : 'struck = excluded'; svg.append(foot);
+  dial.append(svg);
+}
+
+/* --------------------------------------------------------------- actions */
+function subjectDefaults(id) {
+  S.subject = id; S.part = null; S.compare = false; S.showTabNote = null;
+  S.vp = { frame: { s: 1, cx: .5, cy: .5 }, ps: { s: 1, cx: .5, cy: .5 } };
+  if (id === 'range_rover') { S.view = `${S.vehicle}_cam2_r000`; S.layer = 'rgb'; }
+  else if (id === 'bmw_white') { S.view = D.bmw_views[0].id; S.layer = 'normal'; }
+  else { const c = (psBySubject[id] || [])[0]; S.view = c ? psKey(c) : null; S.layer = 'normal'; }
+}
+function selectSubject(id) {
+  if (S.subject === id) return;
+  subjectDefaults(id);
+  render();
+}
+/* Deep link: #subject=bmw_white&view=...&layer=normal&part=hood&vehicle=clean&compare=1&threshold=6 */
+function applyHash() {
+  const h = location.hash.replace(/^#/, ''); if (!h) return;
+  const q = Object.fromEntries(h.split('&').filter(Boolean).map(kv => kv.split('=').map(s => decodeURIComponent(s))));
+  if (q.vehicle && D.manifest.vehicles.includes(q.vehicle)) S.vehicle = q.vehicle;
+  if (q.subject && subjectsById[q.subject]) subjectDefaults(q.subject);
+  if (q.view) S.view = q.view;
+  if (q.part) {
+    S.part = q.part;
+    // A part named without an explicit view opens on that part's own target,
+    // the same view clicking it in the plan view would open.
+    if (!q.view) {
+      const rec = partsByKey[`${S.vehicle}::${q.part}`];
+      const t = rec && ((rec.best_seen_view && viewsById[rec.best_seen_view]) ? rec.best_seen_view
+                      : (rec.representative_view && viewsById[rec.representative_view]) ? rec.representative_view : null);
+      if (t) S.view = t;
+    }
+  }
+  if (q.layer && LAYER_LABEL[q.layer]) S.layer = q.layer;
+  if (q.variant === 'filtered' || q.variant === 'unfiltered') S.variant = q.variant;
+  if (q.compare) S.compare = q.compare === '1';
+  if (q.threshold != null && D.sensitivity[+q.threshold]) S.thresholdIdx = +q.threshold;
+  if (q.z) { const v = S.vp[PS_LAYERS.includes(S.layer) ? 'ps' : 'frame']; v.s = Math.max(1, Math.min(8, +q.z || 1)); if (q.cx) v.cx = +q.cx; if (q.cy) v.cy = +q.cy; }
+}
+function setVehicle(v) {
+  if (S.vehicle === v) return;
+  const cur = viewsById[S.view];
+  S.vehicle = v;
+  if (cur) { const id = `${v}_${cur.camera}_r${String(cur.angle).padStart(3, '0')}`; S.view = viewsById[id] ? id : `${v}_cam2_r000`; }
+  else S.view = `${v}_cam2_r000`;
+  if (S.part && !partsByKey[`${v}::${S.part}`]) S.part = null;
+  render();
+}
+function selectPart(part) {
+  const p = partsByKey[`${S.vehicle}::${part}`]; if (!p) return;
+  S.part = part;
+  // Open the view where the part is largest among views whose segmentation has
+  // not collapsed, rather than the quality-score representative view. The
+  // representative view stays in the record; it is a different question.
+  const target = (p.best_seen_view && viewsById[p.best_seen_view]) ? p.best_seen_view
+               : (p.representative_view && viewsById[p.representative_view]) ? p.representative_view
+               : null;
+  if (target) S.view = target;
+  S.showTabNote = null;
+  render();
+}
+function selectView(id) {
+  S.view = id; S.showTabNote = null;
+  if (S.subject === 'bmw_white') { if (seqById[id] && PS_LAYERS.includes(S.layer)) S.layer = 'rgb'; if (bmwCloseById[id] && FRAME_LAYERS.includes(S.layer)) { /* keep */ } }
+  renderStage(); renderRight(); renderStrip();
+  if (S.subject === 'range_rover') renderLeft();
+}
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input,textarea')) return;
+  if (e.key === 'Escape') { closeDrawer(); return; }
+  // Up and down rotate the turntable one indexed step, holding the camera, and
+  // wrap from the last angle back to the first.
+  if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+    const cur = viewsById[S.view] || seqById[S.view];
+    if (!cur) return;
+    const A = D.manifest.angles, n = A.length;
+    const i = A.indexOf(cur.angle); if (i < 0) return;
+    const views = subjectViews();
+    for (let k = 1; k <= n; k++) {
+      const a = A[(i + (e.key === 'ArrowUp' ? -k : k) % n + n * 2) % n];
+      const v = views.find(w => w.camera === cur.camera && w.angle === a);
+      if (v) { selectView(v.id); e.preventDefault(); return; }
+    }
+    return;
+  }
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  const items = [...$('#thumbs').querySelectorAll('.th')];
+  const i = items.findIndex(b => b.getAttribute('aria-pressed') === 'true');
+  const j = Math.max(0, Math.min(items.length - 1, i + (e.key === 'ArrowRight' ? 1 : -1)));
+  if (items[j] && j !== i) { items[j].click(); e.preventDefault(); }
+});
+
+/* --------------------------------------------------------------- drawer */
+function openDrawer() {
+  const g = D.geometry_first; const box = $('#drawerbox'); box.replaceChildren();
+  box.append(el('button', { class: 'close', onclick: closeDrawer, 'aria-label': 'Close' }, '×'));
+  box.append(el('h2', {}, 'Geometry-first damage proposals'));
+  box.append(el('div', { class: 'status' }, g.status));
+  box.append(el('p', {}, g.claim));
+  box.append(el('h3', {}, 'Detection is a slope limit'));
+  const t = el('table', { class: 't' }); t.append(el('tr', {}, el('th', {}, 'Feature'), el('th', {}, 'Rim slope'), el('th', {}, 'Nominal depth'), el('th', {}, 'Detected')));
+  for (const r of g.slope_not_depth) t.append(el('tr', {}, el('td', {}, r.feature), el('td', {}, r.rim_slope_deg + '°'), el('td', {}, fmt(r.nominal_depth_mm, 2), el('span', { class: 'u' }, 'mm')), el('td', {}, r.detected)));
+  box.append(t);
+  box.append(el('p', {}, g.deciding_comparison));
+  const figs = D.extras.figures || {};
+  if (figs.geo_detection_limit) box.append(el('img', { src: img(figs.geo_detection_limit), alt: 'Detection rate against slope and against depth' }));
+  box.append(el('h3', {}, 'Negative control'), el('p', {}, g.negative_control));
+  if (figs.geo_proposal_maps) box.append(el('img', { src: img(figs.geo_proposal_maps), alt: 'Proposal maps' }));
+  box.append(el('h3', {}, 'Gloss-black Range Rover'), el('p', {}, g.range_rover));
+  box.append(el('h3', {}, 'What this does not support'), el('p', {}, g.not_supported));
+  $('#drawer').classList.add('on');
+}
+function closeDrawer() { $('#drawer').classList.remove('on'); }
+$('#drawer').addEventListener('click', e => { if (e.target.id === 'drawer') closeDrawer(); });
+
+/* --------------------------------------------------------------- export */
+function exportName(kind) {
+  const r = resolveStage(); const id = (r.caption && r.caption.id) || 'none';
+  return `smartgate_${S.subject}_${S.part || 'nopart'}_${id}_${kind}.png`.replace(/[^\w.\-]+/g, '_');
+}
+function deliver(canvas, name) {
+  try {
+    canvas.toBlob(b => {
+      if (!b) { toast('Export failed: the browser blocked reading this canvas.'); return; }
+      const url = URL.createObjectURL(b);
+      const a = el('a', { href: url, download: name }); document.body.append(a); a.click(); a.remove();
+      const w = window.open(url, '_blank'); if (!w) toast('Saved as ' + name + '. If no download appeared, allow pop-ups to open it in a tab.');
+      else toast('Opened in a new tab and offered as ' + name);
+    }, 'image/png');
+  } catch (e) { toast('Export failed: ' + e.message + '. On file:// some browsers refuse to read images back from a canvas; open the image directly instead.'); }
+}
+function exportStage() {
+  const r = resolveStage(); const src = layerSrc(r);
+  if (!src) { toast('Nothing on the stage to export.'); return; }
+  const im = new Image(); im.onload = () => {
+    const scale = 2; const capH = 34;
+    const cv = el('canvas', { width: im.naturalWidth * scale, height: im.naturalHeight * scale + capH * scale });
+    const ctx = cv.getContext('2d'); ctx.fillStyle = '#FBFAF9'; ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.imageSmoothingEnabled = false; ctx.drawImage(im, 0, 0, cv.width, im.naturalHeight * scale);
+    ctx.fillStyle = '#1A1A19'; ctx.font = `${12 * scale}px ${getComputedStyle(document.body).fontFamily}`;
+    const txt = `${(r.caption && r.caption.id) || ''} · ${LAYER_LABEL[S.layer]}${PS_LAYERS.includes(S.layer) ? ' · ' + S.variant + (r.ps ? ' · ' + STATE_LABEL[r.ps.state] : '') : ''}${r.caption && r.caption.camera ? ' · ' + r.caption.camera : ''}${r.caption && r.caption.angle != null ? ' · ' + r.caption.angle + '°' : ''}`;
+    ctx.fillText(txt, 10 * scale, im.naturalHeight * scale + 22 * scale);
+    deliver(cv, exportName('stage'));
+  };
+  im.onerror = () => toast('Could not load the image for export.');
+  im.src = src;
+}
+function exportRecord() {
+  const R = $('#right'); const w = R.clientWidth, h = R.scrollHeight; const scale = 2;
+  const css = [...document.styleSheets].map(s => { try { return [...s.cssRules].map(r => r.cssText).join('\n'); } catch (e) { return ''; } }).join('\n');
+  const clone = R.cloneNode(true); clone.querySelectorAll('img').forEach(i => i.remove());
+  clone.style.cssText = `width:${w}px;height:auto;overflow:visible;background:#FBFAF9;padding:10px 12px 20px;box-sizing:border-box;font-family:${getComputedStyle(document.body).fontFamily}`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><style>${css.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</style><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml" id="right">${new XMLSerializer().serializeToString(clone).replace(/^<div[^>]*>/, '').replace(/<\/div>$/, '')}</div></foreignObject></svg>`;
+  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' }); const url = URL.createObjectURL(blob);
+  const im = new Image(); im.onload = () => {
+    const cv = el('canvas', { width: w * scale, height: h * scale }); const ctx = cv.getContext('2d');
+    ctx.fillStyle = '#FBFAF9'; ctx.fillRect(0, 0, cv.width, cv.height); ctx.scale(scale, scale); ctx.drawImage(im, 0, 0); URL.revokeObjectURL(url);
+    deliver(cv, exportName('record'));
+  };
+  im.onerror = () => { URL.revokeObjectURL(url); toast('Record export failed in this browser. Use the stage export, or print the page to PDF.'); };
+  im.src = url;
+}
+
+/* ----------------------------------------------------------------- init */
+VP.init();
+subjectDefaults(S.subject);
+applyHash();
+render();
+</script>
+</body>
+</html>

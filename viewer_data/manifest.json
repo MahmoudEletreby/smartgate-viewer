@@ -1,0 +1,94 @@
+{
+ "generated": "2026-09-07",
+ "vehicles": [
+  "clean",
+  "damaged"
+ ],
+ "cameras": [
+  "cam0",
+  "cam1",
+  "cam2",
+  "cam3"
+ ],
+ "angles": [
+  0,
+  30,
+  60,
+  90,
+  120,
+  150,
+  180,
+  210,
+  240,
+  270,
+  300,
+  330
+ ],
+ "acquisition": {
+  "id": "allled_30deg",
+  "label": "All-LED, 30 degree indexing",
+  "illumination": "all twelve chamber white LED dies lit simultaneously, no external source",
+  "increment_deg": 30,
+  "exposure": {
+   "range_rover": "100,000 us at gain 1.0",
+   "bmw_white": "60,000 us at gain 1.0"
+  },
+  "white_point": "one fixed per-camera white point estimated from the white BMW under the twelve-LED illuminant, applied unchanged to all three vehicles",
+  "capture_sets": [
+   "rgb_rr_black_clean_360_30deg_allled_r000",
+   "rgb_rr_black_damaged_360_30deg_allled_r000",
+   "rgb_bmw_white_damaged_360_30deg_allled_r000"
+  ],
+  "supersedes": "the externally relit 45 degree sequences, retained on disk as the illumination-limited baseline",
+  "source": "writeups/Experiment_AllLED_RGB_Reevaluation.md"
+ },
+ "confidence_threshold": 0.3,
+ "damage_classes": [
+  "scratch",
+  "dent"
+ ],
+ "damage_model": "site-adapted YOLO11s-seg, 1024 px, confidence 0.30",
+ "part_model": "SegFormer-B2, 512 px letterboxed, 23-class taxonomy",
+ "crop_model": "COCO-pretrained YOLO11x-seg, 1280 px, confidence 0.15",
+ "parts": [
+  "body_side_left",
+  "body_side_right",
+  "front_bumper",
+  "front_door_left",
+  "front_door_right",
+  "headlight_left",
+  "headlight_right",
+  "hood",
+  "mirror_left",
+  "mirror_right",
+  "rear_bumper",
+  "rear_door_left",
+  "rear_door_right",
+  "rear_glass",
+  "roof",
+  "side_window",
+  "taillight_left",
+  "taillight_right",
+  "trunk_tailgate",
+  "wheel",
+  "windshield"
+ ],
+ "counts": {
+  "views_total": 96,
+  "views_eligible": 91,
+  "views_crop_failed": 5,
+  "part_records": 42,
+  "damage_instances": 653,
+  "attributed": 602,
+  "unattributed": 51,
+  "ps_captures_shown": 14,
+  "bmw_sequence_views": 48,
+  "bmw_sequence_crop_ok": 46,
+  "bmw_sequence_detections": 97
+ },
+ "caveats": {
+  "sample": "Two physical vehicles. Every count is a case-study description, not an accuracy estimate. There is no per-instance ground truth on this sequence, so no precision, recall or F1 is reported.",
+  "confound": "The damage model was fine-tuned on 22 images of the damaged car and none of a comparable clean one. Its false-positive behaviour on gloss black is a property of that training set as much as of the surface.",
+  "scale": "Every measurement is on 1:18 and 1:24 scale die-cast subjects. A millimetre on a model is not a millimetre on a full-size vehicle, and depth does not scale by direct multiplication."
+ }
+}

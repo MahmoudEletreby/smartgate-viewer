@@ -1,0 +1,105 @@
+{
+ "interpretation": "Descriptive case-study comparison; the indexed sequences do not have exhaustive pixel-level ground truth.",
+ "range_rover": {
+  "legacy_relit_45deg": {
+   "views": 64,
+   "successful_vehicle_crops": 51,
+   "crop_success_rate": 0.7969,
+   "by_vehicle": {
+    "clean": {
+     "views": 32,
+     "successful_vehicle_crops": 26,
+     "damage_instances": 194,
+     "damage_instances_at_confidence_0.85": 7,
+     "part_class_results_at_confidence_0.85": 3,
+     "part_class_results_with_consensus_at_confidence_0.85": 1
+    },
+    "damaged": {
+     "views": 32,
+     "successful_vehicle_crops": 25,
+     "damage_instances": 393,
+     "damage_instances_at_confidence_0.85": 36,
+     "part_class_results_at_confidence_0.85": 16,
+     "part_class_results_with_consensus_at_confidence_0.85": 15
+    }
+   }
+  },
+  "allled_30deg": {
+   "views": 96,
+   "successful_vehicle_crops": 91,
+   "crop_success_rate": 0.9479,
+   "by_vehicle": {
+    "clean": {
+     "views": 48,
+     "successful_vehicle_crops": 45,
+     "damage_instances": 207,
+     "damage_instances_at_confidence_0.85": 1,
+     "part_class_results_at_confidence_0.85": 1,
+     "part_class_results_with_consensus_at_confidence_0.85": 1
+    },
+    "damaged": {
+     "views": 48,
+     "successful_vehicle_crops": 46,
+     "damage_instances": 446,
+     "damage_instances_at_confidence_0.85": 48,
+     "part_class_results_at_confidence_0.85": 14,
+     "part_class_results_with_consensus_at_confidence_0.85": 12
+    }
+   }
+  }
+ },
+ "bmw_damaged": {
+  "legacy_relit_45deg": {
+   "views": 32,
+   "successful_vehicle_crops": 28,
+   "crop_success_rate": 0.875,
+   "damage_instances": 31,
+   "target_panel_instances": 17,
+   "target_panel_instances_at_confidence_0.70": 7,
+   "views_with_target_panel_evidence": 13
+  },
+  "allled_30deg": {
+   "views": 48,
+   "successful_vehicle_crops": 46,
+   "crop_success_rate": 0.9583,
+   "damage_instances": 97,
+   "attributed_instances": 92,
+   "target_panel_instances": 70,
+   "target_panel_instances_at_confidence_0.70": 23,
+   "views_with_target_panel_evidence": 32
+  }
+ },
+ "prepared_frame_uniformity": {
+  "range_rover_legacy": {
+   "views": 64,
+   "mean_dn": 40.36,
+   "p05_dn": 21.0,
+   "p95_dn": 72.21,
+   "coefficient_of_variation": 0.396
+  },
+  "range_rover_allled": {
+   "views": 96,
+   "mean_dn": 59.83,
+   "p05_dn": 52.17,
+   "p95_dn": 76.67,
+   "coefficient_of_variation": 0.139
+  },
+  "bmw_legacy": {
+   "views": 32,
+   "mean_dn": 33.76,
+   "p05_dn": 18.73,
+   "p95_dn": 57.39,
+   "coefficient_of_variation": 0.42
+  },
+  "bmw_allled": {
+   "views": 48,
+   "mean_dn": 68.11,
+   "p05_dn": 61.44,
+   "p95_dn": 72.73,
+   "coefficient_of_variation": 0.05
+  }
+ },
+ "note": "The externally relit 45-degree sequence is the illumination-limited baseline. Its imagery stays on disk under report_figures/multiview_fusion and report_figures/bmw_sequence. The viewer carries the all-LED sequence because that is what the report now reports.",
+ "source": "report_figures/multiview_fusion_allled_comparison/metrics.json",
+ "figure": "img/figures/acquisition_comparison.jpg"
+}

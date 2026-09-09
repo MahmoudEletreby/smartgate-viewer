@@ -1,0 +1,437 @@
+{
+ "unattributed_by_vehicle": {
+  "clean": [
+   {
+    "damage_class": "dent",
+    "mask_area_px": 2142,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6941,
+    "view_id": "clean_cam0_r090"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 1137,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4423,
+    "view_id": "clean_cam0_r150"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 921,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3737,
+    "view_id": "clean_cam0_r150"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 482,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.8329,
+    "view_id": "clean_cam0_r180"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1824,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.7932,
+    "view_id": "clean_cam0_r270"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 5751,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.737,
+    "view_id": "clean_cam0_r300"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1116,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6326,
+    "view_id": "clean_cam0_r300"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 4863,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4868,
+    "view_id": "clean_cam0_r330"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1266,
+    "reason": "assigned to rear_glass, which is not an eligible part in this view",
+    "rgb_confidence": 0.5829,
+    "view_id": "clean_cam1_r000"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 12925,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.7634,
+    "view_id": "clean_cam1_r060"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 566,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.5162,
+    "view_id": "clean_cam1_r120"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 6445,
+    "reason": "assigned to side_window, which is not an eligible part in this view",
+    "rgb_confidence": 0.7054,
+    "view_id": "clean_cam1_r180"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 7749,
+    "reason": "assigned to rear_door_right, which is not an eligible part in this view",
+    "rgb_confidence": 0.6555,
+    "view_id": "clean_cam1_r180"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 7521,
+    "reason": "assigned to front_door_right, which is not an eligible part in this view",
+    "rgb_confidence": 0.415,
+    "view_id": "clean_cam1_r180"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 6183,
+    "reason": "winning fraction 0.43 below 0.50, damage spans several parts",
+    "rgb_confidence": 0.3602,
+    "view_id": "clean_cam1_r180"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 8170,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4727,
+    "view_id": "clean_cam1_r240"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 2557,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.7647,
+    "view_id": "clean_cam2_r060"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1631,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3058,
+    "view_id": "clean_cam2_r060"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 2440,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3965,
+    "view_id": "clean_cam2_r180"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1182,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6175,
+    "view_id": "clean_cam2_r240"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 5981,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.7779,
+    "view_id": "clean_cam2_r270"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1490,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4293,
+    "view_id": "clean_cam2_r270"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 361,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.5472,
+    "view_id": "clean_cam3_r120"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 5104,
+    "reason": "assigned to side_window, which is not an eligible part in this view",
+    "rgb_confidence": 0.4536,
+    "view_id": "clean_cam3_r180"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 537,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6632,
+    "view_id": "clean_cam3_r300"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 426,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4222,
+    "view_id": "clean_cam3_r300"
+   }
+  ],
+  "damaged": [
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 2656,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4197,
+    "view_id": "damaged_cam0_r000"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 210,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3147,
+    "view_id": "damaged_cam0_r000"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 2376,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3666,
+    "view_id": "damaged_cam0_r060"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 2803,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.8718,
+    "view_id": "damaged_cam0_r090"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1850,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4581,
+    "view_id": "damaged_cam0_r120"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 2225,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4561,
+    "view_id": "damaged_cam0_r120"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 2824,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3263,
+    "view_id": "damaged_cam0_r120"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 478,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.367,
+    "view_id": "damaged_cam0_r150"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 961,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3253,
+    "view_id": "damaged_cam0_r150"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 5609,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6208,
+    "view_id": "damaged_cam0_r180"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 306,
+    "reason": "winning fraction 0.48 below 0.50, damage spans several parts",
+    "rgb_confidence": 0.6751,
+    "view_id": "damaged_cam0_r300"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 5696,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6711,
+    "view_id": "damaged_cam0_r300"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 985,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.5318,
+    "view_id": "damaged_cam0_r300"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 285,
+    "reason": "winning fraction 0.46 below 0.50, damage spans several parts",
+    "rgb_confidence": 0.4113,
+    "view_id": "damaged_cam0_r300"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1866,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6328,
+    "view_id": "damaged_cam0_r330"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 3127,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4613,
+    "view_id": "damaged_cam0_r330"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 677,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3379,
+    "view_id": "damaged_cam1_r120"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 638,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6987,
+    "view_id": "damaged_cam1_r270"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 926,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4027,
+    "view_id": "damaged_cam2_r060"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 3580,
+    "reason": "winning fraction 0.50 below 0.50, damage spans several parts",
+    "rgb_confidence": 0.3727,
+    "view_id": "damaged_cam2_r060"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 579,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4578,
+    "view_id": "damaged_cam2_r180"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 3788,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.8496,
+    "view_id": "damaged_cam2_r240"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 4659,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.7742,
+    "view_id": "damaged_cam2_r270"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1598,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.4967,
+    "view_id": "damaged_cam2_r270"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 9023,
+    "reason": "assigned to front_door_left, which is not an eligible part in this view",
+    "rgb_confidence": 0.6533,
+    "view_id": "damaged_cam3_r000"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 4534,
+    "reason": "assigned to side_window, which is not an eligible part in this view",
+    "rgb_confidence": 0.5924,
+    "view_id": "damaged_cam3_r000"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1041,
+    "reason": "assigned to trunk_tailgate, which is not an eligible part in this view",
+    "rgb_confidence": 0.4164,
+    "view_id": "damaged_cam3_r000"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1294,
+    "reason": "assigned to front_door_left, which is not an eligible part in this view",
+    "rgb_confidence": 0.395,
+    "view_id": "damaged_cam3_r000"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 587,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.5711,
+    "view_id": "damaged_cam3_r030"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 1012,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.524,
+    "view_id": "damaged_cam3_r060"
+   },
+   {
+    "damage_class": "scratch",
+    "mask_area_px": 821,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3887,
+    "view_id": "damaged_cam3_r060"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 661,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3155,
+    "view_id": "damaged_cam3_r060"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 1273,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.6565,
+    "view_id": "damaged_cam3_r090"
+   },
+   {
+    "damage_class": "dent",
+    "mask_area_px": 6079,
+    "reason": "off_vehicle: unsuppressed part model calls the region background",
+    "rgb_confidence": 0.3571,
+    "view_id": "damaged_cam3_r090"
+   }
+  ]
+ },
+ "figures": {
+  "fdm_evaluation": "img/figures/fdm_evaluation.jpg",
+  "coverage_matrix": "img/figures/coverage_matrix.jpg",
+  "single_vs_multiview": "img/figures/single_vs_multiview.jpg",
+  "camera_arrangement": "img/figures/camera_arrangement.jpg",
+  "quality_gated_evidence": "img/figures/quality_gated_evidence.jpg",
+  "geo_detection_limit": "img/figures/geo_detection_limit.jpg",
+  "geo_proposal_maps": "img/figures/geo_proposal_maps.jpg"
+ }
+}

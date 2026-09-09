@@ -1,0 +1,42 @@
+[
+ {
+  "id": "range_rover",
+  "name": "Range Rover",
+  "scale": "1:18 die-cast",
+  "finish": "gloss black",
+  "geometry_outcome": "abstains",
+  "has_multiview": true,
+  "headline": "96 indexed views, 42 part records. Photometric stereo reaches partial on one region and invalid everywhere else. No metric depth released.",
+  "why_it_matters": "The hardest surface in the study. Gloss black under chamber lighting leaves three to four usable lights of twelve, and the quality gate refuses to release geometry from it."
+ },
+ {
+  "id": "bmw_white",
+  "name": "White BMW",
+  "scale": "1:24 die-cast",
+  "finish": "white painted, diffuse",
+  "geometry_outcome": "valid",
+  "has_multiview": true,
+  "headline": "Bonnet capture retains 97.2% of its region at 11 usable lights. Three imposed dents localised with a fixed-pose standard deviation of 0.01 mm.",
+  "why_it_matters": "The strongest applied vehicle-panel evidence in the project. Where illumination support exists, geometry measures."
+ },
+ {
+  "id": "sg_fdm",
+  "name": "SG-FDM artefact",
+  "scale": "printed PLA plate",
+  "finish": "matte",
+  "geometry_outcome": "valid",
+  "has_multiview": false,
+  "headline": "Mean absolute error 0.604 mm against nominal CAD across eight features, with a mean per-feature standard deviation of 0.0043 mm.",
+  "why_it_matters": "High precision with moderate absolute accuracy. Seven of eight signs correct, several concave depths systematically compressed."
+ },
+ {
+  "id": "sheet_metal",
+  "name": "Painted steel strip",
+  "scale": "65 mm wide strip",
+  "finish": "grey etching primer",
+  "geometry_outcome": "valid",
+  "has_multiview": false,
+  "headline": "Three of four dents yield valid depth at about 0.38 mm mean absolute error. The fourth is rejected for wrong sign.",
+  "why_it_matters": "Forcing the rejected dent into the average would raise the error to 0.94 mm. This is abstention paying for itself."
+ }
+]

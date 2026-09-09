@@ -1,0 +1,5181 @@
+[
+ {
+  "part": "body_side_left",
+  "vehicle": "clean",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 18,
+  "eligible_view_ids": [
+   "clean_cam0_r120",
+   "clean_cam1_r030",
+   "clean_cam1_r090",
+   "clean_cam0_r150",
+   "clean_cam2_r210",
+   "clean_cam1_r330",
+   "clean_cam1_r120",
+   "clean_cam0_r240",
+   "clean_cam0_r180",
+   "clean_cam3_r150",
+   "clean_cam0_r090",
+   "clean_cam1_r150",
+   "clean_cam3_r330",
+   "clean_cam2_r240",
+   "clean_cam2_r120",
+   "clean_cam0_r210",
+   "clean_cam2_r270",
+   "clean_cam3_r000"
+  ],
+  "representative_view": "clean_cam0_r120",
+  "representative_view_quality": 0.7023,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.3051,
+   "saturation": 0.9808,
+   "sharpness": 0.2254
+  },
+  "best_seen_view": "clean_cam0_r120",
+  "best_seen_area_px": 176182,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 1,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.517,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam2_r270",
+     "observation_views": [
+      "clean_cam2_r270"
+     ],
+     "observations": 1,
+     "total_mask_area_px": 356,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 1,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.3235,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam0_r150",
+     "observation_views": [
+      "clean_cam0_r150"
+     ],
+     "observations": 1,
+     "total_mask_area_px": 180,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "body_side_right",
+  "vehicle": "clean",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 11,
+  "eligible_view_ids": [
+   "clean_cam1_r240",
+   "clean_cam0_r030",
+   "clean_cam2_r060",
+   "clean_cam0_r330",
+   "clean_cam1_r270",
+   "clean_cam0_r000",
+   "clean_cam1_r210",
+   "clean_cam3_r210",
+   "clean_cam2_r030",
+   "clean_cam0_r300",
+   "clean_cam2_r090"
+  ],
+  "representative_view": "clean_cam1_r240",
+  "representative_view_quality": 0.7165,
+  "representative_view_components": {
+   "area": 0.885,
+   "boundary": 0.985,
+   "exposure": 0.4271,
+   "saturation": 0.6796,
+   "sharpness": 0.6057
+  },
+  "best_seen_view": "clean_cam0_r030",
+  "best_seen_area_px": 114646,
+  "best_seen_classes_in_view": 12,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 3,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.4898,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam2_r060",
+     "observation_views": [
+      "clean_cam2_r060",
+      "clean_cam3_r210",
+      "clean_cam3_r210"
+     ],
+     "observations": 3,
+     "total_mask_area_px": 9335,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.716,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r240",
+     "observation_views": [
+      "clean_cam1_r240",
+      "clean_cam2_r060"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 5305,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "front_bumper",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 21,
+  "eligible_view_ids": [
+   "clean_cam0_r240",
+   "clean_cam0_r270",
+   "clean_cam2_r300",
+   "clean_cam1_r300",
+   "clean_cam1_r060",
+   "clean_cam2_r270",
+   "clean_cam1_r150",
+   "clean_cam3_r030",
+   "clean_cam1_r090",
+   "clean_cam1_r030",
+   "clean_cam0_r210",
+   "clean_cam3_r240",
+   "clean_cam1_r270",
+   "clean_cam1_r210",
+   "clean_cam3_r000",
+   "clean_cam3_r090",
+   "clean_cam0_r330",
+   "clean_cam0_r300",
+   "clean_cam0_r180",
+   "clean_cam2_r240",
+   "clean_cam2_r210"
+  ],
+  "representative_view": "clean_cam0_r240",
+  "representative_view_quality": 0.6618,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.2004,
+   "saturation": 0.871,
+   "sharpness": 0.2376
+  },
+  "best_seen_view": "clean_cam0_r240",
+  "best_seen_area_px": 304668,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8141,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam2_r240",
+     "observation_views": [
+      "clean_cam2_r240",
+      "clean_cam3_r000"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 6888,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r240",
+        "clean_cam0_r240"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r210",
+        "clean_cam0_r210"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r300",
+        "clean_cam0_r300"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam0_r330",
+        "clean_cam0_r300"
+       ]
+      }
+     ],
+     "consensus_support": 12,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7315,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam2_r240",
+     "observation_views": [
+      "clean_cam2_r240",
+      "clean_cam3_r000",
+      "clean_cam1_r210",
+      "clean_cam2_r300",
+      "clean_cam0_r330",
+      "clean_cam1_r210",
+      "clean_cam0_r210",
+      "clean_cam2_r240",
+      "clean_cam0_r240",
+      "clean_cam0_r300",
+      "clean_cam2_r300",
+      "clean_cam1_r210"
+     ],
+     "observations": 12,
+     "total_mask_area_px": 4056,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "front_door_left",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 25,
+  "eligible_view_ids": [
+   "clean_cam1_r090",
+   "clean_cam3_r120",
+   "clean_cam3_r270",
+   "clean_cam1_r060",
+   "clean_cam1_r120",
+   "clean_cam1_r150",
+   "clean_cam2_r180",
+   "clean_cam0_r150",
+   "clean_cam2_r060",
+   "clean_cam2_r210",
+   "clean_cam0_r210",
+   "clean_cam2_r150",
+   "clean_cam3_r300",
+   "clean_cam1_r330",
+   "clean_cam0_r090",
+   "clean_cam2_r330",
+   "clean_cam0_r120",
+   "clean_cam2_r240",
+   "clean_cam2_r000",
+   "clean_cam0_r000",
+   "clean_cam0_r180",
+   "clean_cam2_r270",
+   "clean_cam3_r210",
+   "clean_cam2_r120",
+   "clean_cam1_r030"
+  ],
+  "representative_view": "clean_cam1_r090",
+  "representative_view_quality": 0.7456,
+  "representative_view_components": {
+   "area": 0.7783,
+   "boundary": 1.0,
+   "exposure": 0.6187,
+   "saturation": 0.331,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam1_r090",
+  "best_seen_area_px": 361633,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r180",
+        "clean_cam0_r180"
+       ]
+      }
+     ],
+     "consensus_support": 4,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.5297,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam2_r180",
+     "observation_views": [
+      "clean_cam2_r180",
+      "clean_cam1_r060",
+      "clean_cam0_r180",
+      "clean_cam1_r060"
+     ],
+     "observations": 4,
+     "total_mask_area_px": 23130,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 6,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.6876,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam3_r300",
+     "observation_views": [
+      "clean_cam3_r300",
+      "clean_cam2_r270",
+      "clean_cam2_r270",
+      "clean_cam1_r060",
+      "clean_cam3_r300",
+      "clean_cam2_r180"
+     ],
+     "observations": 6,
+     "total_mask_area_px": 12798,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 36701,
+   "front_facing_fraction": 1.0,
+   "mean_normal_camera_frame": [
+    -0.73726,
+    -0.27571,
+    0.6168
+   ],
+   "mean_normal_object_frame": [
+    -0.71472,
+    0.25194,
+    -0.65247
+   ],
+   "mean_normal_reference_frame": [
+    -0.4386,
+    0.26575,
+    -0.8585
+   ],
+   "median_fit_residual": 0.00499,
+   "median_positive_outlier_ratio": 0.0,
+   "median_usable_lights": 3.0,
+   "normal_spread_about_mean_median_deg": 5.916,
+   "reference_frame": "cam0",
+   "relative_depth_status": "withheld_non_lambertian",
+   "roi_agreement_iou": 0.464,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "source_algorithm": "l1_filtered",
+   "source_camera": "cam3",
+   "source_capture": "ps_rr_black_clean_side_r020_600k",
+   "state": "invalid",
+   "state_reason": "1% of the requested region is supported (68% retained, 1% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 2.831,
+   "surface_roughness_p90_deg": 6.753,
+   "turntable_angle_deg": 20,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 0.0192,
+    "at_least_6": 0.0088,
+    "at_least_8": 0.0001
+   },
+   "valid_coverage": 0.0059
+  }
+ },
+ {
+  "part": "front_door_right",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 18,
+  "eligible_view_ids": [
+   "clean_cam1_r270",
+   "clean_cam1_r300",
+   "clean_cam3_r120",
+   "clean_cam3_r090",
+   "clean_cam0_r330",
+   "clean_cam1_r210",
+   "clean_cam3_r210",
+   "clean_cam0_r000",
+   "clean_cam2_r030",
+   "clean_cam1_r240",
+   "clean_cam0_r030",
+   "clean_cam2_r060",
+   "clean_cam0_r270",
+   "clean_cam3_r300",
+   "clean_cam0_r300",
+   "clean_cam2_r090",
+   "clean_cam0_r060",
+   "clean_cam3_r240"
+  ],
+  "representative_view": "clean_cam1_r270",
+  "representative_view_quality": 0.8162,
+  "representative_view_components": {
+   "area": 0.888,
+   "boundary": 1.0,
+   "exposure": 0.6187,
+   "saturation": 0.5744,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam1_r270",
+  "best_seen_area_px": 372443,
+  "best_seen_classes_in_view": 13,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 6,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8457,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r300",
+     "observation_views": [
+      "clean_cam1_r300",
+      "clean_cam3_r120",
+      "clean_cam0_r000",
+      "clean_cam3_r210",
+      "clean_cam0_r000",
+      "clean_cam1_r300"
+     ],
+     "observations": 6,
+     "total_mask_area_px": 48298,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam3_r210",
+        "clean_cam3_r240"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam3_r300",
+        "clean_cam1_r300"
+       ]
+      }
+     ],
+     "consensus_support": 6,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7205,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam3_r210",
+     "observation_views": [
+      "clean_cam3_r210",
+      "clean_cam2_r090",
+      "clean_cam3_r300",
+      "clean_cam1_r300",
+      "clean_cam2_r090",
+      "clean_cam3_r240"
+     ],
+     "observations": 6,
+     "total_mask_area_px": 7892,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "headlight_left",
+  "vehicle": "clean",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 12,
+  "eligible_view_ids": [
+   "clean_cam1_r150",
+   "clean_cam0_r270",
+   "clean_cam0_r210",
+   "clean_cam0_r240",
+   "clean_cam3_r000",
+   "clean_cam2_r240",
+   "clean_cam1_r210",
+   "clean_cam0_r180",
+   "clean_cam2_r300",
+   "clean_cam2_r270",
+   "clean_cam1_r090",
+   "clean_cam2_r210"
+  ],
+  "representative_view": "clean_cam1_r150",
+  "representative_view_quality": 0.6845,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.8716,
+   "saturation": 0.0,
+   "sharpness": 0.5509
+  },
+  "best_seen_view": "clean_cam1_r150",
+  "best_seen_area_px": 39207,
+  "best_seen_classes_in_view": 8,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   90,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 3,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8213,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r150",
+     "observation_views": [
+      "clean_cam1_r150",
+      "clean_cam0_r210",
+      "clean_cam1_r150"
+     ],
+     "observations": 3,
+     "total_mask_area_px": 15104,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "headlight_right",
+  "vehicle": "clean",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 9,
+  "eligible_view_ids": [
+   "clean_cam3_r240",
+   "clean_cam0_r300",
+   "clean_cam0_r240",
+   "clean_cam1_r210",
+   "clean_cam0_r270",
+   "clean_cam3_r000",
+   "clean_cam2_r270",
+   "clean_cam0_r330",
+   "clean_cam3_r030"
+  ],
+  "representative_view": "clean_cam3_r240",
+  "representative_view_quality": 0.7329,
+  "representative_view_components": {
+   "area": 0.9692,
+   "boundary": 1.0,
+   "exposure": 0.6013,
+   "saturation": 0.9766,
+   "sharpness": 0.1175
+  },
+  "best_seen_view": "clean_cam1_r210",
+  "best_seen_area_px": 35421,
+  "best_seen_classes_in_view": 11,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "hood",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 36,
+  "eligible_view_ids": [
+   "clean_cam3_r330",
+   "clean_cam1_r330",
+   "clean_cam1_r240",
+   "clean_cam3_r210",
+   "clean_cam3_r030",
+   "clean_cam3_r150",
+   "clean_cam1_r210",
+   "clean_cam1_r060",
+   "clean_cam3_r060",
+   "clean_cam1_r090",
+   "clean_cam1_r030",
+   "clean_cam0_r270",
+   "clean_cam2_r300",
+   "clean_cam1_r150",
+   "clean_cam3_r240",
+   "clean_cam0_r240",
+   "clean_cam1_r270",
+   "clean_cam1_r300",
+   "clean_cam3_r000",
+   "clean_cam3_r300",
+   "clean_cam0_r210",
+   "clean_cam3_r090",
+   "clean_cam3_r120",
+   "clean_cam0_r150",
+   "clean_cam2_r210",
+   "clean_cam0_r030",
+   "clean_cam0_r180",
+   "clean_cam2_r270",
+   "clean_cam2_r240",
+   "clean_cam3_r270",
+   "clean_cam0_r330",
+   "clean_cam0_r300",
+   "clean_cam0_r120",
+   "clean_cam1_r120",
+   "clean_cam2_r180",
+   "clean_cam2_r030"
+  ],
+  "representative_view": "clean_cam3_r330",
+  "representative_view_quality": 0.6634,
+  "representative_view_components": {
+   "area": 0.9734,
+   "boundary": 0.948,
+   "exposure": 0.4271,
+   "saturation": 0.807,
+   "sharpness": 0.1616
+  },
+  "best_seen_view": "clean_cam1_r210",
+  "best_seen_area_px": 807873,
+  "best_seen_classes_in_view": 11,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam3_r030",
+        "clean_cam3_r000"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam3_r030",
+        "clean_cam3_r000"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r270",
+        "clean_cam0_r270"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam3_r000",
+        "clean_cam3_r330"
+       ]
+      }
+     ],
+     "consensus_support": 15,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7108,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam3_r030",
+     "observation_views": [
+      "clean_cam3_r030",
+      "clean_cam2_r270",
+      "clean_cam1_r150",
+      "clean_cam3_r000",
+      "clean_cam1_r210",
+      "clean_cam2_r270",
+      "clean_cam1_r210",
+      "clean_cam3_r330",
+      "clean_cam0_r270",
+      "clean_cam3_r030",
+      "clean_cam2_r270",
+      "clean_cam3_r000",
+      "clean_cam1_r210",
+      "clean_cam2_r270",
+      "clean_cam1_r150"
+     ],
+     "observations": 15,
+     "total_mask_area_px": 19202,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r330",
+        "clean_cam3_r330"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r330",
+        "clean_cam3_r330"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r330",
+        "clean_cam3_r330"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r240",
+        "clean_cam3_r240"
+       ]
+      }
+     ],
+     "consensus_support": 34,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8676,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r330",
+     "observation_views": [
+      "clean_cam1_r330",
+      "clean_cam1_r240",
+      "clean_cam3_r030",
+      "clean_cam1_r330",
+      "clean_cam3_r210",
+      "clean_cam3_r240",
+      "clean_cam3_r210",
+      "clean_cam3_r150",
+      "clean_cam3_r150",
+      "clean_cam3_r210",
+      "clean_cam1_r120",
+      "clean_cam1_r150",
+      "clean_cam1_r330",
+      "clean_cam3_r060",
+      "clean_cam1_r150",
+      "clean_cam1_r120",
+      "clean_cam3_r150",
+      "clean_cam3_r330",
+      "clean_cam1_r210",
+      "clean_cam1_r150",
+      "clean_cam1_r330",
+      "clean_cam3_r150",
+      "clean_cam3_r330",
+      "clean_cam3_r060",
+      "clean_cam1_r210",
+      "clean_cam3_r210",
+      "clean_cam1_r240",
+      "clean_cam2_r300",
+      "clean_cam3_r120",
+      "clean_cam1_r210",
+      "clean_cam3_r000",
+      "clean_cam3_r330",
+      "clean_cam3_r210",
+      "clean_cam3_r150"
+     ],
+     "observations": 34,
+     "total_mask_area_px": 31731,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "mirror_left",
+  "vehicle": "clean",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 4,
+  "eligible_view_ids": [
+   "clean_cam0_r090",
+   "clean_cam0_r240",
+   "clean_cam2_r270",
+   "clean_cam3_r000"
+  ],
+  "representative_view": "clean_cam0_r090",
+  "representative_view_quality": 0.8069,
+  "representative_view_components": {
+   "area": 0.6218,
+   "boundary": 1.0,
+   "exposure": 0.4531,
+   "saturation": 0.9596,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam0_r240",
+  "best_seen_area_px": 7149,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   90,
+   240,
+   270
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "mirror_right",
+  "vehicle": "clean",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 6,
+  "eligible_view_ids": [
+   "clean_cam0_r030",
+   "clean_cam0_r270",
+   "clean_cam3_r000",
+   "clean_cam2_r090",
+   "clean_cam0_r060",
+   "clean_cam2_r300"
+  ],
+  "representative_view": "clean_cam0_r030",
+  "representative_view_quality": 0.8116,
+  "representative_view_components": {
+   "area": 0.7544,
+   "boundary": 1.0,
+   "exposure": 0.4444,
+   "saturation": 0.8594,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam0_r270",
+  "best_seen_area_px": 7170,
+  "best_seen_classes_in_view": 11,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   270,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_bumper",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 10,
+  "eligible_view_ids": [
+   "clean_cam2_r090",
+   "clean_cam0_r090",
+   "clean_cam0_r030",
+   "clean_cam0_r060",
+   "clean_cam3_r240",
+   "clean_cam2_r120",
+   "clean_cam0_r120",
+   "clean_cam2_r240",
+   "clean_cam0_r300",
+   "clean_cam0_r210"
+  ],
+  "representative_view": "clean_cam2_r090",
+  "representative_view_quality": 0.8077,
+  "representative_view_components": {
+   "area": 0.9884,
+   "boundary": 1.0,
+   "exposure": 0.2353,
+   "saturation": 0.8938,
+   "sharpness": 0.921
+  },
+  "best_seen_view": "clean_cam0_r090",
+  "best_seen_area_px": 171934,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   90,
+   120,
+   210,
+   240,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r090",
+        "clean_cam0_r090"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r090",
+        "clean_cam0_r090"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam0_r060",
+        "clean_cam0_r090"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam0_r060",
+        "clean_cam0_r090"
+       ]
+      }
+     ],
+     "consensus_support": 7,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8415,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam2_r090",
+     "observation_views": [
+      "clean_cam2_r090",
+      "clean_cam0_r060",
+      "clean_cam2_r090",
+      "clean_cam2_r090",
+      "clean_cam0_r060",
+      "clean_cam0_r090",
+      "clean_cam0_r090"
+     ],
+     "observations": 7,
+     "total_mask_area_px": 13212,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 4,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.4768,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam0_r090",
+     "observation_views": [
+      "clean_cam0_r090",
+      "clean_cam2_r120",
+      "clean_cam2_r120",
+      "clean_cam0_r030"
+     ],
+     "observations": 4,
+     "total_mask_area_px": 1129,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_door_left",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 18,
+  "eligible_view_ids": [
+   "clean_cam1_r090",
+   "clean_cam1_r060",
+   "clean_cam1_r120",
+   "clean_cam0_r120",
+   "clean_cam1_r150",
+   "clean_cam0_r150",
+   "clean_cam1_r030",
+   "clean_cam0_r090",
+   "clean_cam0_r180",
+   "clean_cam3_r270",
+   "clean_cam2_r210",
+   "clean_cam0_r210",
+   "clean_cam2_r180",
+   "clean_cam2_r150",
+   "clean_cam2_r270",
+   "clean_cam3_r240",
+   "clean_cam2_r240",
+   "clean_cam2_r000"
+  ],
+  "representative_view": "clean_cam1_r090",
+  "representative_view_quality": 0.8412,
+  "representative_view_components": {
+   "area": 0.8049,
+   "boundary": 1.0,
+   "exposure": 0.5578,
+   "saturation": 0.8432,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam1_r060",
+  "best_seen_area_px": 414897,
+  "best_seen_classes_in_view": 12,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam0_r120",
+        "clean_cam0_r150"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam0_r120",
+        "clean_cam0_r150"
+       ]
+      }
+     ],
+     "consensus_support": 3,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.5065,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam0_r120",
+     "observation_views": [
+      "clean_cam0_r120",
+      "clean_cam0_r150",
+      "clean_cam0_r150"
+     ],
+     "observations": 3,
+     "total_mask_area_px": 3989,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam0_r180",
+        "clean_cam2_r180"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam0_r180",
+        "clean_cam2_r180"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam0_r180",
+        "clean_cam2_r180"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam2_r180",
+        "clean_cam2_r210"
+       ]
+      }
+     ],
+     "consensus_support": 8,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7826,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r120",
+     "observation_views": [
+      "clean_cam1_r120",
+      "clean_cam0_r180",
+      "clean_cam1_r030",
+      "clean_cam2_r180",
+      "clean_cam2_r180",
+      "clean_cam2_r210",
+      "clean_cam1_r030",
+      "clean_cam2_r180"
+     ],
+     "observations": 8,
+     "total_mask_area_px": 3665,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_door_right",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 15,
+  "eligible_view_ids": [
+   "clean_cam1_r270",
+   "clean_cam1_r300",
+   "clean_cam1_r240",
+   "clean_cam3_r240",
+   "clean_cam0_r060",
+   "clean_cam0_r000",
+   "clean_cam3_r090",
+   "clean_cam2_r030",
+   "clean_cam0_r030",
+   "clean_cam3_r300",
+   "clean_cam0_r330",
+   "clean_cam2_r060",
+   "clean_cam3_r120",
+   "clean_cam0_r300",
+   "clean_cam2_r090"
+  ],
+  "representative_view": "clean_cam1_r270",
+  "representative_view_quality": 0.8244,
+  "representative_view_components": {
+   "area": 0.8808,
+   "boundary": 1.0,
+   "exposure": 0.5491,
+   "saturation": 0.6922,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam1_r300",
+  "best_seen_area_px": 618161,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam1_r270",
+        "clean_cam1_r240"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam1_r270",
+        "clean_cam1_r240"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam2_r030",
+        "clean_cam2_r060"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam2_r030",
+        "clean_cam2_r060"
+       ]
+      }
+     ],
+     "consensus_support": 8,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8198,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r270",
+     "observation_views": [
+      "clean_cam1_r270",
+      "clean_cam1_r240",
+      "clean_cam2_r030",
+      "clean_cam0_r330",
+      "clean_cam2_r060",
+      "clean_cam2_r060",
+      "clean_cam2_r060",
+      "clean_cam1_r240"
+     ],
+     "observations": 8,
+     "total_mask_area_px": 47957,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r240",
+        "clean_cam3_r240"
+       ]
+      }
+     ],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.6324,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r240",
+     "observation_views": [
+      "clean_cam1_r240",
+      "clean_cam3_r240"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 2235,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_glass",
+  "vehicle": "clean",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 10,
+  "eligible_view_ids": [
+   "clean_cam0_r090",
+   "clean_cam1_r090",
+   "clean_cam1_r270",
+   "clean_cam2_r090",
+   "clean_cam3_r090",
+   "clean_cam0_r030",
+   "clean_cam2_r210",
+   "clean_cam2_r330",
+   "clean_cam0_r060",
+   "clean_cam1_r030"
+  ],
+  "representative_view": "clean_cam0_r090",
+  "representative_view_quality": 0.7671,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.6711,
+   "saturation": 0.94,
+   "sharpness": 0.2246
+  },
+  "best_seen_view": "clean_cam0_r090",
+  "best_seen_area_px": 98535,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   90,
+   210,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 1,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.6502,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam0_r030",
+     "observation_views": [
+      "clean_cam0_r030"
+     ],
+     "observations": 1,
+     "total_mask_area_px": 1058,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "roof",
+  "vehicle": "clean",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 2,
+  "eligible_view_ids": [
+   "clean_cam1_r030",
+   "clean_cam1_r060"
+  ],
+  "representative_view": "clean_cam1_r030",
+  "representative_view_quality": 0.7338,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.5402,
+   "saturation": 0.1288,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam1_r030",
+  "best_seen_area_px": 554891,
+  "best_seen_classes_in_view": 12,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60
+  ],
+  "cameras_seeing_part": [
+   "cam1"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 6,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8422,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r030",
+     "observation_views": [
+      "clean_cam1_r030",
+      "clean_cam1_r030",
+      "clean_cam1_r030",
+      "clean_cam1_r030",
+      "clean_cam1_r030",
+      "clean_cam1_r030"
+     ],
+     "observations": 6,
+     "total_mask_area_px": 3375,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "side_window",
+  "vehicle": "clean",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 6,
+  "eligible_view_ids": [
+   "clean_cam2_r090",
+   "clean_cam1_r030",
+   "clean_cam1_r210",
+   "clean_cam2_r210",
+   "clean_cam0_r030",
+   "clean_cam1_r330"
+  ],
+  "representative_view": "clean_cam2_r090",
+  "representative_view_quality": 0.684,
+  "representative_view_components": {
+   "area": 0.0705,
+   "boundary": 1.0,
+   "exposure": 0.7233,
+   "saturation": 0.626,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "clean_cam1_r030",
+  "best_seen_area_px": 71330,
+  "best_seen_classes_in_view": 12,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   90,
+   210,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "taillight_left",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 6,
+  "eligible_view_ids": [
+   "clean_cam0_r120",
+   "clean_cam0_r090",
+   "clean_cam0_r150",
+   "clean_cam0_r060",
+   "clean_cam2_r210",
+   "clean_cam2_r240"
+  ],
+  "representative_view": "clean_cam0_r120",
+  "representative_view_quality": 0.8235,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 0.926,
+   "exposure": 0.9891,
+   "saturation": 0.8778,
+   "sharpness": 0.3247
+  },
+  "best_seen_view": "clean_cam0_r120",
+  "best_seen_area_px": 43679,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   60,
+   90,
+   120,
+   150,
+   210,
+   240
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam2"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam0_r120",
+        "clean_cam0_r090"
+       ]
+      }
+     ],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7687,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam0_r120",
+     "observation_views": [
+      "clean_cam0_r120",
+      "clean_cam0_r090"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 3946,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "taillight_right",
+  "vehicle": "clean",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 6,
+  "eligible_view_ids": [
+   "clean_cam0_r030",
+   "clean_cam2_r090",
+   "clean_cam0_r060",
+   "clean_cam0_r000",
+   "clean_cam0_r090",
+   "clean_cam0_r300"
+  ],
+  "representative_view": "clean_cam0_r030",
+  "representative_view_quality": 0.7654,
+  "representative_view_components": {
+   "area": 0.9351,
+   "boundary": 1.0,
+   "exposure": 0.8498,
+   "saturation": 0.6986,
+   "sharpness": 0.3433
+  },
+  "best_seen_view": "clean_cam2_r090",
+  "best_seen_area_px": 41432,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam2"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.5917,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam0_r060",
+     "observation_views": [
+      "clean_cam0_r060",
+      "clean_cam0_r060"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 635,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "trunk_tailgate",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 27,
+  "eligible_view_ids": [
+   "clean_cam3_r270",
+   "clean_cam1_r270",
+   "clean_cam2_r000",
+   "clean_cam2_r330",
+   "clean_cam3_r060",
+   "clean_cam3_r300",
+   "clean_cam1_r120",
+   "clean_cam2_r090",
+   "clean_cam1_r030",
+   "clean_cam1_r300",
+   "clean_cam2_r120",
+   "clean_cam3_r120",
+   "clean_cam0_r060",
+   "clean_cam1_r060",
+   "clean_cam0_r090",
+   "clean_cam1_r090",
+   "clean_cam2_r150",
+   "clean_cam0_r000",
+   "clean_cam3_r090",
+   "clean_cam2_r060",
+   "clean_cam2_r180",
+   "clean_cam0_r150",
+   "clean_cam2_r210",
+   "clean_cam0_r180",
+   "clean_cam0_r120",
+   "clean_cam0_r030",
+   "clean_cam0_r300"
+  ],
+  "representative_view": "clean_cam3_r270",
+  "representative_view_quality": 0.6659,
+  "representative_view_components": {
+   "area": 0.8448,
+   "boundary": 0.944,
+   "exposure": 0.3573,
+   "saturation": 0.9548,
+   "sharpness": 0.2288
+  },
+  "best_seen_view": "clean_cam2_r090",
+  "best_seen_area_px": 715403,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": true,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam3_r060",
+        "clean_cam0_r060"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r090",
+        "clean_cam0_r090"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r090",
+        "clean_cam0_r090"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r090",
+        "clean_cam0_r090"
+       ]
+      }
+     ],
+     "consensus_support": 17,
+     "fixed_view_confidence": 0.6371,
+     "fixed_view_detected": true,
+     "max_confidence": 0.8411,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam3_r060",
+     "observation_views": [
+      "clean_cam3_r060",
+      "clean_cam3_r270",
+      "clean_cam2_r090",
+      "clean_cam3_r270",
+      "clean_cam0_r090",
+      "clean_cam2_r000",
+      "clean_cam0_r090",
+      "clean_cam0_r090",
+      "clean_cam2_r090",
+      "clean_cam2_r120",
+      "clean_cam2_r180",
+      "clean_cam2_r180",
+      "clean_cam2_r000",
+      "clean_cam0_r060",
+      "clean_cam2_r090",
+      "clean_cam2_r120",
+      "clean_cam2_r000"
+     ],
+     "observations": 17,
+     "total_mask_area_px": 67848,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam2_r120",
+        "clean_cam0_r120"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam2_r120",
+        "clean_cam2_r150"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam2_r120",
+        "clean_cam2_r150"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam2_r120",
+        "clean_cam2_r090"
+       ]
+      }
+     ],
+     "consensus_support": 15,
+     "fixed_view_confidence": 0.6343,
+     "fixed_view_detected": true,
+     "max_confidence": 0.805,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam3_r300",
+     "observation_views": [
+      "clean_cam3_r300",
+      "clean_cam2_r120",
+      "clean_cam2_r060",
+      "clean_cam0_r120",
+      "clean_cam2_r000",
+      "clean_cam0_r030",
+      "clean_cam3_r060",
+      "clean_cam2_r120",
+      "clean_cam3_r060",
+      "clean_cam3_r060",
+      "clean_cam2_r150",
+      "clean_cam2_r150",
+      "clean_cam2_r330",
+      "clean_cam0_r060",
+      "clean_cam2_r090"
+     ],
+     "observations": 15,
+     "total_mask_area_px": 10492,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "damage_pixels_evaluated": 0,
+   "damage_ring_deviation_median_deg": null,
+   "damage_ring_deviation_p90_deg": null,
+   "evaluated_pixels": 380,
+   "front_facing_fraction": 1.0,
+   "mean_normal_camera_frame": [
+    0.14482,
+    -0.47264,
+    0.86928
+   ],
+   "mean_normal_object_frame": [
+    -0.9835,
+    0.14832,
+    -0.1036
+   ],
+   "mean_normal_reference_frame": [
+    -0.9835,
+    0.14832,
+    -0.1036
+   ],
+   "median_fit_residual": 0.010792,
+   "median_positive_outlier_ratio": 0.762,
+   "median_usable_lights": 8.0,
+   "normal_spread_about_mean_median_deg": 6.29,
+   "reference_frame": "cam0",
+   "relative_depth_status": "withheld_non_lambertian",
+   "roi_agreement_iou": 0.0852,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "source_algorithm": "l1_filtered",
+   "source_camera": "cam3",
+   "source_capture": "ps_rr_black_clean_cam3_tilt_r000_600k",
+   "state": "invalid",
+   "state_reason": "1% of the requested region is supported (1% retained, 100% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 1.378,
+   "surface_roughness_p90_deg": 2.955,
+   "turntable_angle_deg": 0,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 0.8026
+   },
+   "valid_coverage": 0.006
+  }
+ },
+ {
+  "part": "wheel",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 32,
+  "eligible_view_ids": [
+   "clean_cam1_r120",
+   "clean_cam0_r000",
+   "clean_cam0_r180",
+   "clean_cam1_r300",
+   "clean_cam0_r330",
+   "clean_cam2_r210",
+   "clean_cam3_r090",
+   "clean_cam2_r180",
+   "clean_cam2_r150",
+   "clean_cam3_r240",
+   "clean_cam1_r060",
+   "clean_cam0_r120",
+   "clean_cam2_r060",
+   "clean_cam2_r000",
+   "clean_cam0_r030",
+   "clean_cam2_r030",
+   "clean_cam2_r240",
+   "clean_cam0_r150",
+   "clean_cam0_r300",
+   "clean_cam0_r210",
+   "clean_cam2_r330",
+   "clean_cam1_r090",
+   "clean_cam1_r240",
+   "clean_cam1_r270",
+   "clean_cam1_r150",
+   "clean_cam0_r090",
+   "clean_cam2_r090",
+   "clean_cam0_r270",
+   "clean_cam2_r270",
+   "clean_cam3_r330",
+   "clean_cam0_r240",
+   "clean_cam0_r060"
+  ],
+  "representative_view": "clean_cam1_r120",
+  "representative_view_quality": 0.7151,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.6711,
+   "saturation": 0.1684,
+   "sharpness": 0.7359
+  },
+  "best_seen_view": "clean_cam1_r120",
+  "best_seen_area_px": 257504,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "clean_cam1_r090",
+        "clean_cam1_r120"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r090",
+        "clean_cam3_r090"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r090",
+        "clean_cam3_r090"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam1_r090",
+        "clean_cam3_r090"
+       ]
+      }
+     ],
+     "consensus_support": 7,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8122,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam1_r090",
+     "observation_views": [
+      "clean_cam1_r090",
+      "clean_cam1_r270",
+      "clean_cam1_r120",
+      "clean_cam3_r090",
+      "clean_cam3_r090",
+      "clean_cam3_r090",
+      "clean_cam3_r240"
+     ],
+     "observations": 7,
+     "total_mask_area_px": 72717,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.5503,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam2_r270",
+     "observation_views": [
+      "clean_cam2_r270",
+      "clean_cam0_r300"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 591,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "windshield",
+  "vehicle": "clean",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 13,
+  "eligible_view_ids": [
+   "clean_cam1_r330",
+   "clean_cam1_r150",
+   "clean_cam0_r330",
+   "clean_cam1_r120",
+   "clean_cam2_r240",
+   "clean_cam0_r240",
+   "clean_cam3_r330",
+   "clean_cam3_r210",
+   "clean_cam0_r210",
+   "clean_cam0_r270",
+   "clean_cam1_r030",
+   "clean_cam3_r150",
+   "clean_cam3_r000"
+  ],
+  "representative_view": "clean_cam1_r330",
+  "representative_view_quality": 0.7138,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 0.952,
+   "exposure": 0.6622,
+   "saturation": 0.399,
+   "sharpness": 0.5557
+  },
+  "best_seen_view": "clean_cam3_r000",
+  "best_seen_area_px": 140032,
+  "best_seen_classes_in_view": 8,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "clean_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   0,
+   30,
+   120,
+   150,
+   210,
+   240,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "clean_cam0_r330",
+        "clean_cam1_r330"
+       ]
+      }
+     ],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.6722,
+     "max_confidence_decision": true,
+     "max_confidence_view": "clean_cam0_r330",
+     "observation_views": [
+      "clean_cam0_r330",
+      "clean_cam1_r330"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 7645,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "body_side_left",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 15,
+  "eligible_view_ids": [
+   "damaged_cam0_r120",
+   "damaged_cam0_r150",
+   "damaged_cam2_r180",
+   "damaged_cam1_r120",
+   "damaged_cam1_r150",
+   "damaged_cam0_r180",
+   "damaged_cam0_r090",
+   "damaged_cam0_r210",
+   "damaged_cam3_r210",
+   "damaged_cam3_r330",
+   "damaged_cam3_r270",
+   "damaged_cam2_r270",
+   "damaged_cam2_r240",
+   "damaged_cam3_r300",
+   "damaged_cam0_r300"
+  ],
+  "representative_view": "damaged_cam0_r120",
+  "representative_view_quality": 0.7147,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.3398,
+   "saturation": 0.9866,
+   "sharpness": 0.2473
+  },
+  "best_seen_view": "damaged_cam0_r120",
+  "best_seen_area_px": 152245,
+  "best_seen_classes_in_view": 8,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r180",
+        "damaged_cam0_r210"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r180",
+        "damaged_cam0_r150"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam0_r180",
+        "damaged_cam2_r180"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r180",
+        "damaged_cam0_r150"
+       ]
+      }
+     ],
+     "consensus_support": 10,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8885,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r180",
+     "observation_views": [
+      "damaged_cam0_r180",
+      "damaged_cam0_r210",
+      "damaged_cam2_r240",
+      "damaged_cam1_r120",
+      "damaged_cam0_r120",
+      "damaged_cam0_r150",
+      "damaged_cam0_r090",
+      "damaged_cam2_r180",
+      "damaged_cam0_r120",
+      "damaged_cam0_r150"
+     ],
+     "observations": 10,
+     "total_mask_area_px": 40648,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 4,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8622,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r120",
+     "observation_views": [
+      "damaged_cam0_r120",
+      "damaged_cam0_r180",
+      "damaged_cam0_r180",
+      "damaged_cam3_r210"
+     ],
+     "observations": 4,
+     "total_mask_area_px": 3555,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "body_side_right",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 13,
+  "eligible_view_ids": [
+   "damaged_cam1_r270",
+   "damaged_cam2_r000",
+   "damaged_cam0_r000",
+   "damaged_cam1_r240",
+   "damaged_cam3_r210",
+   "damaged_cam0_r030",
+   "damaged_cam2_r060",
+   "damaged_cam1_r030",
+   "damaged_cam3_r090",
+   "damaged_cam0_r330",
+   "damaged_cam0_r060",
+   "damaged_cam3_r060",
+   "damaged_cam2_r090"
+  ],
+  "representative_view": "damaged_cam1_r270",
+  "representative_view_quality": 0.6143,
+  "representative_view_components": {
+   "area": 0.1083,
+   "boundary": 1.0,
+   "exposure": 0.5056,
+   "saturation": 0.559,
+   "sharpness": 0.8988
+  },
+  "best_seen_view": "damaged_cam2_r000",
+  "best_seen_area_px": 99597,
+  "best_seen_classes_in_view": 8,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   210,
+   240,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": true,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.6998,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam2_r060",
+     "observation_views": [
+      "damaged_cam2_r060",
+      "damaged_cam0_r030"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 10765,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 1,
+     "fixed_view_confidence": 0.5934,
+     "fixed_view_detected": true,
+     "max_confidence": 0.5934,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam2_r000",
+     "observation_views": [
+      "damaged_cam2_r000"
+     ],
+     "observations": 1,
+     "total_mask_area_px": 1410,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "front_bumper",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 21,
+  "eligible_view_ids": [
+   "damaged_cam0_r270",
+   "damaged_cam0_r240",
+   "damaged_cam1_r060",
+   "damaged_cam2_r300",
+   "damaged_cam3_r030",
+   "damaged_cam2_r270",
+   "damaged_cam3_r240",
+   "damaged_cam1_r150",
+   "damaged_cam1_r030",
+   "damaged_cam1_r090",
+   "damaged_cam1_r120",
+   "damaged_cam3_r330",
+   "damaged_cam0_r210",
+   "damaged_cam1_r210",
+   "damaged_cam3_r270",
+   "damaged_cam2_r240",
+   "damaged_cam0_r330",
+   "damaged_cam3_r090",
+   "damaged_cam0_r180",
+   "damaged_cam1_r180",
+   "damaged_cam3_r060"
+  ],
+  "representative_view": "damaged_cam0_r270",
+  "representative_view_quality": 0.6657,
+  "representative_view_components": {
+   "area": 0.9802,
+   "boundary": 0.998,
+   "exposure": 0.2527,
+   "saturation": 0.9002,
+   "sharpness": 0.1974
+  },
+  "best_seen_view": "damaged_cam0_r240",
+  "best_seen_area_px": 288637,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 4,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7388,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r030",
+     "observation_views": [
+      "damaged_cam3_r030",
+      "damaged_cam3_r240",
+      "damaged_cam0_r270",
+      "damaged_cam3_r240"
+     ],
+     "observations": 4,
+     "total_mask_area_px": 17261,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam2_r240",
+        "damaged_cam0_r240"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam1_r210",
+        "damaged_cam0_r210"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r210",
+        "damaged_cam0_r240"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam0_r210",
+        "damaged_cam1_r210"
+       ]
+      }
+     ],
+     "consensus_support": 8,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7148,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam2_r240",
+     "observation_views": [
+      "damaged_cam2_r240",
+      "damaged_cam1_r210",
+      "damaged_cam0_r330",
+      "damaged_cam0_r210",
+      "damaged_cam2_r300",
+      "damaged_cam0_r240",
+      "damaged_cam1_r210",
+      "damaged_cam3_r030"
+     ],
+     "observations": 8,
+     "total_mask_area_px": 2887,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "front_door_left",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_geometry_partially_supported",
+  "review_required": true,
+  "eligible_views": 23,
+  "eligible_view_ids": [
+   "damaged_cam1_r120",
+   "damaged_cam1_r090",
+   "damaged_cam1_r060",
+   "damaged_cam3_r270",
+   "damaged_cam1_r300",
+   "damaged_cam3_r300",
+   "damaged_cam2_r060",
+   "damaged_cam0_r150",
+   "damaged_cam0_r210",
+   "damaged_cam3_r210",
+   "damaged_cam0_r300",
+   "damaged_cam2_r150",
+   "damaged_cam0_r180",
+   "damaged_cam0_r240",
+   "damaged_cam2_r240",
+   "damaged_cam3_r240",
+   "damaged_cam0_r090",
+   "damaged_cam2_r270",
+   "damaged_cam2_r180",
+   "damaged_cam0_r120",
+   "damaged_cam3_r180",
+   "damaged_cam2_r210",
+   "damaged_cam2_r120"
+  ],
+  "representative_view": "damaged_cam1_r120",
+  "representative_view_quality": 0.7668,
+  "representative_view_components": {
+   "area": 0.9901,
+   "boundary": 1.0,
+   "exposure": 0.5056,
+   "saturation": 0.6912,
+   "sharpness": 0.6469
+  },
+  "best_seen_view": "damaged_cam1_r090",
+  "best_seen_area_px": 409051,
+  "best_seen_classes_in_view": 12,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r240",
+        "damaged_cam2_r240"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r240",
+        "damaged_cam2_r240"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r240",
+        "damaged_cam3_r270"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r240",
+        "damaged_cam3_r270"
+       ]
+      }
+     ],
+     "consensus_support": 31,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8865,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r240",
+     "observation_views": [
+      "damaged_cam3_r240",
+      "damaged_cam0_r150",
+      "damaged_cam0_r150",
+      "damaged_cam0_r120",
+      "damaged_cam0_r180",
+      "damaged_cam2_r240",
+      "damaged_cam1_r120",
+      "damaged_cam0_r180",
+      "damaged_cam2_r240",
+      "damaged_cam2_r180",
+      "damaged_cam1_r090",
+      "damaged_cam1_r090",
+      "damaged_cam2_r180",
+      "damaged_cam1_r060",
+      "damaged_cam3_r270",
+      "damaged_cam3_r300",
+      "damaged_cam3_r270",
+      "damaged_cam0_r120",
+      "damaged_cam1_r060",
+      "damaged_cam0_r210",
+      "damaged_cam0_r210",
+      "damaged_cam3_r300",
+      "damaged_cam1_r120",
+      "damaged_cam1_r120",
+      "damaged_cam1_r120",
+      "damaged_cam0_r300",
+      "damaged_cam3_r300",
+      "damaged_cam0_r210",
+      "damaged_cam0_r210",
+      "damaged_cam1_r120",
+      "damaged_cam0_r300"
+     ],
+     "observations": 31,
+     "total_mask_area_px": 76658,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r270",
+        "damaged_cam3_r240"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam2_r210",
+        "damaged_cam2_r240"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam2_r210",
+        "damaged_cam0_r210"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam2_r210",
+        "damaged_cam0_r210"
+       ]
+      }
+     ],
+     "consensus_support": 24,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.9045,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r300",
+     "observation_views": [
+      "damaged_cam0_r300",
+      "damaged_cam3_r270",
+      "damaged_cam0_r300",
+      "damaged_cam2_r210",
+      "damaged_cam1_r090",
+      "damaged_cam2_r240",
+      "damaged_cam0_r180",
+      "damaged_cam0_r150",
+      "damaged_cam1_r090",
+      "damaged_cam3_r270",
+      "damaged_cam0_r120",
+      "damaged_cam0_r300",
+      "damaged_cam0_r150",
+      "damaged_cam0_r210",
+      "damaged_cam0_r210",
+      "damaged_cam1_r060",
+      "damaged_cam2_r240",
+      "damaged_cam0_r120",
+      "damaged_cam1_r060",
+      "damaged_cam2_r240",
+      "damaged_cam2_r120",
+      "damaged_cam3_r240",
+      "damaged_cam0_r120",
+      "damaged_cam0_r180"
+     ],
+     "observations": 24,
+     "total_mask_area_px": 16728,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "damage_pixels_evaluated": 5338,
+   "damage_ring_deviation_median_deg": 66.601,
+   "damage_ring_deviation_p90_deg": 72.442,
+   "evaluated_pixels": 51844,
+   "front_facing_fraction": 0.9914,
+   "mean_normal_camera_frame": [
+    0.47751,
+    -0.6889,
+    -0.54534
+   ],
+   "mean_normal_object_frame": [
+    0.49397,
+    -0.68651,
+    -0.53357
+   ],
+   "mean_normal_reference_frame": [
+    0.60965,
+    -0.72176,
+    -0.32769
+   ],
+   "median_fit_residual": 0.006867,
+   "median_positive_outlier_ratio": 0.163,
+   "median_usable_lights": 4.0,
+   "normal_spread_about_mean_median_deg": 14.676,
+   "reference_frame": "cam0",
+   "relative_depth_status": "withheld_non_lambertian",
+   "roi_agreement_iou": 0.2858,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "source_algorithm": "l1_filtered",
+   "source_camera": "cam2",
+   "source_capture": "ps_rr_black_damaged_side_r020_600k",
+   "state": "partial",
+   "state_reason": "10% of the requested region is supported (71% retained, 14% of those well lit), below the 70% required for integration",
+   "surface_roughness_median_deg": 8.739,
+   "surface_roughness_p90_deg": 23.135,
+   "turntable_angle_deg": 20,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 0.2503,
+    "at_least_6": 0.1445,
+    "at_least_8": 0.0516
+   },
+   "valid_coverage": 0.1023
+  }
+ },
+ {
+  "part": "front_door_right",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 20,
+  "eligible_view_ids": [
+   "damaged_cam1_r270",
+   "damaged_cam1_r240",
+   "damaged_cam1_r300",
+   "damaged_cam3_r090",
+   "damaged_cam0_r330",
+   "damaged_cam2_r000",
+   "damaged_cam2_r030",
+   "damaged_cam0_r000",
+   "damaged_cam3_r210",
+   "damaged_cam1_r210",
+   "damaged_cam0_r030",
+   "damaged_cam1_r030",
+   "damaged_cam2_r060",
+   "damaged_cam3_r300",
+   "damaged_cam3_r120",
+   "damaged_cam2_r090",
+   "damaged_cam2_r180",
+   "damaged_cam3_r240",
+   "damaged_cam0_r300",
+   "damaged_cam3_r060"
+  ],
+  "representative_view": "damaged_cam1_r270",
+  "representative_view_quality": 0.7782,
+  "representative_view_components": {
+   "area": 0.7723,
+   "boundary": 1.0,
+   "exposure": 0.5751,
+   "saturation": 0.5924,
+   "sharpness": 0.9512
+  },
+  "best_seen_view": "damaged_cam1_r270",
+  "best_seen_area_px": 282886,
+  "best_seen_classes_in_view": 16,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": true,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r090",
+        "damaged_cam3_r120"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r090",
+        "damaged_cam3_r120"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r090",
+        "damaged_cam3_r120"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r090",
+        "damaged_cam2_r090"
+       ]
+      }
+     ],
+     "consensus_support": 16,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8562,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r090",
+     "observation_views": [
+      "damaged_cam3_r090",
+      "damaged_cam1_r270",
+      "damaged_cam3_r300",
+      "damaged_cam0_r000",
+      "damaged_cam0_r330",
+      "damaged_cam3_r120",
+      "damaged_cam1_r300",
+      "damaged_cam2_r030",
+      "damaged_cam3_r210",
+      "damaged_cam3_r120",
+      "damaged_cam3_r120",
+      "damaged_cam1_r210",
+      "damaged_cam1_r240",
+      "damaged_cam1_r270",
+      "damaged_cam2_r090",
+      "damaged_cam3_r120"
+     ],
+     "observations": 16,
+     "total_mask_area_px": 43237,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam2_r000",
+        "damaged_cam0_r000"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam2_r000",
+        "damaged_cam2_r030"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam2_r000",
+        "damaged_cam2_r030"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam2_r000",
+        "damaged_cam2_r030"
+       ]
+      }
+     ],
+     "consensus_support": 39,
+     "fixed_view_confidence": 0.9222,
+     "fixed_view_detected": true,
+     "max_confidence": 0.9222,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam2_r000",
+     "observation_views": [
+      "damaged_cam2_r000",
+      "damaged_cam0_r000",
+      "damaged_cam1_r240",
+      "damaged_cam2_r000",
+      "damaged_cam3_r090",
+      "damaged_cam2_r030",
+      "damaged_cam0_r330",
+      "damaged_cam1_r300",
+      "damaged_cam0_r030",
+      "damaged_cam2_r060",
+      "damaged_cam2_r030",
+      "damaged_cam1_r270",
+      "damaged_cam3_r090",
+      "damaged_cam2_r090",
+      "damaged_cam2_r030",
+      "damaged_cam0_r000",
+      "damaged_cam0_r330",
+      "damaged_cam3_r090",
+      "damaged_cam0_r000",
+      "damaged_cam2_r180",
+      "damaged_cam1_r270",
+      "damaged_cam1_r300",
+      "damaged_cam2_r000",
+      "damaged_cam1_r300",
+      "damaged_cam1_r270",
+      "damaged_cam2_r060",
+      "damaged_cam2_r060",
+      "damaged_cam0_r330",
+      "damaged_cam1_r240",
+      "damaged_cam0_r030",
+      "damaged_cam3_r120",
+      "damaged_cam0_r030",
+      "damaged_cam2_r180",
+      "damaged_cam1_r240",
+      "damaged_cam1_r300",
+      "damaged_cam0_r000",
+      "damaged_cam3_r090",
+      "damaged_cam1_r240",
+      "damaged_cam1_r210"
+     ],
+     "observations": 39,
+     "total_mask_area_px": 20778,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "damage_pixels_evaluated": 1327,
+   "damage_ring_deviation_median_deg": 4.758,
+   "damage_ring_deviation_p90_deg": 11.048,
+   "evaluated_pixels": 4927,
+   "front_facing_fraction": 1.0,
+   "mean_normal_camera_frame": [
+    -0.07943,
+    -0.23089,
+    0.96973
+   ],
+   "mean_normal_object_frame": [
+    -0.86384,
+    0.42832,
+    -0.26517
+   ],
+   "mean_normal_reference_frame": [
+    -0.86384,
+    0.42832,
+    -0.26517
+   ],
+   "median_fit_residual": 0.013311,
+   "median_positive_outlier_ratio": 0.4254,
+   "median_usable_lights": 8.0,
+   "normal_spread_about_mean_median_deg": 5.797,
+   "reference_frame": "cam0",
+   "relative_depth_status": "withheld_non_lambertian",
+   "roi_agreement_iou": 0.558,
+   "roi_source": "predicted part mask, eroded 2 px",
+   "source_algorithm": "l1_filtered",
+   "source_camera": "cam3",
+   "source_capture": "ps_rr_black_damaged_cam3_tilt_r000_600k",
+   "state": "invalid",
+   "state_reason": "5% of the requested region is supported (5% retained, 100% of those well lit), below the partial gate",
+   "surface_roughness_median_deg": 3.883,
+   "surface_roughness_p90_deg": 9.859,
+   "turntable_angle_deg": 0,
+   "usable_light_fractions": {
+    "at_least_3": 1.0,
+    "at_least_5": 1.0,
+    "at_least_6": 1.0,
+    "at_least_8": 0.6324
+   },
+   "valid_coverage": 0.0508
+  }
+ },
+ {
+  "part": "headlight_left",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 12,
+  "eligible_view_ids": [
+   "damaged_cam0_r210",
+   "damaged_cam0_r270",
+   "damaged_cam3_r030",
+   "damaged_cam1_r180",
+   "damaged_cam0_r240",
+   "damaged_cam0_r180",
+   "damaged_cam2_r240",
+   "damaged_cam2_r300",
+   "damaged_cam2_r270",
+   "damaged_cam1_r090",
+   "damaged_cam1_r210",
+   "damaged_cam3_r270"
+  ],
+  "representative_view": "damaged_cam0_r210",
+  "representative_view_quality": 0.6923,
+  "representative_view_components": {
+   "area": 0.9044,
+   "boundary": 1.0,
+   "exposure": 0.8278,
+   "saturation": 0.0,
+   "sharpness": 0.7294
+  },
+  "best_seen_view": "damaged_cam0_r240",
+  "best_seen_area_px": 37435,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   90,
+   180,
+   210,
+   240,
+   270,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 1,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.5514,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r210",
+     "observation_views": [
+      "damaged_cam0_r210"
+     ],
+     "observations": 1,
+     "total_mask_area_px": 7777,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "headlight_right",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 6,
+  "eligible_view_ids": [
+   "damaged_cam1_r180",
+   "damaged_cam1_r210",
+   "damaged_cam0_r330",
+   "damaged_cam0_r270",
+   "damaged_cam0_r240",
+   "damaged_cam3_r240"
+  ],
+  "representative_view": "damaged_cam1_r180",
+  "representative_view_quality": 0.7265,
+  "representative_view_components": {
+   "area": 0.9674,
+   "boundary": 1.0,
+   "exposure": 0.9107,
+   "saturation": 0.0,
+   "sharpness": 0.7546
+  },
+  "best_seen_view": "damaged_cam1_r210",
+  "best_seen_area_px": 35812,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   180,
+   210,
+   240,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r180",
+        "damaged_cam1_r210"
+       ]
+      }
+     ],
+     "consensus_support": 5,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.774,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r330",
+     "observation_views": [
+      "damaged_cam0_r330",
+      "damaged_cam1_r180",
+      "damaged_cam0_r330",
+      "damaged_cam1_r210",
+      "damaged_cam0_r270"
+     ],
+     "observations": 5,
+     "total_mask_area_px": 27929,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 1,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.3067,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r330",
+     "observation_views": [
+      "damaged_cam0_r330"
+     ],
+     "observations": 1,
+     "total_mask_area_px": 929,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "hood",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 35,
+  "eligible_view_ids": [
+   "damaged_cam1_r330",
+   "damaged_cam3_r330",
+   "damaged_cam1_r150",
+   "damaged_cam3_r150",
+   "damaged_cam1_r270",
+   "damaged_cam2_r090",
+   "damaged_cam1_r300",
+   "damaged_cam1_r240",
+   "damaged_cam1_r210",
+   "damaged_cam3_r210",
+   "damaged_cam1_r090",
+   "damaged_cam1_r030",
+   "damaged_cam1_r060",
+   "damaged_cam3_r060",
+   "damaged_cam3_r300",
+   "damaged_cam3_r120",
+   "damaged_cam3_r240",
+   "damaged_cam2_r300",
+   "damaged_cam3_r030",
+   "damaged_cam2_r270",
+   "damaged_cam0_r270",
+   "damaged_cam0_r180",
+   "damaged_cam0_r300",
+   "damaged_cam0_r240",
+   "damaged_cam2_r210",
+   "damaged_cam2_r000",
+   "damaged_cam0_r210",
+   "damaged_cam3_r090",
+   "damaged_cam0_r330",
+   "damaged_cam1_r180",
+   "damaged_cam3_r270",
+   "damaged_cam0_r030",
+   "damaged_cam2_r240",
+   "damaged_cam1_r120",
+   "damaged_cam3_r180"
+  ],
+  "representative_view": "damaged_cam1_r330",
+  "representative_view_quality": 0.641,
+  "representative_view_components": {
+   "area": 0.7472,
+   "boundary": 0.961,
+   "exposure": 0.5838,
+   "saturation": 0.4582,
+   "sharpness": 0.4549
+  },
+  "best_seen_view": "damaged_cam3_r210",
+  "best_seen_area_px": 872213,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r060",
+        "damaged_cam3_r030"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r150",
+        "damaged_cam1_r150"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r150",
+        "damaged_cam1_r150"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r150",
+        "damaged_cam1_r150"
+       ]
+      }
+     ],
+     "consensus_support": 22,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7987,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r060",
+     "observation_views": [
+      "damaged_cam3_r060",
+      "damaged_cam3_r150",
+      "damaged_cam3_r330",
+      "damaged_cam1_r330",
+      "damaged_cam1_r150",
+      "damaged_cam1_r210",
+      "damaged_cam3_r330",
+      "damaged_cam1_r150",
+      "damaged_cam3_r060",
+      "damaged_cam3_r030",
+      "damaged_cam1_r210",
+      "damaged_cam1_r210",
+      "damaged_cam1_r180",
+      "damaged_cam1_r150",
+      "damaged_cam2_r240",
+      "damaged_cam1_r150",
+      "damaged_cam1_r150",
+      "damaged_cam1_r210",
+      "damaged_cam1_r330",
+      "damaged_cam3_r330",
+      "damaged_cam1_r150",
+      "damaged_cam1_r030"
+     ],
+     "observations": 22,
+     "total_mask_area_px": 45484,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam1_r330",
+        "damaged_cam3_r330"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r330",
+        "damaged_cam1_r300"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam1_r330",
+        "damaged_cam3_r330"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam1_r330",
+        "damaged_cam3_r330"
+       ]
+      }
+     ],
+     "consensus_support": 40,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8986,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r060",
+     "observation_views": [
+      "damaged_cam3_r060",
+      "damaged_cam1_r330",
+      "damaged_cam3_r150",
+      "damaged_cam1_r330",
+      "damaged_cam3_r210",
+      "damaged_cam1_r030",
+      "damaged_cam1_r030",
+      "damaged_cam3_r060",
+      "damaged_cam3_r060",
+      "damaged_cam3_r150",
+      "damaged_cam1_r210",
+      "damaged_cam1_r120",
+      "damaged_cam3_r330",
+      "damaged_cam3_r060",
+      "damaged_cam3_r060",
+      "damaged_cam3_r150",
+      "damaged_cam3_r150",
+      "damaged_cam1_r330",
+      "damaged_cam3_r210",
+      "damaged_cam2_r300",
+      "damaged_cam1_r030",
+      "damaged_cam1_r210",
+      "damaged_cam3_r150",
+      "damaged_cam3_r150",
+      "damaged_cam1_r300",
+      "damaged_cam3_r210",
+      "damaged_cam3_r240",
+      "damaged_cam1_r210",
+      "damaged_cam3_r060",
+      "damaged_cam3_r210",
+      "damaged_cam3_r330",
+      "damaged_cam1_r210",
+      "damaged_cam1_r210",
+      "damaged_cam1_r240",
+      "damaged_cam3_r210",
+      "damaged_cam1_r030",
+      "damaged_cam1_r030",
+      "damaged_cam1_r330",
+      "damaged_cam3_r150",
+      "damaged_cam3_r060"
+     ],
+     "observations": 40,
+     "total_mask_area_px": 31193,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "mirror_left",
+  "vehicle": "damaged",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 4,
+  "eligible_view_ids": [
+   "damaged_cam1_r180",
+   "damaged_cam0_r090",
+   "damaged_cam0_r240",
+   "damaged_cam2_r270"
+  ],
+  "representative_view": "damaged_cam1_r180",
+  "representative_view_quality": 0.8949,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.488,
+   "saturation": 0.9896,
+   "sharpness": 0.9969
+  },
+  "best_seen_view": "damaged_cam1_r180",
+  "best_seen_area_px": 7726,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   90,
+   180,
+   240,
+   270
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "mirror_right",
+  "vehicle": "damaged",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 3,
+  "eligible_view_ids": [
+   "damaged_cam0_r060",
+   "damaged_cam0_r030",
+   "damaged_cam2_r300"
+  ],
+  "representative_view": "damaged_cam0_r060",
+  "representative_view_quality": 0.8971,
+  "representative_view_components": {
+   "area": 0.9713,
+   "boundary": 1.0,
+   "exposure": 0.5229,
+   "saturation": 0.9914,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "damaged_cam0_r060",
+  "best_seen_area_px": 4600,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam2"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_bumper",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 9,
+  "eligible_view_ids": [
+   "damaged_cam2_r090",
+   "damaged_cam0_r090",
+   "damaged_cam1_r060",
+   "damaged_cam0_r060",
+   "damaged_cam0_r120",
+   "damaged_cam0_r030",
+   "damaged_cam3_r240",
+   "damaged_cam0_r300",
+   "damaged_cam2_r120"
+  ],
+  "representative_view": "damaged_cam2_r090",
+  "representative_view_quality": 0.6755,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 0.981,
+   "exposure": 0.244,
+   "saturation": 0.9832,
+   "sharpness": 0.1692
+  },
+  "best_seen_view": "damaged_cam2_r090",
+  "best_seen_area_px": 217339,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   90,
+   120,
+   240,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 3,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.8357,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam2_r090",
+     "observation_views": [
+      "damaged_cam2_r090",
+      "damaged_cam1_r060",
+      "damaged_cam2_r090"
+     ],
+     "observations": 3,
+     "total_mask_area_px": 11037,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam0_r120",
+        "damaged_cam2_r120"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam0_r120",
+        "damaged_cam2_r120"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam0_r120",
+        "damaged_cam2_r120"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r120",
+        "damaged_cam0_r090"
+       ]
+      }
+     ],
+     "consensus_support": 8,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7877,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r120",
+     "observation_views": [
+      "damaged_cam0_r120",
+      "damaged_cam0_r300",
+      "damaged_cam2_r120",
+      "damaged_cam2_r120",
+      "damaged_cam2_r120",
+      "damaged_cam1_r060",
+      "damaged_cam0_r090",
+      "damaged_cam1_r060"
+     ],
+     "observations": 8,
+     "total_mask_area_px": 2740,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_door_left",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 17,
+  "eligible_view_ids": [
+   "damaged_cam1_r090",
+   "damaged_cam1_r060",
+   "damaged_cam3_r270",
+   "damaged_cam0_r120",
+   "damaged_cam1_r120",
+   "damaged_cam0_r150",
+   "damaged_cam0_r090",
+   "damaged_cam1_r030",
+   "damaged_cam0_r180",
+   "damaged_cam0_r210",
+   "damaged_cam2_r180",
+   "damaged_cam3_r240",
+   "damaged_cam2_r240",
+   "damaged_cam2_r270",
+   "damaged_cam2_r150",
+   "damaged_cam0_r300",
+   "damaged_cam3_r180"
+  ],
+  "representative_view": "damaged_cam1_r090",
+  "representative_view_quality": 0.8663,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.6013,
+   "saturation": 0.8074,
+   "sharpness": 0.9226
+  },
+  "best_seen_view": "damaged_cam1_r090",
+  "best_seen_area_px": 457886,
+  "best_seen_classes_in_view": 12,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r090",
+        "damaged_cam1_r060"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r090",
+        "damaged_cam1_r060"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r090",
+        "damaged_cam1_r120"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r090",
+        "damaged_cam1_r120"
+       ]
+      }
+     ],
+     "consensus_support": 26,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.9196,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam1_r090",
+     "observation_views": [
+      "damaged_cam1_r090",
+      "damaged_cam1_r090",
+      "damaged_cam2_r180",
+      "damaged_cam3_r270",
+      "damaged_cam3_r270",
+      "damaged_cam1_r060",
+      "damaged_cam0_r210",
+      "damaged_cam1_r060",
+      "damaged_cam1_r090",
+      "damaged_cam3_r270",
+      "damaged_cam3_r240",
+      "damaged_cam0_r180",
+      "damaged_cam3_r240",
+      "damaged_cam1_r120",
+      "damaged_cam0_r120",
+      "damaged_cam1_r120",
+      "damaged_cam1_r060",
+      "damaged_cam0_r150",
+      "damaged_cam0_r150",
+      "damaged_cam3_r270",
+      "damaged_cam0_r180",
+      "damaged_cam2_r150",
+      "damaged_cam0_r120",
+      "damaged_cam2_r240",
+      "damaged_cam2_r180",
+      "damaged_cam2_r150"
+     ],
+     "observations": 26,
+     "total_mask_area_px": 79768,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r090",
+        "damaged_cam1_r060"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r090",
+        "damaged_cam1_r120"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r090",
+        "damaged_cam1_r120"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam1_r060",
+        "damaged_cam1_r090"
+       ]
+      }
+     ],
+     "consensus_support": 17,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.9062,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam1_r090",
+     "observation_views": [
+      "damaged_cam1_r090",
+      "damaged_cam1_r060",
+      "damaged_cam3_r240",
+      "damaged_cam3_r270",
+      "damaged_cam0_r150",
+      "damaged_cam2_r180",
+      "damaged_cam3_r270",
+      "damaged_cam2_r240",
+      "damaged_cam1_r090",
+      "damaged_cam0_r180",
+      "damaged_cam2_r150",
+      "damaged_cam0_r210",
+      "damaged_cam0_r120",
+      "damaged_cam0_r150",
+      "damaged_cam0_r120",
+      "damaged_cam1_r120",
+      "damaged_cam1_r120"
+     ],
+     "observations": 17,
+     "total_mask_area_px": 9500,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_door_right",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 16,
+  "eligible_view_ids": [
+   "damaged_cam1_r270",
+   "damaged_cam1_r240",
+   "damaged_cam0_r000",
+   "damaged_cam2_r060",
+   "damaged_cam1_r300",
+   "damaged_cam0_r330",
+   "damaged_cam0_r030",
+   "damaged_cam3_r090",
+   "damaged_cam2_r000",
+   "damaged_cam1_r030",
+   "damaged_cam1_r210",
+   "damaged_cam0_r060",
+   "damaged_cam3_r240",
+   "damaged_cam2_r090",
+   "damaged_cam3_r060",
+   "damaged_cam0_r300"
+  ],
+  "representative_view": "damaged_cam1_r270",
+  "representative_view_quality": 0.7989,
+  "representative_view_components": {
+   "area": 0.6988,
+   "boundary": 1.0,
+   "exposure": 0.6362,
+   "saturation": 0.6594,
+   "sharpness": 1.0
+  },
+  "best_seen_view": "damaged_cam1_r270",
+  "best_seen_area_px": 216910,
+  "best_seen_classes_in_view": 16,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": true,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r330",
+        "damaged_cam0_r000"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r330",
+        "damaged_cam0_r300"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam1_r240",
+        "damaged_cam3_r240"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r030",
+        "damaged_cam0_r000"
+       ]
+      }
+     ],
+     "consensus_support": 10,
+     "fixed_view_confidence": 0.6808,
+     "fixed_view_detected": true,
+     "max_confidence": 0.9233,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r330",
+     "observation_views": [
+      "damaged_cam0_r330",
+      "damaged_cam2_r060",
+      "damaged_cam1_r240",
+      "damaged_cam0_r030",
+      "damaged_cam1_r240",
+      "damaged_cam0_r000",
+      "damaged_cam0_r330",
+      "damaged_cam3_r240",
+      "damaged_cam2_r000",
+      "damaged_cam0_r300"
+     ],
+     "observations": 10,
+     "total_mask_area_px": 23901,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r030",
+        "damaged_cam0_r000"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r030",
+        "damaged_cam0_r000"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r030",
+        "damaged_cam0_r000"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r030",
+        "damaged_cam0_r000"
+       ]
+      }
+     ],
+     "consensus_support": 35,
+     "fixed_view_confidence": 0.8248,
+     "fixed_view_detected": true,
+     "max_confidence": 0.9361,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r030",
+     "observation_views": [
+      "damaged_cam0_r030",
+      "damaged_cam1_r240",
+      "damaged_cam0_r000",
+      "damaged_cam2_r060",
+      "damaged_cam3_r090",
+      "damaged_cam2_r060",
+      "damaged_cam2_r000",
+      "damaged_cam2_r000",
+      "damaged_cam0_r000",
+      "damaged_cam0_r030",
+      "damaged_cam0_r030",
+      "damaged_cam0_r330",
+      "damaged_cam0_r330",
+      "damaged_cam0_r030",
+      "damaged_cam3_r060",
+      "damaged_cam2_r060",
+      "damaged_cam1_r240",
+      "damaged_cam0_r330",
+      "damaged_cam0_r000",
+      "damaged_cam1_r270",
+      "damaged_cam2_r090",
+      "damaged_cam0_r030",
+      "damaged_cam0_r330",
+      "damaged_cam1_r270",
+      "damaged_cam0_r000",
+      "damaged_cam2_r060",
+      "damaged_cam0_r030",
+      "damaged_cam2_r090",
+      "damaged_cam0_r300",
+      "damaged_cam0_r330",
+      "damaged_cam0_r000",
+      "damaged_cam2_r060",
+      "damaged_cam0_r330",
+      "damaged_cam0_r000",
+      "damaged_cam0_r330"
+     ],
+     "observations": 35,
+     "total_mask_area_px": 11649,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "rear_glass",
+  "vehicle": "damaged",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 11,
+  "eligible_view_ids": [
+   "damaged_cam1_r270",
+   "damaged_cam0_r090",
+   "damaged_cam1_r090",
+   "damaged_cam0_r060",
+   "damaged_cam0_r330",
+   "damaged_cam3_r090",
+   "damaged_cam0_r030",
+   "damaged_cam1_r330",
+   "damaged_cam3_r270",
+   "damaged_cam0_r120",
+   "damaged_cam3_r180"
+  ],
+  "representative_view": "damaged_cam1_r270",
+  "representative_view_quality": 0.773,
+  "representative_view_components": {
+   "area": 0.716,
+   "boundary": 1.0,
+   "exposure": 0.6711,
+   "saturation": 0.9114,
+   "sharpness": 0.5664
+  },
+  "best_seen_view": "damaged_cam0_r060",
+  "best_seen_area_px": 157560,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   90,
+   120,
+   180,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "roof",
+  "vehicle": "damaged",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 5,
+  "eligible_view_ids": [
+   "damaged_cam3_r180",
+   "damaged_cam1_r300",
+   "damaged_cam1_r030",
+   "damaged_cam3_r270",
+   "damaged_cam1_r060"
+  ],
+  "representative_view": "damaged_cam3_r180",
+  "representative_view_quality": 0.6943,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 0.989,
+   "exposure": 0.4531,
+   "saturation": 0.9036,
+   "sharpness": 0.126
+  },
+  "best_seen_view": "damaged_cam3_r180",
+  "best_seen_area_px": 860378,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   180,
+   270,
+   300
+  ],
+  "cameras_seeing_part": [
+   "cam1",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "side_window",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 4,
+  "eligible_view_ids": [
+   "damaged_cam1_r030",
+   "damaged_cam1_r060",
+   "damaged_cam2_r180",
+   "damaged_cam3_r180"
+  ],
+  "representative_view": "damaged_cam1_r030",
+  "representative_view_quality": 0.761,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.5578,
+   "saturation": 0.3758,
+   "sharpness": 0.8716
+  },
+  "best_seen_view": "damaged_cam1_r030",
+  "best_seen_area_px": 61164,
+  "best_seen_classes_in_view": 10,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   180
+  ],
+  "cameras_seeing_part": [
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 1,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.7436,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam1_r060",
+     "observation_views": [
+      "damaged_cam1_r060"
+     ],
+     "observations": 1,
+     "total_mask_area_px": 1432,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "taillight_left",
+  "vehicle": "damaged",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 5,
+  "eligible_view_ids": [
+   "damaged_cam0_r120",
+   "damaged_cam3_r120",
+   "damaged_cam0_r090",
+   "damaged_cam0_r060",
+   "damaged_cam2_r240"
+  ],
+  "representative_view": "damaged_cam0_r120",
+  "representative_view_quality": 0.7857,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.8933,
+   "saturation": 0.8948,
+   "sharpness": 0.1403
+  },
+  "best_seen_view": "damaged_cam0_r120",
+  "best_seen_area_px": 38799,
+  "best_seen_classes_in_view": 8,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   60,
+   90,
+   120,
+   240
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "taillight_right",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 6,
+  "eligible_view_ids": [
+   "damaged_cam0_r060",
+   "damaged_cam0_r030",
+   "damaged_cam2_r090",
+   "damaged_cam0_r330",
+   "damaged_cam1_r270",
+   "damaged_cam0_r090"
+  ],
+  "representative_view": "damaged_cam0_r060",
+  "representative_view_quality": 0.7442,
+  "representative_view_components": {
+   "area": 0.9216,
+   "boundary": 1.0,
+   "exposure": 0.9456,
+   "saturation": 0.7482,
+   "sharpness": 0.1055
+  },
+  "best_seen_view": "damaged_cam0_r030",
+  "best_seen_area_px": 38962,
+  "best_seen_classes_in_view": 12,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   60,
+   90,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam0_r060",
+        "damaged_cam0_r030"
+       ]
+      }
+     ],
+     "consensus_support": 2,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.795,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r060",
+     "observation_views": [
+      "damaged_cam0_r060",
+      "damaged_cam0_r030"
+     ],
+     "observations": 2,
+     "total_mask_area_px": 695,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "trunk_tailgate",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_multiview_confirmed_no_geometry",
+  "review_required": true,
+  "eligible_views": 30,
+  "eligible_view_ids": [
+   "damaged_cam1_r300",
+   "damaged_cam3_r120",
+   "damaged_cam2_r030",
+   "damaged_cam2_r330",
+   "damaged_cam1_r270",
+   "damaged_cam3_r300",
+   "damaged_cam2_r150",
+   "damaged_cam1_r090",
+   "damaged_cam2_r210",
+   "damaged_cam2_r120",
+   "damaged_cam0_r000",
+   "damaged_cam2_r090",
+   "damaged_cam3_r090",
+   "damaged_cam0_r300",
+   "damaged_cam0_r090",
+   "damaged_cam3_r270",
+   "damaged_cam0_r060",
+   "damaged_cam3_r060",
+   "damaged_cam1_r060",
+   "damaged_cam2_r270",
+   "damaged_cam3_r210",
+   "damaged_cam3_r180",
+   "damaged_cam2_r060",
+   "damaged_cam0_r120",
+   "damaged_cam0_r150",
+   "damaged_cam0_r030",
+   "damaged_cam0_r330",
+   "damaged_cam0_r180",
+   "damaged_cam2_r240",
+   "damaged_cam2_r000"
+  ],
+  "representative_view": "damaged_cam1_r300",
+  "representative_view_quality": 0.7261,
+  "representative_view_components": {
+   "area": 0.5836,
+   "boundary": 0.991,
+   "exposure": 0.5578,
+   "saturation": 0.6644,
+   "sharpness": 0.8336
+  },
+  "best_seen_view": "damaged_cam2_r090",
+  "best_seen_area_px": 739435,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": true,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r300",
+        "damaged_cam0_r300"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r300",
+        "damaged_cam1_r300"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r300",
+        "damaged_cam1_r300"
+       ]
+      },
+      {
+       "relation": "same angle, different cameras",
+       "views": [
+        "damaged_cam3_r300",
+        "damaged_cam1_r300"
+       ]
+      }
+     ],
+     "consensus_support": 49,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.9182,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r300",
+     "observation_views": [
+      "damaged_cam3_r300",
+      "damaged_cam2_r210",
+      "damaged_cam1_r270",
+      "damaged_cam1_r270",
+      "damaged_cam2_r030",
+      "damaged_cam2_r210",
+      "damaged_cam2_r210",
+      "damaged_cam2_r150",
+      "damaged_cam2_r150",
+      "damaged_cam2_r150",
+      "damaged_cam2_r210",
+      "damaged_cam1_r270",
+      "damaged_cam3_r120",
+      "damaged_cam2_r330",
+      "damaged_cam2_r030",
+      "damaged_cam0_r300",
+      "damaged_cam2_r150",
+      "damaged_cam3_r090",
+      "damaged_cam2_r210",
+      "damaged_cam2_r150",
+      "damaged_cam3_r300",
+      "damaged_cam1_r300",
+      "damaged_cam2_r090",
+      "damaged_cam0_r090",
+      "damaged_cam3_r090",
+      "damaged_cam1_r300",
+      "damaged_cam2_r120",
+      "damaged_cam0_r090",
+      "damaged_cam1_r300",
+      "damaged_cam2_r090",
+      "damaged_cam0_r000",
+      "damaged_cam2_r210",
+      "damaged_cam2_r090",
+      "damaged_cam2_r090",
+      "damaged_cam3_r300",
+      "damaged_cam2_r330",
+      "damaged_cam2_r330",
+      "damaged_cam3_r120",
+      "damaged_cam3_r060",
+      "damaged_cam2_r090",
+      "damaged_cam2_r150",
+      "damaged_cam2_r030",
+      "damaged_cam0_r060",
+      "damaged_cam1_r300",
+      "damaged_cam2_r150",
+      "damaged_cam3_r060",
+      "damaged_cam2_r210",
+      "damaged_cam3_r300",
+      "damaged_cam3_r120"
+     ],
+     "observations": 49,
+     "total_mask_area_px": 140074,
+     "two_view_consensus": true
+    },
+    "scratch": {
+     "consensus_pairs": [
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r060",
+        "damaged_cam3_r090"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r060",
+        "damaged_cam3_r090"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r060",
+        "damaged_cam3_r090"
+       ]
+      },
+      {
+       "relation": "neighbouring angles, same camera",
+       "views": [
+        "damaged_cam3_r060",
+        "damaged_cam3_r090"
+       ]
+      }
+     ],
+     "consensus_support": 44,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.9168,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r060",
+     "observation_views": [
+      "damaged_cam3_r060",
+      "damaged_cam3_r090",
+      "damaged_cam2_r330",
+      "damaged_cam1_r300",
+      "damaged_cam3_r120",
+      "damaged_cam3_r120",
+      "damaged_cam0_r000",
+      "damaged_cam3_r120",
+      "damaged_cam2_r030",
+      "damaged_cam3_r120",
+      "damaged_cam1_r300",
+      "damaged_cam0_r180",
+      "damaged_cam2_r210",
+      "damaged_cam2_r210",
+      "damaged_cam2_r150",
+      "damaged_cam2_r030",
+      "damaged_cam1_r270",
+      "damaged_cam1_r300",
+      "damaged_cam1_r270",
+      "damaged_cam2_r330",
+      "damaged_cam3_r090",
+      "damaged_cam1_r270",
+      "damaged_cam2_r330",
+      "damaged_cam3_r300",
+      "damaged_cam2_r330",
+      "damaged_cam2_r150",
+      "damaged_cam3_r090",
+      "damaged_cam0_r180",
+      "damaged_cam3_r090",
+      "damaged_cam2_r060",
+      "damaged_cam2_r210",
+      "damaged_cam2_r330",
+      "damaged_cam0_r060",
+      "damaged_cam1_r270",
+      "damaged_cam3_r120",
+      "damaged_cam1_r270",
+      "damaged_cam2_r120",
+      "damaged_cam0_r060",
+      "damaged_cam0_r000",
+      "damaged_cam3_r120",
+      "damaged_cam2_r330",
+      "damaged_cam2_r150",
+      "damaged_cam2_r030",
+      "damaged_cam3_r300"
+     ],
+     "observations": 44,
+     "total_mask_area_px": 30363,
+     "two_view_consensus": true
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "wheel",
+  "vehicle": "damaged",
+  "decision": "rgb_damage_single_view_only",
+  "review_required": true,
+  "eligible_views": 35,
+  "eligible_view_ids": [
+   "damaged_cam0_r180",
+   "damaged_cam0_r000",
+   "damaged_cam0_r330",
+   "damaged_cam2_r000",
+   "damaged_cam2_r210",
+   "damaged_cam0_r030",
+   "damaged_cam2_r060",
+   "damaged_cam2_r240",
+   "damaged_cam0_r210",
+   "damaged_cam0_r300",
+   "damaged_cam2_r150",
+   "damaged_cam0_r150",
+   "damaged_cam3_r270",
+   "damaged_cam2_r330",
+   "damaged_cam1_r120",
+   "damaged_cam0_r120",
+   "damaged_cam2_r180",
+   "damaged_cam3_r090",
+   "damaged_cam3_r060",
+   "damaged_cam3_r240",
+   "damaged_cam1_r270",
+   "damaged_cam1_r060",
+   "damaged_cam2_r090",
+   "damaged_cam1_r030",
+   "damaged_cam2_r270",
+   "damaged_cam1_r090",
+   "damaged_cam2_r120",
+   "damaged_cam1_r240",
+   "damaged_cam0_r090",
+   "damaged_cam0_r240",
+   "damaged_cam0_r270",
+   "damaged_cam3_r330",
+   "damaged_cam0_r060",
+   "damaged_cam1_r210",
+   "damaged_cam1_r180"
+  ],
+  "representative_view": "damaged_cam0_r180",
+  "representative_view_quality": 0.6789,
+  "representative_view_components": {
+   "area": 1.0,
+   "boundary": 1.0,
+   "exposure": 0.2527,
+   "saturation": 0.941,
+   "sharpness": 0.2008
+  },
+  "best_seen_view": "damaged_cam0_r180",
+  "best_seen_area_px": 184507,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": true,
+  "angles_seeing_part": [
+   0,
+   30,
+   60,
+   90,
+   120,
+   150,
+   180,
+   210,
+   240,
+   270,
+   300,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": true,
+   "by_class": {
+    "dent": {
+     "consensus_pairs": [],
+     "consensus_support": 6,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.9348,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam3_r270",
+     "observation_views": [
+      "damaged_cam3_r270",
+      "damaged_cam1_r090",
+      "damaged_cam1_r090",
+      "damaged_cam1_r090",
+      "damaged_cam0_r000",
+      "damaged_cam3_r270"
+     ],
+     "observations": 6,
+     "total_mask_area_px": 43770,
+     "two_view_consensus": false
+    },
+    "scratch": {
+     "consensus_pairs": [],
+     "consensus_support": 3,
+     "fixed_view_confidence": null,
+     "fixed_view_detected": false,
+     "max_confidence": 0.5327,
+     "max_confidence_decision": true,
+     "max_confidence_view": "damaged_cam0_r210",
+     "observation_views": [
+      "damaged_cam0_r210",
+      "damaged_cam2_r270",
+      "damaged_cam2_r150"
+     ],
+     "observations": 3,
+     "total_mask_area_px": 843,
+     "two_view_consensus": false
+    }
+   },
+   "damage_classes": [
+    "dent",
+    "scratch"
+   ]
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ },
+ {
+  "part": "windshield",
+  "vehicle": "damaged",
+  "decision": "no_rgb_damage",
+  "review_required": false,
+  "eligible_views": 12,
+  "eligible_view_ids": [
+   "damaged_cam1_r330",
+   "damaged_cam1_r150",
+   "damaged_cam1_r090",
+   "damaged_cam1_r180",
+   "damaged_cam1_r210",
+   "damaged_cam0_r240",
+   "damaged_cam3_r330",
+   "damaged_cam3_r270",
+   "damaged_cam3_r150",
+   "damaged_cam1_r030",
+   "damaged_cam3_r210",
+   "damaged_cam2_r240"
+  ],
+  "representative_view": "damaged_cam1_r330",
+  "representative_view_quality": 0.7689,
+  "representative_view_components": {
+   "area": 0.8688,
+   "boundary": 0.988,
+   "exposure": 0.6276,
+   "saturation": 0.5374,
+   "sharpness": 0.8227
+  },
+  "best_seen_view": "damaged_cam1_r180",
+  "best_seen_area_px": 166192,
+  "best_seen_classes_in_view": 9,
+  "best_seen_class_floor": 8,
+  "fixed_view_id": "damaged_cam2_r000",
+  "fixed_view_eligible": false,
+  "angles_seeing_part": [
+   30,
+   90,
+   150,
+   180,
+   210,
+   240,
+   270,
+   330
+  ],
+  "cameras_seeing_part": [
+   "cam0",
+   "cam1",
+   "cam2",
+   "cam3"
+  ],
+  "rgb": {
+   "any_damage_consensus": false,
+   "any_damage_fixed_view": false,
+   "any_damage_max_confidence": false,
+   "by_class": {},
+   "damage_classes": []
+  },
+  "photometric_stereo": {
+   "relative_depth_status": "not_attempted",
+   "state": "not_attempted",
+   "state_reason": "no photometric-stereo burst covers this part"
+  }
+ }
+]

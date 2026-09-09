@@ -1,0 +1,80 @@
+[
+ {
+  "id": "ps_bmw_white_multidamage_hood_cam3_150k_repeat01",
+  "subject": "bmw_white",
+  "camera": "cam3",
+  "support": {
+   "requested_px": 139069,
+   "usable_lights_p10_med_p90": [
+    10,
+    11,
+    12
+   ],
+   "region_at_least_six": 0.99935,
+   "retained": 0.97166,
+   "state": "valid"
+  },
+  "img": {
+   "rgb": "img/bmw/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_rgb.jpg",
+   "damage": "img/bmw/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_damage.jpg",
+   "parts": "img/bmw/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_parts.jpg",
+   "thumb": "img/bmw/ps_bmw_white_multidamage_hood_cam3_150k_repeat01_thumb.jpg"
+  }
+ },
+ {
+  "id": "ps_bmw_white_damaged_hood_r000_150k",
+  "subject": "bmw_white",
+  "camera": "cam3",
+  "support": {
+   "requested_px": 162431,
+   "usable_lights_p10_med_p90": [
+    11,
+    12,
+    12
+   ],
+   "region_at_least_six": 0.99998,
+   "retained": 0.9764,
+   "state": "valid"
+  },
+  "img": {
+   "rgb": "img/bmw/ps_bmw_white_damaged_hood_r000_150k_rgb.jpg",
+   "damage": "img/bmw/ps_bmw_white_damaged_hood_r000_150k_damage.jpg",
+   "parts": "img/bmw/ps_bmw_white_damaged_hood_r000_150k_parts.jpg",
+   "thumb": "img/bmw/ps_bmw_white_damaged_hood_r000_150k_thumb.jpg"
+  }
+ },
+ {
+  "id": "ps_bmw_white_damaged_doors_r270_150k",
+  "subject": "bmw_white",
+  "camera": "cam3",
+  "support": {
+   "requested_px": 37485,
+   "usable_lights_p10_med_p90": [
+    6,
+    8,
+    8
+   ],
+   "region_at_least_six": 0.9882,
+   "retained": 0.8004,
+   "state": "valid"
+  },
+  "img": {
+   "rgb": "img/bmw/ps_bmw_white_damaged_doors_r270_150k_rgb.jpg",
+   "damage": "img/bmw/ps_bmw_white_damaged_doors_r270_150k_damage.jpg",
+   "parts": "img/bmw/ps_bmw_white_damaged_doors_r270_150k_parts.jpg",
+   "thumb": "img/bmw/ps_bmw_white_damaged_doors_r270_150k_thumb.jpg"
+  }
+ },
+ {
+  "id": "ps_bmw_white_r000",
+  "subject": "bmw_white",
+  "camera": "cam3",
+  "support": null,
+  "img": {
+   "rgb": "img/bmw/ps_bmw_white_r000_rgb.jpg",
+   "damage": "img/bmw/ps_bmw_white_r000_damage.jpg",
+   "parts": "img/bmw/ps_bmw_white_r000_parts.jpg",
+   "thumb": "img/bmw/ps_bmw_white_r000_thumb.jpg"
+  }
+ }
+]
