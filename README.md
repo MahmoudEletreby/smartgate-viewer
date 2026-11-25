@@ -16,6 +16,8 @@ is no server, no build step and no network access. Every image is a local file.
 
 ![The viewer on opening](screenshot.png)
 
+Segmentation overlays in this viewer are from models trained on real-vehicle datasets (CarDD, DSMLR) running on 1:18 / 1:24 die-cast models, so they show the domain gap the thesis measured. After fine-tuning on 22 labelled rig images, damage segmentation reached 0.93 mask AP50 on held-out frames.
+
 The page opens on the white BMW, the subject where the geometry gate returns
 `valid`: the bonnet capture retains 97.2% of its region at eleven usable lights
 of twelve, and three imposed dents are recovered with a fixed-pose standard
