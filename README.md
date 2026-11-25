@@ -9,6 +9,8 @@ when the observed surface cannot support a geometric measurement, the system
 withholds the depth value and records why, rather than reporting a number it
 cannot defend. This viewer is where that behaviour becomes visible.
 
+https://github.com/user-attachments/assets/9f96c7f7-01b2-4de8-a2b2-34f2b1fc7384
+
 ## Open it
 
 Clone or download this repository, then open `index.html` in any browser. There
